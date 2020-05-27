@@ -4,7 +4,7 @@
 - Applications
 
 ## Command
-# a
+### a
 - a52dec - decode ATSC A/52 audio streams
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
 - [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
@@ -13,12 +13,12 @@
 - adduser
 - alias
 
-# b
+### b
 - bg
 - bunzip2
 - bzip2
 
-# c
+### c
 - cal
 - cat
 - cd
@@ -28,7 +28,11 @@
 - clear
 - clock
 
+### d
 - date
 - dd
-- 
+
+### t
+ - tar 
+
 ## Applicaitons
