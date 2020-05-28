@@ -9,6 +9,7 @@
 - [linuxcommand.org](http://linuxcommand.org)
 - [The Linux man-pages project](https://www.kernel.org/doc/man-pages/)
 - [Linux man pages online](https://man7.org/linux/man-pages/index.html)
+- [nixdoc.net](https://nixdoc.net/man-pages)
 
 ## Command
 ### a
@@ -95,3 +96,4 @@
 - [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
 - [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
 - [git](https://git-scm.com) - git is a free and open source distributed version control system
+- [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
