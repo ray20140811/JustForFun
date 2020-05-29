@@ -5,11 +5,13 @@
 - Applications
 
 ## Linux man page
-- [die.net](https://linux.die.net)
+- [linux.die.net](https://linux.die.net)
 - [linuxcommand.org](http://linuxcommand.org)
 - [The Linux man-pages project](https://www.kernel.org/doc/man-pages/)
 - [Linux man pages online](https://man7.org/linux/man-pages/index.html)
 - [nixdoc.net](https://nixdoc.net/man-pages)
+- [GNU Manuals Online](https://www.gnu.org/manual/manual.html)
+- [FSF dirctory](https://directory.fsf.org/wiki/GNU)
 
 ## Command
 ### a
@@ -102,3 +104,4 @@
 - [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
 - [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
 - [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
+
