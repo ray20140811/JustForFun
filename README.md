@@ -78,10 +78,11 @@
 ### s
 
 ### t
- - [tar](https://linux.die.net/man/1/tar) - manual page for tar 1.23
+ - [tar](https://linux.die.net/man/1/tar) - the GNU version of the tar archiving utility
 
 ### u
  - [useradd](https://linux.die.net/man/8/adduser) - create a new user or update default new user information
+
 ### v
 
 ### w
@@ -91,9 +92,13 @@
 ### y
 
 ### z
+
 ## Applicaitons
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
 - [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
 - [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
+- [bash] - GNU Bourne-Again SHell
 - [git](https://git-scm.com) - git is a free and open source distributed version control system
 - [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
+- [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
+- [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
