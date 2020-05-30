@@ -66,6 +66,7 @@
 ### m
 - make - GNU make utility to maintain groups of programs
 - man - an interface to the on-line reference manuals
+- mc - Visual shell for Unix-like systems
 
 ### n
 
