@@ -61,12 +61,15 @@
 - kill - send a signal to a process
 
 ### l
+- less - opposite of more
 - ls - list directory contents
 
 ### m
 - make - GNU make utility to maintain groups of programs
 - man - an interface to the on-line reference manuals
+- mandb - create or update the manual page index caches
 - mc - Visual shell for Unix-like systems
+- more - file perusal filter for crt viewing
 
 ### n
 
@@ -89,6 +92,9 @@
 ### v
 
 ### w
+ - whatis - display one-line manual page descriptions
+ - whereis - locate the binary, source, and manual page files for a com‐
+       mand
 
 ### x
 
@@ -103,6 +109,7 @@
 - [bash] - GNU Bourne-Again SHell
 - [git](https://git-scm.com) - git is a free and open source distributed version control system
 - [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
+- [tilda](http://tilda.sourceforge.net/tildadoc.php) - first person shooter console likeness terminal
 - [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
 - [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
 
