@@ -7,6 +7,7 @@
 
 ## Linux distribution
 - [antiX Linux](https://antixlinux.com)
+- [Dragora](https://dragora.org/en/index.html)
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
 
@@ -17,7 +18,7 @@
 - [Linux man pages online](https://man7.org/linux/man-pages/index.html)
 - [nixdoc.net](https://nixdoc.net/man-pages)
 - [GNU Manuals Online](https://www.gnu.org/manual/manual.html)
-- [FSF dirctory](https://directory.fsf.org/wiki/GNU)
+- [FSF directory](https://directory.fsf.org/wiki/GNU)
 
 ## Command
 ### a
