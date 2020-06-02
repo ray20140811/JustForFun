@@ -7,7 +7,7 @@
 
 ## Linux distribution
 - [antiX Linux](https://antixlinux.com)
-- [Puppy Linux](https://www.puppylinux.com)
+- [Puppy Linux](https://puppylinux.com)
 - [Trisquel](https://trisquel.info)
 
 ## Linux man page
