@@ -48,6 +48,8 @@
 ### d
 - date - print or set the system date and time
 - dd - convert and copy a file
+- df - report file system disk space usage
+- du - estimate file space usage
 
 ### e
 - echo - display a line of text
@@ -58,6 +60,7 @@
 ### g
 - gawk - pattern scanning and processing language
 - gcc - GNU project C and C++ compiler
+- grep - print lines matching a pattern
 
 ### h
 - help - see the help
