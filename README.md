@@ -6,7 +6,10 @@
 - Applications
 
 ## Linux distribution
+- [antiX Linux](https://antixlinux.com)
 - [Puppy Linux](https://www.puppylinux.com)
+- [Trisquel](https://trisquel.info)
+
 ## Linux man page
 - [linux.die.net](https://linux.die.net)
 - [linuxcommand.org](http://linuxcommand.org)
