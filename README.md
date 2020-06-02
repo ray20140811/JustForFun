@@ -56,13 +56,17 @@
 - find - search for files in a directory hierarchy
 
 ### g
+- gawk - pattern scanning and processing language
+- gcc - GNU project C and C++ compiler
 
 ### h
+- help - see the help
 
 ### i
 - info - read Info documents
 
 ### j
+- join - join lines of two files on a common field
 
 ### k
 - kill - send a signal to a process
@@ -79,6 +83,7 @@
 - more - file perusal filter for crt viewing
 
 ### n
+- nasm - the Netwide Assembler, a portable 80x86 assembler
 
 ### o
 
