@@ -1,9 +1,12 @@
 # Just For Fun
 ## Table of Contents
+- Linux distribution
 - Linux man page 
 - Command
 - Applications
 
+## Linux distribution
+- [Puppy Linux](https://www.puppylinux.com)
 ## Linux man page
 - [linux.die.net](https://linux.die.net)
 - [linuxcommand.org](http://linuxcommand.org)
