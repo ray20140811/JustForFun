@@ -121,7 +121,7 @@
 
 ## Document
 - [tldp](http://www.tldp.org)
-- [The Mine of Information](http://www.tldp.org)
+- [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
 
 ## Applicaitons
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
