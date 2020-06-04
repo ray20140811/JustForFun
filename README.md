@@ -10,7 +10,7 @@
 - [Dragora](https://dragora.org/en/index.html)
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
-
+- [LFS](http://www.linuxfromscratch.org)
 ## Linux man page
 - [linux.die.net](https://linux.die.net)
 - [linuxcommand.org](http://linuxcommand.org)
