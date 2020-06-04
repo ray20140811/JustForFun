@@ -3,6 +3,7 @@
 - Linux distribution
 - Linux man page 
 - Command
+- Document
 - Applications
 
 ## Linux distribution
@@ -11,6 +12,7 @@
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
 - [LFS](http://www.linuxfromscratch.org)
+
 ## Linux man page
 - [linux.die.net](https://linux.die.net)
 - [linuxcommand.org](http://linuxcommand.org)
@@ -116,6 +118,10 @@
 ### y
 
 ### z
+
+## Document
+- [tldp](http://www.tldp.org)
+- [The Mine of Information](http://www.tldp.org)
 
 ## Applicaitons
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
