@@ -3,6 +3,7 @@
 - Linux distribution
 - Linux man page 
 - Command
+- Document
 - Applications
 
 ## Linux distribution
@@ -10,6 +11,7 @@
 - [Dragora](https://dragora.org/en/index.html)
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
+- [LFS](http://www.linuxfromscratch.org)
 
 ## Linux man page
 - [linux.die.net](https://linux.die.net)
@@ -117,11 +119,15 @@
 
 ### z
 
+## Document
+- [tldp](http://www.tldp.org)
+- [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
+
 ## Applicaitons
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
 - [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
 - [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
-- [bash] - GNU Bourne-Again SHell
+- [bash](https://www.gnu.org/software/bash/) - GNU Bourne-Again SHell
 - [git](https://git-scm.com) - git is a free and open source distributed version control system
 - [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
 - [tilda](http://tilda.sourceforge.net/tildadoc.php) - first person shooter console likeness terminal
