@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html>
+    <title>Linux File System</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+        th {
+            padding: 15px;
+        }
+        th {
+            text-align: left;
+        }
+    </style>
+    <body>
+        <h1>檔案系統目錄結構</h1>
+        <p>檔案系統以樹狀結構來組織目錄和檔案的結構</p>
+        <table style="width:35%">
+        <tr>
+            <th>目錄</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <th>/</th>
+            <th>根目錄,其他的目錄由此目錄延伸下去</th>
+        </tr>
+        <tr>
+            <th>root</th>
+            <th>root的目錄,root為administrator管理員的帳號</th>
+        </tr>
+        <tr>
+            <th>proc</th>
+            <th>此目錄作為proc檔案系統的掛載點.proc檔案系統為一虛擬的檔案系統,存在於記憶體中.proc檔案系統中的目錄和檔案均為核心臨時產生的.用於了解系統目前的執行狀態.</th>
+        </tr>
+        <tr>
+            <th>bin</th>
+            <th>此目錄存放使用者可用的基本指令,例如:ls,cd,mv,cp等</th>
+        </tr>
+        
+        </table>
+    </body>
+</html>
