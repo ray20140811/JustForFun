@@ -122,6 +122,8 @@
 - [The Linux Document Project](http://www.tldp.org)
 - [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
 - [Linux Device Drivers](https://lwn.net/Kernel/LDD3/)
+- [Linux Kernel in a Nutshell](http://www.kroah.com/lkn/)
+
 ## Applicaitons
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
 - [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
