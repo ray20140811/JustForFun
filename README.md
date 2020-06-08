@@ -119,7 +119,7 @@
 ### z
 
 ## Document
-- [tldp](http://www.tldp.org)
+- [The Linux Document Project](http://www.tldp.org)
 - [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
 - [Linux Device Drivers](https://lwn.net/Kernel/LDD3/)
 ## Applicaitons
