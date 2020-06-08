@@ -21,6 +21,7 @@
 - [nixdoc.net](https://nixdoc.net/man-pages)
 - [GNU Manuals Online](https://www.gnu.org/manual/manual.html)
 - [FSF directory](https://directory.fsf.org/wiki/GNU)
+- [Linux User and Programmer's Manual - Manpages](https://www.systutorials.com/docs/linux/man/)
 
 ## Command
 ### a
@@ -113,6 +114,7 @@
  - whereis - locate the binary, source, and manual page files for a command
 
 ### x
+ - [xgc](https://www.systutorials.com/docs/linux/man/1-xgc/) - X graphics demo
 
 ### y
 
