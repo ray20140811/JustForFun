@@ -110,8 +110,7 @@
 
 ### w
  - whatis - display one-line manual page descriptions
- - whereis - locate the binary, source, and manual page files for a com‐
-       mand
+ - whereis - locate the binary, source, and manual page files for a command
 
 ### x
 
