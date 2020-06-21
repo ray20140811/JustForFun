@@ -2,14 +2,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu, .home, .linuxdistribution, .linuxcommand, 
+.menu, .home, .linux, .linuxcommand, 
 .linuxapplication, .linuxfilesystem, .linuxdriver {
     overflow: hidden;
     background-color: #111;
   }
 
 
-.menu a ,.home a, .linuxdistribution a, .linuxcommand a,
+.menu a ,.home a, .linux a, .linuxcommand a,
 .linuxapplication a, .linuxfilesystem a, .linuxdriver a {
     float: left;
     font-size: 16px;
@@ -20,13 +20,13 @@ body {
   }
   
   
-.home, .linuxdistribution, .linuxcommand, 
+.home, .linux, .linuxcommand, 
 .linuxapplication, .linuxfilesystem, .linuxdriver {
     float: left;
     overflow: hidden;
   }
   
-.home .homebtn, .modeling .modelingbtn, .linuxdistribution .linuxdistributionbtn,
+.home .homebtn, .modeling .modelingbtn, .linux .linuxbtn,
 .linuxcommand .linuxcommandbtn, .linuxapplication .linuxapplicationbtn,
 .linuxfilesystem .linuxfilesystembtn, .linuxdriver .linuxdriverbtn {
     font-size: 16px;  
@@ -39,13 +39,13 @@ body {
     margin: 0;
 }
   
-.menu a:hover, .home:hover .homebtn, .linuxdistribution:hover .linuxdistributionbtn,
+.menu a:hover, .home:hover .homebtn, .linux:hover .linuxbtn,
 .linuxcommand:hover .linuxcommandbtn, .linuxapplication:hover .linuxapplicationbtn,
 .linuxfilesystem:hover .linuxfilesystembtn, .linuxdriver:hover .linuxdriverbtn {
     background-color: rebeccapurple;
   }
   
-.home-content , .linuxdistribution-content, .linuxcommand-content,
+.home-content , .linux-content, .linuxcommand-content,
 .linuxapplication-content, .linuxfilesystem-content, .linuxdriver-content {
     display: none;
     position: absolute;
@@ -56,7 +56,7 @@ body {
   }
   
 
-.home-content a, .linuxdistribution-content a, .linuxcommand-content a,
+.home-content a, .linux-content a, .linuxcommand-content a,
 .linuxapplication-content a, .linuxfilesystem-content a, .linuxdriver-content a {
     float: none;
     color: black;
@@ -66,15 +66,16 @@ body {
     text-align: left;
   }
   
-.home-content a:hover, .linuxdistribution-content a:hover,
+.home-content a:hover, .linux-content a:hover,
 .linuxcommand-content a:hover, .linuxapplication-content a:hover,
 .linuxfilesystem-content a:hover, .linuxdriver-content a:hover {
     background-color: #ddd;
 }
   
-.home:hover .home-content, .linuxdistribution:hover .linuxdistribution-content,
+.home:hover .home-content, .linux:hover .linux-content,
 .linuxcommand:hover .linuxcommand-content, .linuxapplication:hover .linuxapplication-content,
 .linuxfilesystem:hover .linuxfilesystem-content, .linuxdriver:hover .linuxdriver-content {
 
   display: block;
 }
+
