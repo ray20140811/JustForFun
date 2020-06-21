@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu, .linuxdistribution, .linuxcommand, 
+.linuxapplication, .linuxfilesystem, .linuxdriver {
+    overflow: hidden;
+    background-color: #111;
+  }
+
+
+.menu a , .linuxdistribution a, .linuxcommand a,
+.linuxapplication a, .linuxfilesystem a, .linuxdriver a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+.modeling , .linuxdistribution, .linuxcommand, 
+.linuxapplication, .linuxfilesystem, .linuxdriver {
+    float: left;
+    overflow: hidden;
+  }
+  
+.modeling .modelingbtn, .linuxdistribution .linuxdistributionbtn,
+.linuxcommand .linuxcommandbtn, .linuxapplication .linuxapplicationbtn,
+.linuxfilesystem .linuxfilesystembtn, .linuxdriver .linuxdriverbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.menu a:hover, .modeling:hover .modelingbtn, .linuxdistribution:hover .linuxdistributionbtn,
+.linuxcommand:hover .linuxcommandbtn, .linuxapplication:hover .linuxapplicationbtn,
+.linuxfilesystem:hover .linuxfilesystembtn, .linuxdriver:hover .linuxdriverbtn {
+    background-color: rebeccapurple;
+  }
+  
+.modeling-content , .linuxdistribution-content, .linuxcommand-content,
+.linuxapplication-content, .linuxfilesystem-content, .linuxdriver-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+
+.modeling-content a, .linuxdistribution-content a, .linuxcommand-content a,
+.linuxapplication-content a, .linuxfilesystem-content a, .linuxdriver-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.modeling-content a:hover, .linuxdistribution-content a:hover,
+.linuxcommand-content a:hover, .linuxapplication-content a:hover,
+.linuxfilesystem-content a:hover, .linuxdriver-content a:hover {
+    background-color: #ddd;
+}
+  
+  .modeling:hover .modeling-content, .linuxdistribution:hover .linuxdistribution-content,
+  .linuxcommand:hover .linuxcommand-content, .linuxapplication:hover .linuxapplication-content,
+  .linuxfilesystem:hover .linuxfilesystem-content, .linuxdriver:hover .linuxdriver-content {
+    display: block;
+  }
