@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+            }
+            th {
+                padding: 15px;
+            }
+            th, td {
+                text-align: left;
+            }
+        </style>
     </head>
     <body>
        <h1><a href="https://www.kernel.org/" target="_blank">Linux Kernel (Linux內核)</a></h1>
-       <p>技術上來說Linux是一個內核。Linux內核的主要模塊分成以下幾個部分:存储管理、CPU和进程管理、文件系统、设备管理和驱动、网络通信，以及系统的初始化（引导）、系统调用等</p>
+       <p>平常說的Linux只是一個內核。Linux內核的主要模塊分成以下幾個部分:存储管理、CPU和进程管理、文件系统、设备管理和驱动、网络通信，以及系统的初始化（引导）、系统调用等</p>
+       <p>Linux原始碼包含以下目錄</p>
+       <table style="width:100%">
+        <tr>
+            <th>目錄</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td>Documentation</td>
+            <td>此目錄存放文字檔案,用來解釋或提示有關內核元素</td>
+        </tr>
+        <tr>
+            <td>arch</td>
+            <td>此目錄存放不同CPU架構的程式碼,例如:x86,arm,arm64...等</td>
+        </tr>
+        <tr>
+            <td>kernel</td>
+            <td>此目錄存放核心</td>
+        </tr>
+        <tr>
+            <td>mm</td>
+            <td>此目錄存放記憶體管理</td>
+        </tr>
+        <tr>
+            <td>drivers</td>
+            <td>此目錄存放驅動程式</td>
+        </tr>
+        </table>
+        <p>如何獲取Linux原始碼:</p>
+        <p style="font: italic bold;">git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</p>
+        <p>內核參考文件:<a href="https://www.kernel.org/doc/html/latest/" target="_new">The Linux Kernel Documentation</a></p>
     </body>
 </html>
