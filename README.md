@@ -9,6 +9,7 @@
 ## Linux distribution
 - [antiX Linux](https://antixlinux.com)
 - [Dragora](https://dragora.org/en/index.html)
+- [Parabola](https://www.parabola.nu/)
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
 - [LFS](http://www.linuxfromscratch.org)
@@ -28,6 +29,7 @@
 - [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
 - [Linux Device Drivers](https://lwn.net/Kernel/LDD3/)
 - [Linux Kernel in a Nutshell](http://www.kroah.com/lkn/)
+- [Parabola Wiki](https://wiki.parabola.nu/Main_Page)
 
 ## Software 
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
