@@ -23,6 +23,25 @@
 - [FSF directory](https://directory.fsf.org/wiki/GNU)
 - [Linux User and Programmer's Manual - Manpages](https://www.systutorials.com/docs/linux/man/)
 
+## Document
+- [The Linux Document Project](http://www.tldp.org)
+- [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
+- [Linux Device Drivers](https://lwn.net/Kernel/LDD3/)
+- [Linux Kernel in a Nutshell](http://www.kroah.com/lkn/)
+
+## Software 
+- [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
+- [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
+- [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
+- [bash](https://www.gnu.org/software/bash/) - GNU Bourne-Again SHell
+- [emacs](https://www.gnu.org/software/emacs/) - GNU An extensible, customizable, free/libre text editor
+- [git](https://git-scm.com) - git is a free and open source distributed version control system
+- [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
+- [tilda](http://tilda.sourceforge.net/tildadoc.php) - first person shooter console likeness terminal
+- [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
+- [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
+- [w3m](http://w3m.sourceforge.net) - text-based web browser
+
 ## Command
 ### a
 - a52dec - decode ATSC A/52 audio streams
@@ -120,20 +139,4 @@
 
 ### z
 
-## Document
-- [The Linux Document Project](http://www.tldp.org)
-- [The Mine of Information](http://moi.vonos.net/linux/beginners-installing-from-source/)
-- [Linux Device Drivers](https://lwn.net/Kernel/LDD3/)
-- [Linux Kernel in a Nutshell](http://www.kroah.com/lkn/)
-
-## Applicaitons
-- [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
-- [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
-- [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
-- [bash](https://www.gnu.org/software/bash/) - GNU Bourne-Again SHell
-- [git](https://git-scm.com) - git is a free and open source distributed version control system
-- [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
-- [tilda](http://tilda.sourceforge.net/tildadoc.php) - first person shooter console likeness terminal
-- [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
-- [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
 
