@@ -4,6 +4,14 @@ set hlsearch
 set autoread
 au CursorHold * checktime
 
+"Disabling swap files"
+set noswapfile
+"Organizing swap files"
+"create a swp folder in ~/.vim/ and put all swap files in this folder"
+"mkdir -p ~/.vim/swp"
+"set directory=$HOME/.vim/swp//
+
+
 "For Windows GVim"
 "set guifont=Consolas:h12  
 
