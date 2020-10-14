@@ -6,13 +6,15 @@ Basic
 
 功能和cd類似,用來改變當前的路徑.可以用popd回到原來的路徑.	
 
-	pwd
-	ray@linux ~ #
+	
+	ray@linux ~ # pwd
 	/home/ray
-	pushd ~/Project/GitHub/
-	ray@linux ~/Project/GitHub #
+	ray@linux ~/Project/GitHub # pushd ~/Project/GitHub/
 
+	ray@linux ~ # pwd
+	/home/ray/Project/GitHub
 * popd
 	
-	popd
-	ray@linux ~ #
+	ray@linux ~ # popd
+	ray@linux ~ # pwd
+	/home/ray
