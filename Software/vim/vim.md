@@ -1,6 +1,14 @@
 vim
 ====
 
+如何垂直選取
+============
+[vim](https://www.footmark.info/linux/centos/vi-vim/)
+
+	v	選取字元
+	V	選取整列
+	C-v	選取矩形區塊
+
 How to disable to create .swp file 
 ------------------------
 有2個方法:

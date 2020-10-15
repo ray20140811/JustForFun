@@ -18,3 +18,11 @@ Basic
 	ray@linux ~ # popd
 	ray@linux ~ # pwd
 	/home/ray
+
+* file
+
+查看檔案屬性
+
+
+
+
