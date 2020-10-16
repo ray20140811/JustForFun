@@ -1,8 +1,37 @@
-Burp Suite
+OWASP
 ==========
+* Open Web Application Security Project = OWASP
+* [Top 10 測試項目](https://owasp.org/www-project-top-ten/)
+  1. Injection 注入攻擊
+  2. Broken Authentication 無效的身分驗證
+  3. Sensitive Data Exposure 機敏資料外洩
+  4. XML External Entities (XXE) XML 外部處理器弱點
+  5. Broken Access Control 無效的存取控管
+  6. Security Misconfiguration 不安全的組態設定
+  7. Cross-Site Scripting XSS 跨站腳本攻擊
+  8. Insecure Deserialization 不安全的反序列化弱點
+  9. Using Components with Known Vulnerabilities 不安全的元件
+  10. Insufficient Logging & Monitoring 紀錄與監控不足風險
 
-設定
-----
+[資安人須知的 OWASP TOP 10 資安風險來源(上)](https://secbuzzer.co/post/116)
+[資安人須知的 OWASP TOP 10 資安風險來源(下)](https://secbuzzer.co/post/115)
+
+測試工具
+-----
+* [Burp Suite]
+* [DVWA]
+* [sql map]
+* [commix]
+* [testssl](https://testssl.sh/)
+* [testssl GitHub](https://github.com/drwetter/testssl.sh)
+
+測試網站 
+---------
+[Altoro Mutual](http://www.testfire.net/)
+[Acunetix Art](http://testphp.vulnweb.com/)
+
+Burp Suite設定
+--------------
 * Https封包攔截不到時,需要把憑證匯到瀏覽器
 * Chrome要打開Proxy 可以安裝套件
 * Options 
@@ -23,33 +52,6 @@ Burp Suite
   
 * Repeater
 
-其他檢測工具
------
-* [DVWA]
-* SQL Injection -> [sql map]
-* Command Injection -> [commix]
-
-測試網站 
----------
-[Altoro Mutual](http://testfire.net/)
-[Acunetix Art](http://testphp.vulnweb.com/)
-
-OWASP
------
-* Open Web Application Security Project = OWASP
-* Tools & Documentation
-* [Top 10 測試項目](https://owasp.org/www-project-top-ten/)
-  1. Injection
-  2. Broken Authentication
-  3. Sensitive Data Exposure 私人資料
-  4. XML External Entities (XXE)
-  5. Broken Access Control
-  6. Security Misconfiguration
-  7. Cross-Site Scripting XSS
-  8. Insecure Deserialization 反序列化
-  9. Using Components with Known Vulnerabilities 不安全的元件
-  10. Insufficient Logging & Monitoring
-  
 A1-Injection
 ------------
 * SQL injection
@@ -140,6 +142,10 @@ A1-Injection
   $ commix --url="你的victime網址" --data="你剛剛送的訊息" --cookie="你的cookie"
   
   127.0.0.1; ls
+
+* [Worst Password](https://github.com/danielmiessler/SecLists/Passwords/Common-Credentials)
+https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/500-worst-passwords.txt
+
 
 
     
