@@ -1,5 +1,7 @@
 Alpine Linux
 ============
+Install Step
+-----------
 
 	localhost login: root
 	localhost:~# setup-alpine
@@ -22,3 +24,10 @@ Alpine Linux
 	WARNING: Erase the above disk(s) and continue? [y/N]: y
 	Installation is complete. Please reboot.
 	alpine:~# reboot
+
+
+Reference
+---------
+	[Installation](https://wiki.alpinelinux.org/wiki/Installation)
+	[Hwo to install Alpine Linux](https://www.youtube.com/watch?v=DiovVzb4Udc)
+	[How to install Docker under Alpine Linux v3.11](https://www.youtube.com/watch?v=6CVQ75nGVAY)
