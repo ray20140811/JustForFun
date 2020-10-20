@@ -4,10 +4,10 @@ vim
 啟動多個視窗
 -----------
 
-	vim -o test1 test2
-	vim -O test1 test2
+	vim -o file1 file2
+	vim -O file1 file2
 
-開啟多個視窗
+分割視窗
 -----------
 				
 	:split
@@ -16,12 +16,22 @@ vim
 切換視窗
 -----------
 				
-	C-w h
-	C-w j
+	C-w h 切換到左邊的視窗
+	C-w j 切換到上面的視窗
 	C-w k
 	C-w l
 
 	C-w w
+	C-w t
+	C-w b
+	C-w p
+
+關閉視窗
+-----------
+				
+	C-w c
+	C-w q
+	C-w o
 
 如何垂直選取
 ------------
