@@ -1,8 +1,30 @@
 vim
 ====
 
+啟動多個視窗
+-----------
+
+	vim -o test1 test2
+	vim -O test1 test2
+
+開啟多個視窗
+-----------
+				
+	:split
+	:vsplit
+
+切換視窗
+-----------
+				
+	C-w h
+	C-w j
+	C-w k
+	C-w l
+
+	C-w w
+
 如何垂直選取
-============
+------------
 [vim](https://www.footmark.info/linux/centos/vi-vim/)
 
 	v	選取字元
