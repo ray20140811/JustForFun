@@ -13,18 +13,21 @@ vim
 	:split
 	:vsplit
 
+	:split filename		開啟另一視窗瀏覽檔案
+	:vsplit filename	開啟另一視窗瀏覽檔案
+
 切換視窗
 -----------
 				
 	C-w h 切換到左邊的視窗
 	C-w j 切換到上面的視窗
-	C-w k
-	C-w l
+	C-w k 切換到下面的視窗
+	C-w l 切換到右邊的視窗
 
-	C-w w
+	C-w w 循環切換
 	C-w t
 	C-w b
-	C-w p
+	C-w p 
 
 關閉視窗
 -----------

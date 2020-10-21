@@ -2,12 +2,13 @@
 
 sudo apt update
 #sudo apt upgrade
-sudo apt autoremove
+#sudo apt autoremove
 
 ##sudo apt install 
 
 # Source Version Control
 #sudo apt install git
+#sudo apt install subversion
 
 # Midnight Commander
 #sudo apt install mc
