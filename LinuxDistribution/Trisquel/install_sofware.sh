@@ -74,5 +74,7 @@ sudo apt update
 # MicroController
 #sudo apt install arduino
 
+# Medial Player
+#sudo apt install vlc
 
 
