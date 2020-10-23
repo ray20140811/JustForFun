@@ -3,6 +3,7 @@ atom
 
 vue packages
 --------------
+* atom-vue
 * language-vue
 
 markdown packages
@@ -21,6 +22,15 @@ Useful Packages
 * highlight-selected (高亮已選擇的項目，可以幫助你找到它。)
 * Sublime-Style-Column-Selection (ALT+滑鼠左鍵 垂直選取)
 
+How to uninstall packages?
+--------------------------
+	
+	apm list
+	apm uninstall PACKAGENAME 
+
+or 
+
+	rm -rf ~/.atom/packages/PACKAGENAME
 
 
 How to auto-indent code in the Atom editor?
