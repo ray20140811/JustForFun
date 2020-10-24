@@ -7,8 +7,10 @@
 - Applications
 
 ## Linux distribution
+- [Alpine Linux](https://alpinelinux.org/)
 - [antiX Linux](https://antixlinux.com)
 - [Dragora](https://dragora.org/en/index.html)
+- [Kali](https://www.kali.org/)
 - [Parabola](https://www.parabola.nu/)
 - [Puppy Linux](http://puppylinux.com)
 - [Trisquel](https://trisquel.info)
@@ -35,14 +37,22 @@
 - [abiword](https://www.abisource.com/) - biWord is a free word processing program similar to Microsoft® Word.
 - [abrowser](https://trisquel.info/en/wiki/abrowser-help) - Abrowser is Trisquel's version of Mozilla's popular web browser.
 - [alsa](https://www.alsa-project.org/main/index.php/Main_Page) - Advanced Linux Sound Architecture (ALSA)
+- [awesome](https://awesomewm.org/) - is a highly configurable, next generation framework window manager for X. It is very fast, extensible and licensed under the GNU GPLv2 license.
 - [bash](https://www.gnu.org/software/bash/) - GNU Bourne-Again SHell
+- [bluefish](http://bluefish.openoffice.nl/index.html) - Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. 
+- [eDEX-UI](https://github.com/GitSquared/edex-ui) - eDEX-UI is a fullscreen, cross-platform terminal emulator and system monitor that looks and feels like a sci-fi computer interface.
 - [emacs](https://www.gnu.org/software/emacs/) - GNU An extensible, customizable, free/libre text editor
+- [fish](https://fishshell.com/) - fish is a smart and user-friendly command line
+shell for Linux, macOS, and the rest of the family.
+- [geany](https://www.geany.org/) - Geany is a powerful, stable and lightweight programmer's text editor that provides tons of useful features without bogging down your workflow.
 - [git](https://git-scm.com) - git is a free and open source distributed version control system
+- [lxde](http://www.lxde.org/) - is a desktop environment which is lightweight and fast.
 - [mg](http://man.openbsd.org/OpenBSD-current/man1/mg.1) - emacs-like text editor
 - [tilda](http://tilda.sourceforge.net/tildadoc.php) - first person shooter console likeness terminal
 - [uemacs](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/uemacs.git/) - emacs-like text editor which used by Linus Torvalds
-- [vim](https://www.vim.org) - Vi IMproved, a programmers text editor
-- [w3m](http://w3m.sourceforge.net) - text-based web browser
+- [vim](https://www.vim.org) - Vi IMproved, a programmers text editor.
+- [w3m](http://w3m.sourceforge.net) - text-based web browser.
+- [zsh](https://www.zsh.org/) - Zsh is a shell designed for interactive us.
 
 ## Command
 ### a
