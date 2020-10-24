@@ -14,10 +14,11 @@ sudo apt update
 #sudo apt install mc
 
 # Text Editor
-#sudo apt install ne
-#sudo apt install geany
-#sudo apt install vim 
+#sudo apt install bluefish
 #sudo apt install emacs
+#sudo apt install geany
+#sudo apt install ne
+#sudo apt install vim 
 
 ## doom emacs
 #git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
@@ -29,13 +30,12 @@ sudo apt update
 #sudo apt install wget
 #sudo apt install curl
 
-# Shell
-## zsh
+# shell
+#sudo apt install fish
 #sudo apt install zsh
 
 ## oh-my-zsh
-#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"")"
-
+#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 #sudo apt install tree
 
@@ -77,4 +77,11 @@ sudo apt update
 # Medial Player
 #sudo apt install vlc
 
+# Kali Linux [https://kknews.cc/zh-tw/code/9g9eb4b.html]
+#sudo apt install nmap
+#sudo apt install lynis
+#sudo apt install wpscan
+#sudo apt install aircrack-ng
+#sudo apt install hydra
+#sudo apt install wireshark
 
