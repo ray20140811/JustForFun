@@ -1,6 +1,11 @@
 vim
 ====
 
+Cygwin
+------
+* ~/.vimrc not working
+cp ~/.vimrc ~/.virc
+
 啟動多個視窗
 -----------
 
