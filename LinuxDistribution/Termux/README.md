@@ -10,4 +10,11 @@ Termux
 
 常用指令
 ----------
-* pkg install xxxx
+
+* 安裝軟體
+	
+	pkg install PACKAGENAME
+
+* 系統更新
+
+	pkg update

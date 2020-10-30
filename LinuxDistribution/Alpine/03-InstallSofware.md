@@ -22,8 +22,10 @@ do follow as root
 	alpine:~# docker run hello-world
 	alpine:~# free mem
 
+* In WSL: If you see error so below, try to use su command first.
+ERROR: Unable to lock database: Permission denied
+ERROR: Failed to open apk database: Permission denied
 
-
-	
-
+	alpine:~# su 
+	alpine:~# apk add vim
 
