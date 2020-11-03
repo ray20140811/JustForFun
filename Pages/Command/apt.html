@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="../../CSS/style.css">
+	<style>
+	h4 {
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	.links {
+		text-align: left;
+		color: black;
+
+	}
+
+	#thumbnail {
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+
+	.fullCard {
+		width: auto;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin: 10px 5px;
+		padding: 4px;
+	}
+
+	.cardContent {
+		padding: 10px;
+	}
+
+	.cardText {
+		margin-bottom: 30px;
+	}
+	</style>
+	<title>apt</title>
+</head>
+<body>
+	<div class="fullCard" id="thumbnail">
+		<div class="cardContent">
+			<div class="cardText">
+				<h4><a href="https://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/" target="_blank">APT</a></h4>
+				<p>Advanced Package Tool.</p>
+				<hr>
+				<h3>How Do I List All Available Packages?</h3>
+				<p class="code">$ apt-cache pkgnames</p>
+				<h3>How Do I Find Out Package Name and Description of Software?</h3>
+				<p class="code">$ apt-cache search vsftpd</p>
+				<p class="code">$ apt-cache pkgnames vsftpd</p>
+				<h3>How Do I Check Package Information?</h3>
+				<p class="code">$ apt-cache show netcat</p>
+				<h3>How Do I Check Dependencies for Specific Packages?</h3>
+				<p class="code">$ apt-cache showpkg vsftpd</p>
+				<h3>How Do I Check statistics of Cache</h3>
+				<p class="code">$ apt-cache stats</p>
+				<h3>How to Update System Packages</h3>
+				<p class="code">$ sudo apt-get update</p>
+				<h3>How to Upgrade Software Packages</h3>
+				<p class="code">$ sudo apt-get upgrade</p>
+				<p class="code">$ sudo apt-get dist-upgrade</p>
+				<h3>How Do I Install or Upgrade Specific Packages?</h3>
+				<p class="code">$ sudo apt-get install netcat</p>
+				<h3>How I can Install Multiple Packages?</h3>
+				<p class="code">$ sudo apt-get install nethogs goaccess</p>
+				<h3></h3>
+				<p class="code"></p>
+				<h3>How to Install Several Packages using Wildcard</h3>
+				<p class="code">$ sudo apt-get install '*name*'</p>
+				<h3>How to install Packages without Upgrading</h3>
+				<p class="code">$ sudo apt-get install packageName --no-upgrade</p>
+				<h3>How to Upgrade Only Specific Packages</h3>
+				<p class="code">$ sudo apt-get install packageName --only-upgrade</p>
+				<h3>How Do I Install Specific Package Version?</h3>
+				<p class="code">$ sudo apt-get install vsftpd=2.3.5-3ubuntu1</p>
+				<h3>How Do I Remove Packages Without Configuration</h3>
+				<p class="code">$ sudo apt-get remove vsftpd</p>
+				<h3>How Do I Completely Remove Packages</h3>
+				<p class="code">$ sudo apt-get purge vsftpd</p>
+				<p class="code">$ sudo apt-get remove --purge vsftpd</p>
+				<h3>How I Can Clean Up Disk Space</h3>
+				<p class="code">$ sudo apt-get clean</p>
+				<h3>How Do I Download Only Source Code of Package</h3>
+				<p class="code">$ sudo apt-get --download-only source vsftpd</p>
+				<h3>How Can I Download and Unpack a Package</h3>
+				<p class="code">$ sudo apt-get source vsftpd</p>
+				<h3>How Can I Download, Unpack and Compile a Package</h3>
+				<p class="code">$ sudo apt-get --compile source goaccess</p>
+				<h3>How Do I Download a Package Without Installing</h3>
+				<p class="code">$ sudo apt-get download nethogs</p>
+				<h3>How Do I Check Change Log of Package?</h3>
+				<p class="code">$ sudo apt-get changelog vsftpd</p>
+				<h3>How Do I Check Broken Dependencies?</h3>
+				<p class="code">$ sudo apt-get check</p>
+				<h3>How Do I Search and Build Dependencies?</h3>
+				<p class="code">$ sudo apt-get build-dep netcat</p>
+				<h3>How I Can Auto clean Apt-Get Cache?</h3>
+				<p class="code">$ sudo apt-get autoclean</p>
+				<h3>How I Can Auto remove Installed Packages?</h3>
+				<p class="code">$ sudo apt-get autoremove vsftpd</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

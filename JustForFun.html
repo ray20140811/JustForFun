@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<title>Hello World!</title>
 	<head>
 		<link rel="icon" href="images/video-player.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="CSS/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 		<style>
-            h1 {
-                font-family: Lobster;
-            }
-			p {
-				font-family: monospace;
-			}
 			#nav {
 				line-height:100px;
 				background-color:#eeeeee;
@@ -26,7 +19,19 @@
 			.azure-background {
 				background-color: azure;
 			}
-			</style>
+			.fullCard {
+				width: auto;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				margin: 10px 5px;
+				padding: 4px;
+				background-color: azure;
+			}
+			.center-text {
+				text-align: center;
+			}
+		</style>
+		<title>Hello World!</title>
 	</head>
 	<body>
 	<h1>Just For Fun</h1>
@@ -39,14 +44,45 @@
 				<a href="LinuxCommand/default.html" target="iframe_right">Linux Command</a>
 			</div>
 		</div>
+		<div class="distribution">
+			<button class="distributionbtn">Distribution</button>
+			<div class="distribution-content">
+				<a href="https://www.dragora.org/" target="_blank">Dragora</a>
+				<a href="https://www.parabola.nu/" target="_blank">Parabola Linux</a>
+				<a href="https://trisquel.info/en" target="_blank">Trisquel</a>
+				<a href="https://pureos.net/" target="_blank">PureOS</a>
+				<a href="http://www.linuxfromscratch.org/" target="_blank">LFS</a>
+				<a href="https://antixlinux.com/" target="_blank">antix Linux</a>
+				<a href="http://puppylinux.com/" target="_blank">Puppy Linux</a>
+				<a href="https://alpinelinux.org/" target="_blank">Alpine Linux</a>
+				<a href="https://www.kali.org/" target="_blank">Kali Linux</a>
+				<a href="">Termux</a>
+				<a href="" target="_blank"></a>
+			</div>
+		</div>
 		<div class="linuxcommand">
-			<button class="linuxcommandbtn">Linux Command</button>
+			<button class="linuxcommandbtn">Command</button>
 			<div class="linuxcommand-content">
+       			<a href="Pages/Command/summary.html" target="_blank">summary</a>
+       			<a href="Pages/Command/apt.html" target="_blank">apt</a>
+       			<a href="Pages/Command/find.html" target="_blank">find</a>
+		       	<a href="Pages/Command/grep.html" target="_blank">grep</a>
+       			<a href="Pages/Command/pushd.html" target="_blank">pushd</a>
+       			<a href="Pages/Command/popd.html" target="_blank">popd</a>
+       			<a href="Pages/Command/tar.html" target="_blank">tar</a>
 				<a href="https://ray20140811.blogspot.com/2020/06/linux-client-ftp-command.html" target="iframe_right">ftp</a>
 			</div>
 		</div>
+		<div class="shell">
+			<button class="shellbtn">Shell</button>
+			<div class="shell-content">
+       			<a href="Pages/Shell/ash.html" target="_blank">ash</a>
+       			<a href="Pages/Shell/bash.html" target="_blank">bash</a>
+       			<a href="Pages/Shell/zsh.html" target="_blank">zsh</a>
+			</div>
+		</div>
 		<div class="linuxapplication">
-			<button class="linuxapplicationbtn">Linux Application</button>
+			<button class="linuxapplicationbtn">Software</button>
 			<div class="linuxapplication-content">
 				<a href="Pages/bc.html" target="iframe_right">bc</a>
 				<a href="Pages/git.html" target="iframe_right">git</a>
@@ -56,24 +92,62 @@
 				<a href="cygwin.html" target="iframe_right">cygwin</a></li>
 			</div>
 		</div>
+		<div class="server">
+			<button class="serverbtn">Server</button>
+			<div class="server-content">
+       			<a href="Pages/Server/webserver.html" target="_blank">Web Server</a>
+       			<a href="Pages/Server/fileserver.html" target="_blank">File Server</a>
+       			<a href="Pages/Server/mailserver.html" target="_blank">Mail Server</a>
+       			<a href="Pages/Server/gitserver.html" target="_blank">Git Server</a>
+			</div>
+		</div>
 		<div class="linuxfilesystem">
-			<button class="linuxfilesystembtn">Linux File System</button>
+			<button class="linuxfilesystembtn">File System</button>
 			<div class="linuxfilesystem-content">
 				<a href="Pages/LinuxFileSystem.html" target="iframe_right">File System</a>
-
 			</div>
 		</div>
 		<div class="linuxdriver">
-			<button class="linuxdriverbtn">Linux Driver</button>
+			<button class="linuxdriverbtn">Device Driver</button>
 			<div class="linuxdriver-content">
 				<a href="Pages/LinuxModules.html" target="iframe_right">Linux Module</a>
+			</div>
+		</div>
+		<div class="document">
+			<button class="documentbtn">Document</button>
+			<div class="document-content">
+				<a href="http://www.tldp.org" target="_blank">The Linux Document Project</a>
+				<a href="http://moi.vonos.net/linux/beginners-installing-from-source/" target="_blank">The Mine of Information</a>
+				<a href="https://lwn.net/Kernel/LDD3/" target="_blank">Linux Device Drivers</a>
+				<a href="http://www.kroah.com/lkn/" target="_blank">Linux Kernel in a Nutshell</a>
+				<a href="https://linux.die.net" target="_blank">linux.die.net</a>
+				<a href="http://linuxcommand.org" target="_blank">linuxcommand.org</a>
+				<a href="https://www.kernel.org/doc/man-pages/" target="_blank">The Linux man-pages project</a>
+				<a href="(https://man7.org/linux/man-pages/index.html" target="_blank">Linux man pages online</a>
+				<a href="https://nixdoc.net/man-pages" target="_blank">nixdoc.net</a>
+				<a href="https://www.gnu.org/manual/manual.html" target="_blank">GNU Manuals Online</a>
+				<a href="https://directory.fsf.org/wiki/GNU" target="_blank">FSF directory</a>
+				<a href="https://www.systutorials.com/docs/linux/man/" target="_blank">Linux User and Programmer's Manual - Manpages</a>
+				<a href="https://wiki.parabola.nu/Main_Page" target="_blank">Parabola Wiki</a>
+				<a href="" target="_blank"></a>
+			</div>
+		</div>
+		<div class="embeddedsystem">
+			<button class="embeddedsystembtn">Embedded System</button>
+			<div class="embeddedsystem-content">
 
 			</div>
 		</div>
 	</div>
 	<div id="nav" style="width:100%; ">
-		<iframe src="default.html" height="600px" width="14%" name="iframe_left"></iframe>
-		<iframe src="LinuxKernel/default.html" height="600px" width="85%" name="iframe_right"></iframe>
+		<!--iframe src="default.html" height="600px" width="14%" name="iframe_left"></iframe-->
+		<!--iframe src="LinuxKernel/default.html" height="600px" width="85%" name="iframe_right"></iframe-->
+	</div>
+	<div class="fullCard">
+		<h3 class="center-text">Learn Linux and BSD at anywhere and anytime.</h3>
+	</div>
+	<div class="center-text">
+		<p>Have Fun!</p>
 	</div>
 	</body>
 </html>

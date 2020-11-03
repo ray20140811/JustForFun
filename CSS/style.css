@@ -1,35 +1,145 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
 }
 
-.menu, .home, .linux, .linuxcommand, 
-.linuxapplication, .linuxfilesystem, .linuxdriver {
+h1 {
+    font-family: Lobster;
+}
+
+h4 {
+    text-align: left;
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+}
+
+p {
+    font-family: monospace;
+    text-align: center;
+}
+
+.p-left {
+    font-family: monospace;
+    text-align: left;
+}
+
+.p-justify {
+    text-align: justify;
+}
+
+.code {
+    width: 600px;
+    background-color: rgb(240, 240, 240);
+    padding: 15px;
+    border: 1px dotted;
+    text-align: left;
+}
+
+.commandline {
+    width: 600px;
+    background-color: black;
+    color: white;
+    font: bold;
+    text-align: left;
+    padding: 15px;
+}
+
+
+.links {
+	text-align: left;
+	color: black;
+}
+
+#thumbnail {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.fullCard {
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+.cardContent {
+    padding: 10px;
+}
+
+.center-text {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.menu,
+.home,
+.linux,
+.distribution,
+.document,
+.embeddedsystem,
+.server,
+.shell,
+.linuxcommand,
+.linuxapplication,
+.linuxfilesystem,
+.linuxdriver {
     overflow: hidden;
     background-color: #111;
-  }
+}
 
 
-.menu a ,.home a, .linux a, .linuxcommand a,
-.linuxapplication a, .linuxfilesystem a, .linuxdriver a {
+.menu a ,
+.home a,
+.linux a,
+.distribution a,
+.document a,
+.embeddedsystem a,
+.server a,
+.shell a,
+.linuxcommand a,
+.linuxapplication a,
+.linuxfilesystem a,
+.linuxdriver a {
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  
-.home, .linux, .linuxcommand, 
-.linuxapplication, .linuxfilesystem, .linuxdriver {
+}
+
+
+.home,
+.linux,
+.distribution,
+.document,
+.embeddedsystem,
+.server,
+.shell,
+.linuxcommand,
+.linuxapplication,
+.linuxfilesystem,
+.linuxdriver {
     float: left;
     overflow: hidden;
-  }
-  
-.home .homebtn, .modeling .modelingbtn, .linux .linuxbtn,
-.linuxcommand .linuxcommandbtn, .linuxapplication .linuxapplicationbtn,
-.linuxfilesystem .linuxfilesystembtn, .linuxdriver .linuxdriverbtn {
-    font-size: 16px;  
+}
+
+.home .homebtn,
+.modeling .modelingbtn,
+.linux .linuxbtn,
+.distribution .distributionbtn,
+.document .documentbtn,
+.embeddedsystem .embeddedsystembtn,
+.server .serverbtn,
+.shell .shellbtn,
+.linuxcommand .linuxcommandbtn,
+.linuxapplication .linuxapplicationbtn,
+.linuxfilesystem .linuxfilesystembtn,
+.linuxdriver .linuxdriverbtn {
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
@@ -38,44 +148,85 @@ body {
     font-family: inherit;
     margin: 0;
 }
-  
-.menu a:hover, .home:hover .homebtn, .linux:hover .linuxbtn,
-.linuxcommand:hover .linuxcommandbtn, .linuxapplication:hover .linuxapplicationbtn,
-.linuxfilesystem:hover .linuxfilesystembtn, .linuxdriver:hover .linuxdriverbtn {
+
+.menu a:hover,
+.home:hover .homebtn,
+.linux:hover .linuxbtn,
+.distribution:hover .distributionbtn,
+.document:hover .documentbtn,
+.embeddedsystem:hover .embeddedsystembtn,
+.server:hover .serverbtn,
+.shell:hover .shellbtn,
+.linuxcommand:hover .linuxcommandbtn,
+.linuxapplication:hover .linuxapplicationbtn,
+.linuxfilesystem:hover .linuxfilesystembtn,
+.linuxdriver:hover .linuxdriverbtn {
     background-color: rebeccapurple;
-  }
-  
-.home-content , .linux-content, .linuxcommand-content,
-.linuxapplication-content, .linuxfilesystem-content, .linuxdriver-content {
+}
+
+.home-content ,
+.linux-content,
+.distribution-content,
+.document-content,
+.embeddedsystem-content,
+.server-content,
+.shell-content,
+.linuxcommand-content,
+.linuxapplication-content,
+.linuxfilesystem-content,
+.linuxdriver-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
+}
 
-.home-content a, .linux-content a, .linuxcommand-content a,
-.linuxapplication-content a, .linuxfilesystem-content a, .linuxdriver-content a {
+
+.home-content a,
+.linux-content a,
+.distribution-content a,
+.document-content a,
+.embeddedsystem-content a,
+.server-content a,
+.shell-content a,
+.linuxcommand-content a,
+.linuxapplication-content a,
+.linuxfilesystem-content a,
+.linuxdriver-content a {
     float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-  }
-  
-.home-content a:hover, .linux-content a:hover,
-.linuxcommand-content a:hover, .linuxapplication-content a:hover,
-.linuxfilesystem-content a:hover, .linuxdriver-content a:hover {
+}
+
+.home-content a:hover,
+.linux-content a:hover,
+.distribution-content a:hover,
+.document-content a:hover,
+.embeddedsystem-content a:hover,
+.server-content a:hover,
+.shell-content a:hover,
+.linuxcommand-content a:hover,
+.linuxapplication-content a:hover,
+.linuxfilesystem-content a:hover,
+.linuxdriver-content a:hover {
     background-color: #ddd;
 }
-  
-.home:hover .home-content, .linux:hover .linux-content,
-.linuxcommand:hover .linuxcommand-content, .linuxapplication:hover .linuxapplication-content,
-.linuxfilesystem:hover .linuxfilesystem-content, .linuxdriver:hover .linuxdriver-content {
 
-  display: block;
+.home:hover .home-content,
+.linux:hover .linux-content,
+.distribution:hover .distribution-content,
+.document:hover .document-content,
+.embeddedsystem:hover .embeddedsystem-content,
+.server:hover .server-content,
+.shell:hover .shell-content,
+.linuxcommand:hover .linuxcommand-content,
+.linuxapplication:hover .linuxapplication-content,
+.linuxfilesystem:hover .linuxfilesystem-content,
+.linuxdriver:hover .linuxdriver-content {
+    display: block;
 }
-
