@@ -3,17 +3,35 @@
 <head>
 	<link rel="stylesheet" href="../../CSS/style.css">
 	<style>
+		p {
+			text-align: justify;
+		}
 	</style>
 	<title>tar</title>
 </head>
 <body>
-	<h1>tar</h1>
-	<p class="p-left">an archiving utility</p>
-	<h4>解包</h4>
-	<p class="code">tar xvf FILENAME.tar</p>
-	<h4>打包</h4>
-	<p class="code">tar cvf FILENAME.tar SOURCEFILES</p>
-	<h6>Example</h6>
-	<p class="commandline">$ tar cvf MyProject.tar ~/Project</p>
+	<div class="fullCard" id="thumbnail">
+		<div class="cardContent">
+			<div class="cardText">
+				<h4>tar</h4>
+				<p>GNU 'tar' saves many files together into a single tape or disk archive, and can
+restore individual files from the archive.</p>
+				<p>用來打包和解包</p>
+				<hr>
+				<h6>Usage: 打包</h6>
+				<p class="code">$ tar [OPTION...] [FILE]...</p>
+				<h6>Example</h6>
+				<p># Create archive.tar from files foo and bar.</p>
+				<p class="commandline">$ tar -cf MyProject.tar ~/Project</p>
+				<h6>Usage: 解包</h6>
+				<p class="code">$ tar [OPTION...] [FILE]...</p>
+				<h6>Example</h6>
+				<p># List all files in archive.tar verbosely.</p>
+				<p class="commandline">$ tar -tvf MyProject.tar </p>
+				<p># Extract all files from archive.tar.</p>
+				<p class="commandline">$ tar -xf MyProject.tar </p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
