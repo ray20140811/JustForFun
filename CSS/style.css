@@ -82,8 +82,8 @@ p {
 .embeddedsystem,
 .server,
 .shell,
-.linuxcommand,
-.linuxapplication,
+.command,
+.software,
 .linuxfilesystem,
 .linuxdriver {
     overflow: hidden;
@@ -99,8 +99,8 @@ p {
 .embeddedsystem a,
 .server a,
 .shell a,
-.linuxcommand a,
-.linuxapplication a,
+.command a,
+.software a,
 .linuxfilesystem a,
 .linuxdriver a {
     float: left;
@@ -119,8 +119,8 @@ p {
 .embeddedsystem,
 .server,
 .shell,
-.linuxcommand,
-.linuxapplication,
+.command,
+.software,
 .linuxfilesystem,
 .linuxdriver {
     float: left;
@@ -135,8 +135,8 @@ p {
 .embeddedsystem .embeddedsystembtn,
 .server .serverbtn,
 .shell .shellbtn,
-.linuxcommand .linuxcommandbtn,
-.linuxapplication .linuxapplicationbtn,
+.command .commandbtn,
+.software .softwarebtn,
 .linuxfilesystem .linuxfilesystembtn,
 .linuxdriver .linuxdriverbtn {
     font-size: 16px;
@@ -157,8 +157,8 @@ p {
 .embeddedsystem:hover .embeddedsystembtn,
 .server:hover .serverbtn,
 .shell:hover .shellbtn,
-.linuxcommand:hover .linuxcommandbtn,
-.linuxapplication:hover .linuxapplicationbtn,
+.command:hover .commandbtn,
+.software:hover .softwarebtn,
 .linuxfilesystem:hover .linuxfilesystembtn,
 .linuxdriver:hover .linuxdriverbtn {
     background-color: rebeccapurple;
@@ -171,8 +171,8 @@ p {
 .embeddedsystem-content,
 .server-content,
 .shell-content,
-.linuxcommand-content,
-.linuxapplication-content,
+.command-content,
+.software-content,
 .linuxfilesystem-content,
 .linuxdriver-content {
     display: none;
@@ -191,8 +191,8 @@ p {
 .embeddedsystem-content a,
 .server-content a,
 .shell-content a,
-.linuxcommand-content a,
-.linuxapplication-content a,
+.command-content a,
+.software-content a,
 .linuxfilesystem-content a,
 .linuxdriver-content a {
     float: none;
@@ -210,8 +210,8 @@ p {
 .embeddedsystem-content a:hover,
 .server-content a:hover,
 .shell-content a:hover,
-.linuxcommand-content a:hover,
-.linuxapplication-content a:hover,
+.command-content a:hover,
+.software-content a:hover,
 .linuxfilesystem-content a:hover,
 .linuxdriver-content a:hover {
     background-color: #ddd;
@@ -224,8 +224,8 @@ p {
 .embeddedsystem:hover .embeddedsystem-content,
 .server:hover .server-content,
 .shell:hover .shell-content,
-.linuxcommand:hover .linuxcommand-content,
-.linuxapplication:hover .linuxapplication-content,
+.command:hover .command-content,
+.software:hover .software-content,
 .linuxfilesystem:hover .linuxfilesystem-content,
 .linuxdriver:hover .linuxdriver-content {
     display: block;
