@@ -19,6 +19,11 @@ p {
     text-align: center;
 }
 
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
 .p-left {
     font-family: monospace;
     text-align: left;
@@ -44,7 +49,6 @@ p {
     text-align: left;
     padding: 15px;
 }
-
 
 .links {
 	text-align: left;
@@ -72,7 +76,6 @@ p {
     margin-bottom: 30px;
     text-align: center;
 }
-
 
 .menu,
 .home,
