@@ -8,7 +8,7 @@ vue packages
 
 markdown packages
 -----------------
-* markdown preview
+* markdown preview (markdown預覽)
 * markdown-toc (主要用來快速生成markdown目錄)
 * markdown-preview-enhanced (含同步滾動預覽，Latex公式預覽)
 * language-markdown (程式碼增強)
@@ -19,16 +19,20 @@ markdown packages
 
 Useful Packages
 ---------------
+* atom-html-preview (HTML預覽)
+* autosave-onchange (自動保存)
+* view-in-browser (用瀏覽器開啟檔案)
+* vim-mode-plus (vim)
 * highlight-selected (高亮已選擇的項目，可以幫助你找到它。)
 * Sublime-Style-Column-Selection (ALT+滑鼠左鍵 垂直選取)
 
 How to uninstall packages?
 --------------------------
-	
-	apm list
-	apm uninstall PACKAGENAME 
 
-or 
+	apm list
+	apm uninstall PACKAGENAME
+
+or
 
 	rm -rf ~/.atom/packages/PACKAGENAME
 
