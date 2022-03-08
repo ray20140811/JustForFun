@@ -1,50 +1,165 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="CSS/style.css">
-        <style>
-			p {
-				font-family: Lobster;
-			}
-            a {
-                font-size: 15px;
-            }
-            .tut_overview{
-                /* display :none; */
-                margin-left:10px;
-                background-color :#ddd;
-                line-height:1.8em;
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Just For Fun</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
 
-            }
-            .aliceblue-background {
-				background-color: aliceblue;
-			}
-        </style>
-    </head>
-    <body class="aliceblue-background">
-        <h3 class="left"><span class="left_h3">Linux</span></h3>
-        <a  href="LinuxKernel/default.html" target="iframe_right">Linux Kernel</a><br>
-        <div class="tut_overview">
-            <a  href="https://www.Kernel.org/" target="_new">The Linux Kernel Archives</a><br>
+        .jumbotron {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .mycode {
+            background-color: black;
+            color: white;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 0.1em;
+        }
+
+        .code {
+            font-size: 18px;
+            padding: 10px;
+            text-align: left;
+            background: black;
+            color: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 3px;
+            margin: 15px 0 0;
+        }
+
+        .shell {
+            font-size: 18px;
+            color: green;
+        }
+
+        .shell-slash {
+            color: blue;
+        }
+
+        .title {
+            text-decoration: underline;
+        }
+
+        .mycard {
+            font-size: 18px;
+            padding: 10px;
+            text-align: left;
+            background: #fafafa;
+            border: 2px solid #e0e0e0;
+            border-radius: 3px;
+            margin: 15px 0 0;
+        }
+
+        .myhr {
+            border: 0.1px solid
+        }
+
+        .myhr-border-2 {
+            border: 2px solid black;
+        }
+
+        .myhr-border-4 {
+            border: 4px solid black;
+        }
+
+        .myhr-border-4-blue {
+            border: 4px solid blue;
+        }
+
+        .myhr-border-4-lightblue {
+            border: 4px solid #2196f3;
+        }
+
+        .myhr-border-4-darkcyan {
+            border: 4px solid darkcyan;
+        }
+
+        body {
+            background-color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="default.html">Just For Fun</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">程式設計</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">作業系統</a>
+                </li>
+            </ul>
         </div>
-        <a  href="LinuxDistribution/default.html" target="iframe_right" onclick="">Linux Distribution</a><br>
-        <div class="tut_overview">
-            <a  href="https://www.dragora.org/" target="iframe_right">Dragora</a><br>
-            <a  href="https://trisquel.info/en" target="iframe_right">trisquel</a><br>
-            <a  href="https://www.parabola.nu/" target="iframe_right">Parabola</a><br>
-            <a  href="https://pureos.net/" target="iframe_right">PureOS</a><br>
-            <a  href="https://antixlinux.com/" target="iframe_right">AntiX Linux</a><br>
-            <a  href="http://puppylinux.com/" target="iframe_right">Puppy Linux</a><br>
-            <a  href="http://www.linuxfromscratch.org/" target="iframe_right">Linux From Scratch</a><br>
-        </div>
-        <a  href="LinuxCommand/default.html" target="iframe_right">Linux Command</a><br>
-        <div class="tut_overview">
-            <a  href="LinuxCommand/find.html" target="iframe_right">find</a><br>
-            <a  href="LinuxCommand/grep.html" target="iframe_right">grep</a><br>
-            <a  href="LinuxCommand/tar.html" target="iframe_right">tar</a><br>
+    </nav>
+
+    <div class="container" style="margin-top:30px">
+
+        <!-----------[程式設計] ---->
+        <div class="card" style="margin-top: 50px;">
+            <div class="card-body">
+                <h3>程式設計</h3>
+                <hr class="myhr-border-4-darkcyan">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">C</a>
+                  <a href="#" class="list-group-item list-group-item-action">C#</a>
+                  <a href="#" class="list-group-item list-group-item-action">Java</a>
+                  <a href="#" class="list-group-item list-group-item-action">Python</a>
+                </div>
+            </div>
         </div>
 
+        <!-----------[作業系統] ---->
+        <div class="card" style="margin-top: 50px;">
+            <div class="card-body">
+                <h3>作業系統</h3>
+                <hr class="myhr-border-4-darkcyan">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">Windows</a>
+                  <a href="#" class="list-group-item list-group-item-action">Linux</a>
+                  <a href="#" class="list-group-item list-group-item-action">FreeBSD</a>
+                </div>
+            </div>
+        </div>
 
-    </body>
+        <!-----------[軟體工具] ---->
+        <div class="card" style="margin-top: 50px;">
+            <div class="card-body">
+                <h3>軟體工具</h3>
+                <hr class="myhr-border-4-darkcyan">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">BlueJ</a>
+                  <a href="#" class="list-group-item list-group-item-action">BlueFish</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p></p>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <!-- <p>Copyright ©2022 Just For Fun foundation</p> -->
+        Copyright ©2022 Just For Fun Foundation
+    </div>
+</body>
 </html>
