@@ -3,11 +3,20 @@ docker
 
 常用指令
 -------
+* docker version
+* docker image ls
+* docker container ls
+* docker pull hello-world
 * docker run hello-world
 * docker run --name my-hello hello-world
 
-* docker run -it ubuntu bash
+* docker run -it ubuntu bash 
+  下載並運行
+
 * docker run -it --name my-linux-container ubuntu bash
+
+* docker container ls
+* docker container kill <CONTAINER_ID>
 
 * docker ps -a
 
@@ -34,4 +43,5 @@ docker
 	docker ps -a
 	docker build -t my-ubuntu-image .
 	docker run -it my-ubuntu-image
+
 
