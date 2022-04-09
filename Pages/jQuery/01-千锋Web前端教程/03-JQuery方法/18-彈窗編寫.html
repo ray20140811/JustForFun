@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <style>
+    * { margin: 0px; padding: 0px}
+    #div1 { width: 300px; height: 300px; border: 1px solid black; position: relative; display: none}
+    #close { position: absolute; right: 0px; top: 0px}
+
+  </style>
+  <script>
+
+    $(function(){
+	//計算居中的top和left的值
+	var top = $(window).scrollTop() + ($(window).height() - $("#div1").outerHeight(true))/2;
+	var left = ($(window).width() - $("#div1").outerWidth(true))/2;
+
+	$("#div1").css({
+	    left: left,
+	    top: top
+	});
+
+
+	$(window).on("scroll resize", function(){
+	    var top = $(window).scrollTop() + ($(window).height() - $("#div1").outerHeight(true))/2;
+	    var left = ($(window).width() - $("#div1").outerWidth(true))/2;
+
+	    $("#div1").css({
+		left: left,
+		top: top
+	    });
+	});
+    
+	
+	$("#issue").click(function(){
+	    $("#div1").css("display", "block");
+	});
+
+	$("#close").click(function(){
+	    $("#div1").css("display", "none");
+	});
+    });
+
+  </script>
+</head>
+<body style="height:3000px">
+  <button id='issue'>發佈</button>
+  <div id="div1">
+    <input type="text" placeholder="用戶名">
+    <input type="text" placeholder="密碼">
+    <div id='close'>X</div>
+  </div>
+</body>
+</html>

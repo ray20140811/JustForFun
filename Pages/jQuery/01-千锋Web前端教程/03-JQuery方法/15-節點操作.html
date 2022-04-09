@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <script>
+    /*
+      - insertBefore()    before()
+      - insertAfter()     after()
+      - appendTo()    插入到子節點的末尾      append()
+      - prependTo()   插入到子節點的首位     prepend()
+      - remove()
+
+      【注】
+     */
+  $(function(){
+
+      //找到span節點插入到div的前面
+      //$("span").insertBefore($("div"));
+
+      //找到div節點,插入到span節點的後面
+      //$("div").insertAfter($("span"));
+
+      //找到span節點，插入到div節點的子節點的末尾
+      //$("span").appendTo($("div"));
+
+      //找到span節點，插入到div節點的子節點的首位
+      //$("span").prependTo($("div"));
+
+      //移除div節點
+      //$("div").remove();
+
+      //找到span節點插入到div的前面
+      //$("span").insertBefore($("div"));
+
+      //與鏈式的用法一起,操作的元素會不同,下面的寫法會把span元素背景變成紅色
+      //$("span").insertBefore($("div")).css("backgroundColor", 'red'); 
+
+      //div節點前面是span
+      //$("div").before($("span"));
+
+      //與鏈式的用法一起,操作的元素會不同,下面的寫法會把div元素背景變成紅色
+      $("div").before($("span")).css("backgroundColor", 'red');
+     
+  });
+  </script>
+</head>
+<body>
+  <div id="div1"><em>em</em>div文本</div>
+  <span>span</span>
+</body>
+</html>

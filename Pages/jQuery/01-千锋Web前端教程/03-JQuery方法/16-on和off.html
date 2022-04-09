@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <style>
+    #div1 { width: 100px; height: 100px; background-color: red}
+  </style>
+  <script>
+
+    /*
+      $().click(function(){
+      
+      })
+
+      on和off方法
+
+      【注】
+     */
+
+    $(function(){
+	//事件綁定
+	/*
+	$("#div1").click(function(){
+	    alert(1);
+	})
+
+	$("#div1").click(function(){
+	    alert(2);
+	})
+	*/
+
+	//on用法
+	//1.給一個事件添加一個函數
+	/*
+	$("#div1").on("click", function(){
+	    alert("hello");
+	});
+	*/
+
+	//2.同時給多個事件添加一個函數,多給事件之間可以通過空格隔開
+	/*
+	var i = 0;
+	$("#div1").on("click mouseover", function(){
+	    $(this).html(i++);
+	});
+	*/
+
+	//3.給不同的事件添加不同的函數
+	/*
+	$("#div1").on({
+	    click: function(){
+		alert("點擊");
+	    },
+	    mouseover: function(){
+		$(this).css("backgroundColor", 'orange');
+	    },
+	    mouseout: function(){
+		$(this).css("backgroundColor", 'blue');
+	    }
+	});
+	*/
+
+	//4.事件委託
+	/*
+	  第2個參數是觸發對象的選擇器
+
+	 */
+	/*
+	$("ul").on("click", "li", function(){
+		$(this).css("backgroundColor", 'red');
+	})
+
+	var i = 6;
+	$("#btn1").click(function(){
+	    //新增li節點
+	    $(`<li>${i++ * 1111}</li>`).appendTo($("ul"));
+	})
+	*/
+
+	$("#div1").on({
+	    click: function(){
+		alert("點擊");
+	    },
+	    mouseover: function(){
+		$(this).css("backgroundColor", 'orange');
+	    },
+	    mouseout: function(){
+		$(this).css("backgroundColor", 'blue');
+	    }
+	});
+
+	function show(){
+	    alert("show");
+	}
+
+	$("#div1").click(show);
+
+	$("#cancel").click(function(){
+	    //$("#div1").off(); //取消所有事件上的所有函數
+	    //$("#div1").off("click"); //取消某一個事件下的所有函數
+
+	    $("#div1").off("click", show); //取消某一個事件下指定的函數
+	});
+
+    });
+
+  </script>
+</head>
+<body>
+  <div id="div1"></div>
+    <ul>
+      <li>1111</li>
+      <li>2222</li>
+      <li>3333</li>
+      <li>4444</li>
+      <li>5555</li>
+    </ul>
+    <button id="btn1">增加節點</button>
+    <button id="cancel">取消事件</button>
+</body>
+</html>

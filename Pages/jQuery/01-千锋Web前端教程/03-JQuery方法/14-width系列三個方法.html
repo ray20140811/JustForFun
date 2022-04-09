@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <style>
+    #div1 { width: 100px; height: 100px; background-color: red; border: 1px solid black; padding: 8px; margin: 20px}
+  </style>
+  <script>
+    // width()      innerWidth()     outerWidth()
+    // height()     innerHeight()    outerHeight()
+    /*
+      offsetWidth  width + border + padding
+
+      【注】
+     */
+  $(function(){
+      alert('css("width")=' + $("#div1").css("width")); //"100px"字符串
+      alert($("#div1").width()); //width
+      alert($("#div1").innerWidth()); //width + padding
+      alert($("#div1").outerWidth()); //width + border + padding
+      alert($("#div1").outerWidth(true)); //width + border + padding + margin
+  });
+  </script>
+</head>
+<body>
+  <div id="div1"></div>
+</body>
+</html>
