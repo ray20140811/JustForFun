@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <script>
+    /*
+      filter 過濾: 對已經獲取到的網頁元素進行過濾
+      not       : 過濾的反義詞
+      has       : 直接判定子節點中是否有符合條件的元素。
+     */
+    $(function(){
+	//$("div").css("backgroundColor", "orange"); //所以的div元素背景都爲橘色
+	//$("div").filter(".box").css("backgroundColor", "orange"); //找到div中class爲box的元素
+	//$("div").not(".box").css("backgroundColor", "orange"); //找到div中class不爲box的元素
+	$("div").has(".box").css("backgroundColor", "orange"); //找到div中子節點的class爲box的元素
+    });
+  </script>
+</head>
+<body>
+  <div class="box">div1</div>
+  <div>div2 <strong class="box"></strong></div>
+</body>
+</html>

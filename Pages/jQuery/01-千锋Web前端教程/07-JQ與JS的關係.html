@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+	//$("#div1") //jQuery對象
+	//alert($("#div1").innerHTML); //錯的寫法
+	alert($("#div1").html()); //對的寫法:jQuery的寫法
+
+	/*
+	  jQuery和JS可以共存,但不能混用
+	 */
+    });
+  </script>
+</head>
+<body>
+  <div id="div1">div文本</div>
+</body>
+</html>

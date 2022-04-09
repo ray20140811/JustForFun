@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+	/*
+	$("h1").click(function(){
+	    alert("點擊");
+	})
+
+	$("h1").css("backgroundColor", "orange");
+
+	$("h1").mouseover(function(){
+	    this.style.backgroundColor = 'red';
+	})
+
+	$("h1").mouseout(function(){
+	    this.style.backgroundColor = 'blue';
+	})
+	*/
+
+	//[注]我們可以通過鏈式操作對上述操作進行簡化
+	$("h1").click(function(){
+	    alert("點擊");
+	})
+	.css("backgroundColor", "orange")
+	.mouseover(function(){
+	    this.style.backgroundColor = 'red';
+	}).mouseout(function(){
+	    this.style.backgroundColor = 'blue';
+	})
+
+    });
+
+  </script>
+</head>
+<body>
+  <h1>hello world</h1>
+</body>
+</html>

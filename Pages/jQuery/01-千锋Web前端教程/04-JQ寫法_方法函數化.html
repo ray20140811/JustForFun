@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    /*
+    window.onload = function() {
+
+    }
+    */
+
+    /*
+      【注】在JQ中基本上見不到等於號.所有的賦值操作都是函數傳參的操作.
+     */
+    $(function(){
+	alert("相當於window.onload");
+
+	$("h1").click(function(){
+	    alert("我被點擊了");
+	})
+
+	//後續所有的事件綁定大家都會了,都是一樣的套路
+	$("h1").mouseover(function(){
+	    this.style.backgroundColor = 'red';
+	})
+
+	$("h1").mouseout(function(){
+	    this.style.backgroundColor = 'blue';
+	})
+    });
+  </script>
+</head>
+<body>
+  <h1>Hello World</h1>
+</body>
+<script>
+  alert("Hello");
+</script>
+</html>

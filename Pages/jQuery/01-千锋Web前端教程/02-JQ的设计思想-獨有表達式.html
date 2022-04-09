@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #div1{}
+    li{}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    window.onload = function() {
+	//all li element
+	//$("li").css("backgroundColor", 'red');
+
+        //表達式的寫法
+	//$("li:first").css("backgroundColor", 'blue');
+	//$("li:last").css("backgroundColor", 'green');
+
+        //比較高級的表達式寫法
+	//$("li:even").css("backgroundColor", 'red');
+	//$("li:odd").css("backgroundColor", 'yellow');
+
+	$("li:eq(2)").css("backgroundColor", 'yellow');
+    }
+  </script>
+</head>
+<body>
+  <ul>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+</head>
+<body>
+  <script>
+    /*
+      find 查找子節點
+     */
+    $(function(){
+	//$("li").css("backgroundColor", "red"); //所有的li元素都會變成紅色
+	//$("ul").find("li").css("backgroundColor", "red"); //ul下的li元素變成紅色
+	//$("ul li").css("backgroundColor", "red"); //和上面寫法相同的結果
+	//$("ul").find(".box").css("backgroundColor", "red"); //ul下 class爲box的元素 紅色
+	$("ul").find("[name=hello]").css("backgroundColor", "red"); //ul下 class爲box的元素 紅色
+    })
+  </script>
+</body>
+     <ul>
+       <li class="box"></li>
+       <li name="hello"></li>
+       <li class="box"></li>
+     </ul>
+     <ol>
+       <li></li>
+       <li></li>
+       <li></li>
+     </ol>
+</html>

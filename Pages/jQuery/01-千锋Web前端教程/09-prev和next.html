@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+</head>
+<body>
+  <script>
+    /*
+      prev 查找當前兄弟節點中的上一個節點
+      next 查找當前兄弟節點中的下一個節點
+     */
+    $(function(){
+	$("h3").prev().css("backgroundColor", "red");
+	$("h3").next().css("backgroundColor", "blue");
+    })
+  </script>
+</body>
+    <h2>h2</h2>
+    <p>p</p>
+    <h3>h3</h3>
+    <em>em</em>
+</html>

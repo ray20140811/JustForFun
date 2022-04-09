@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="jquery-1.12.4.min.js"></script> 
+  <script>
+    /*
+      attr 設置和修改行間屬性
+     */
+  $(function(){
+      /*
+      alert($("#div1").attr("id"));
+      alert($("#div1").attr("title"));
+      alert($("#div1").attr("class"));
+      */
+
+      //設置屬性值
+      /*
+      $("#div1").attr("title", "world");
+      $("#div1").attr("class", "box22");
+      */
+
+      //一次性修改多條屬性
+      $("#div1").attr({
+	  title: 'world',
+	  class: "xxx",
+	  yyy: "zzz"
+      })
+  });
+  </script>
+</head>
+<body>
+  <div id="div1" title="hello" class="box"></div>
+</body>
+</html>
