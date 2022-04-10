@@ -1,0 +1,17 @@
+* NeoTree
+
+** Shortcut
+- <n> : next line 
+- <p> : previous line
+- <SPC> or <Enter> or <TAB> : open current item
+- <U> : go up a directory
+- <g> : refresh
+- <A> : Maximize/Minimize the NeoTree Window
+- <H> : Toggle display hidden files
+- <H> : Toggle display hidden files
+- <C-c C-n> : create a file or create a directory if filename ends with a '/'
+- <C-c C-d> : delete a file or a directory 
+- <C-c C-r> : rename a file or a directory 
+- <C-c C-c> : change the root directory 
+- <C-c C-p> : copy a file or a directory 
+
