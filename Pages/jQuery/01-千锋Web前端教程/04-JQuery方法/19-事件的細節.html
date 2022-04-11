@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+        div { padding: 50px; }
+        #div1 { background-color: red; }
+        #div2 { background-color: blue; }
+        #div3 { background-color: orange; }
+    </style>
+    <script>
+        /*
+            [注] 都是兼容後的.
+            * ev pageX 
+            * which
+                滑鼠事件: button
+                1 左鍵
+                2 滾輪
+                3 右鍵
+                keydown: keyCode 鍵碼
+                keypress: charCode 字符碼
+
+            * preventDefault stopPropagation
+            * 
+            [注] 大家不能為了使用JQ而使用JQ.如果實際開發的時候JS一些比較簡單的操作,沒必要寫成JQ代碼
+        */
+        $(function(){
+            $("div").click(function(ev){
+                alert(this.id);
+                //alert($(this).attr("id")); //不要為了使用JQ而使用JQ
+                ev.stopPropagation();   //阻止事件冒泡
+            });
+
+
+            $("a").click(function(ev){
+                // ev.preventDefault(); //阻止默認行為. 在這裡不會進行跳轉
+                // ev.stopPropagation(); //阻止事件冒泡
+
+                //既阻止事件冒泡,又阻止默認行為
+                    return false;
+            });
+
+            // $(document).click(function(ev){
+            //     // alert(ev.pageX + ", " + ev.pageY);  //帶滾動距離
+            //     // alert(ev.clientX + ", " + ev.clientY);  //可視窗口為原點    
+            //     alert(ev.which);
+            // });
+
+            $(document).mousedown(function(ev){
+                alert(ev.which);    
+            });
+
+            // $(document).keydown(function(ev){
+            //     alert(ev.which);
+            // });
+
+            $(document).keypress(function(ev){
+                alert(ev.which);                
+            });
+        })
+    </script>
+</head>
+<body style="height: 3000px">
+    <!-- <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <a href="https://www.baidu.com">百度</a>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>
