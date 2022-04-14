@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-1.12.4.min.js"></script>
+    <style>
+        * { margin: 0px; padding: 0px; }
+        #div1 { width: 200px; height: 200px; background-color: orange; margin: 30px;}
+        #div2 { width: 100px; height: 100px; background-color: blue; margin: 20px; }
+    </style>
+    <script>
+        /*
+            * offset() 直接獲取當前元素,距離最左邊的距離, margin不算數的.
+            * position() 直接獲取當前元素,距離第一個元素有定位父節點的距離, margin算在內
+            * offsetParent() 查找第一個有定位的父節點,如果父節點沒有定位就繼續往上去找,最終找到html節點
+            * 
+            [注] 
+        */
+        $(function(){
+            //alert($("#div2").css("left")); //auto
+
+            //alert($("#div2").offset().left); //50: 因為div1 margin:30px + div2 margin:20px
+            
+            //alert($("#div2").position().left);
+            //alert($("#div2").position().top);
+
+            $("#div2").offsetParent().css("backgroundColor", 'yellow'); //如果把style #div1的position:relative去掉,則父節點變成html
+        })
+    </script>
+</head>
+<body style="height: 3000px">
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+</body>
+</html>
