@@ -29,6 +29,23 @@ Alpine
 
 	`rc-service nginx stop`
 
+# Apache setup
+
+	`apk add apache2`
+
+	`rc-service apache2 start`
+
+##	ash: rc-service: not found
+
+	`apk add openrc --no-cache`
+
+	 `rc-service apache2 start`
+
+## Consider permanently enabling apache on startup 
+
+	`rc-update add apache2`
+
+## Edit the configuration in /etc/apache2/, then run rc-service apache2 restart to enable your changes
 	
 # reboot/halt/poweroff
 
