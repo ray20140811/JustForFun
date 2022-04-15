@@ -7,6 +7,7 @@ docker
 * docker image ls
 * docker container ls
 * docker pull hello-world
+
 * docker run hello-world
 * docker run --name my-hello hello-world
 
@@ -20,11 +21,15 @@ docker
 
 * docker ps -a
 
+* docker attach <CONTAINER_ID>
+
+* docker stop <CONTAINER_ID>
+  - docker stop my-hello
+
 * docker rm my-hello
 * docker rm $(docker ps -a -f status=exited -q)
 * sudo docker rm $(sudo docker ps -a -f status=exited -q)
 
-* docker stop my-hello
 
 * docker run -it --name my-linux-container --rm -v /Data/Private/Document/Project/learning/Docker:/my-data ubuntu bash
 
