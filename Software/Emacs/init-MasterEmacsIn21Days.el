@@ -1,3 +1,8 @@
+;; Enable line-numbers
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
+
+;;;;;;;;;;;;;;;;;;;;;;;;start;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
 
@@ -130,6 +135,67 @@ M-x custmoize-group <PACKAGE-NAME>
 ;;  ("\\.c\\'" . c-mode)
 ;;  ("\\.h\\'" . c-mode)
 ;;  …)
+
+;; 自动加载外部修改过的文件
+(global-auto-revert-mode 1)
+
+;; 关闭自动保存文件
+;;(setq auto-save-default nil)
+
+;; popwin 自动将光标移动到，新创建的窗口中。
+(require 'popwin)
+(popwin-mode 1)
+
+;; 关闭 Emacs 中的警告音
+(setq ring-bell-function 'ignore)
+
+;; (yes or no ) 设置一个别名将其简化
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; 一次重新缩进全部缓冲区的代码
+(defun indent-buffer()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun indent-region-or-buffer()
+  (interactive)
+  (save-excursion
+    (if (region-active-p)
+	(progn
+	  (indent-region (region-beginning) (region-end))
+	  (message "Indent selected region."))
+      (progn
+	(indent-buffer)
+	(message "Indent buffer.")))))
+
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;; 缩写补全
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+    ;; Shifu
+    ("8zl" "zilongshanren")
+    ;; Tudi
+    ("8lxy" "lixinyang")
+   ))
+
+;; Hippie 补全
+(setq hippie-expand-try-function-list '(try-expand-debbrev
+					try-expand-debbrev-all-buffers
+					try-expand-debbrev-from-kill
+					try-complete-file-name-partially
+					try-complete-file-name
+					try-expand-all-abbrevs
+					try-expand-list
+					try-expand-line
+					try-complete-lisp-symbol-partially
+					try-complete-lisp-symbol))
+
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+;; 970
+
+
 
 
 
