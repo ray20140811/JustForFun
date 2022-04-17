@@ -1,0 +1,572 @@
+http://www.study-area.org/tips/linux_entry.htm  
+
+GNU/Linux 初學之旅
+
+李果正 Edward G.J. Lee
+
+目 錄 
+
+* 0.1 前言 
+* 0.2 強烈建議手頭上要有一、二本基礎書籍！！！ 
+* 0.3 行前準備 
+* 0.4 GNU/Linux 的 distribution(發行套件，簡稱 distro) 的問題 
+* 0.5 Mouse vs. Keyboard 
+* 0.6 建議先學的幾個指令及架構(開始蹲一點點馬步吧！:) 
+* 0.7 GNU/Linux 上有沒有 ``窗'' 呢？ 
+* 0.8 我能在 GNU/Linux 上做什麼事情呢？ 
+* 0.9 精華區 
+* 0.10 不錯的中文網站 
+* 0.11 不錯的英文網站 
+* 0.12 各位的系統裡就有不少文件可以參考 
+* 0.13 硬體支援資料庫 
+* 0.14 找軟體 
+* 0.15 網路學習 
+* 0.16 呼天不應，叫地不響的時候 
+* 0.17 進階內容的獲得 
+* 0.18 本文的內容變遷 
+* 0.19 授權聲明 
+* About this document ... 
+
+  
+0.1 前言 
+
+這篇文章旨在幫助初接觸 GNU/Linux 的朋友能較輕鬆的進入 GNU/Linux 的世界。由於資料愈加愈多，書籍介紹的部份只好忍痛刪去，各位
+到書局逛逛應該就找得到合適的。 
+
+雖在發表之前已做過檢查，但疏漏難免，內容或連結如果有錯誤，或有些內容您認為有必要列入，請您隨時告知，很樂意接受大家的意見，
+謝謝！ 
+
+  
+0.2 強烈建議手頭上要有一、二本基礎書籍！！！ 
+
+不管您使用 GNU/Linux 的目的為何，請先準備一、二本的書，先看看書裡頭的相關內容後再配合 BBS 站上的精華區內容、網路上的文件，
+這樣和同好討論時會更有所得。 
+
+當然，如果您已有 Unix-like 系統的使用經驗，那網路上、系統上的一些資料也是可以讓您很容易的進入狀況。 
+
+另外，請不必急著追求新版本，新版本是追不完的，不如在穩定的版本裡頭整個架構先熟悉。不管是發行套件或是核心，剛出爐的，相關的
+配套工具軟體都得更新，設定也會不一樣，這對初學的朋友常會搞得一頭霧水，實在是沒有必要把時間浪費在這裡。到了一定的熟悉度就可
+以去使用發展中的版本 2，例如 CVS(Concurrent Version System) server 裡頭的版本，比市面上所能見到的版本都還新，所以還是先把
+基礎打好最要緊。 
+
+編譯核心(kernel)，幾乎書裡頭都會提到，但目前您是否有必要去編譯 kernel 呢？很值得深思，您真的搞得清楚編譯 kernel 前的一些選
+項、設定嗎？萬一出了問題(有些可能是潛在問題)，那真的是得不償失，kernel 可是整個系統的心臟呀！還是等熟悉一點再來玩編譯
+kernel 的遊戲吧！這裡有一篇 kids 兄翻譯的文章，很值得參考，請先看看，您有沒有必要去重編譯 kernel： 
+
+ http://linux.ee.tku.edu.tw/~kids/kernel/myth.html 
+
+  
+0.3 行前準備 
+
+GNU/Linux 3 是個還很年輕的作業系統（剛滿十歲沒多久），目前正處於成長期，改版（改進）相當快速，意思是您現在所看的資料，很可
+能過沒多久就是昨日黃花了（當然一些系統基本操作是變動很小的，這不必擔心），所以您要使用 GNU/Linux，最好要有 DIY 的心理準
+備，也要能主動學習。 
+
+GNU/Linux 和 Windows 系統是不同的兩種作業系統，定位不一樣，操作哲學也不一樣（至少目前是如此），因此如果您已習慣了 Windows
+的操作方式，請暫時先把它忘掉，當作您從未接觸過電腦一樣，否則您將 Windows 的操作習慣帶入 GNU/Linux 裡面來，將會造成學習上很
+大的困擾。操作方式的優劣，其實是和您的習慣息息相關的。 
+
+目前的 KDE, GNOME 的 GUI(Graphical User Interface) 環境的操作方式，和 Windows 系統有點類似，但底層的運作方式仍然不同，這些
+GUI 目前尚無法完全操控 GNU/Linux 系統的一些細節。但很明顯的，進步相當快速，一般用途應該是可以應付了，目前只是中文處理、列
+印方面還不算很流利，這還得靠大家的努力。 
+
+  
+0.4 GNU/Linux 的 distribution(發行套件，簡稱 distro) 的問題 
+
+Linux 其實只是 Linus Torvalds 所寫的 kernel，必需配上許多工具（絕大部份是 GNU 4 的）才能成為一個完整的作業系統，因此就有許
+多的廠商或團體在做這種整合的工作，這就是各種 distro 的由來。但由於主要部份還是： kernel + GNU Tools + XFree86，因此基本操
+作還是相同的，不必太擔心。 
+
+每個 distro 各有各的擁護者，很常看到版上討論哪一個 distro 比較好，對初學者而言，我覺得這不是很重要的問題，每個 distro 各有
+千秋，您選了哪一個 distro 您就盡量去適應她，過一段時間，熟悉了整個 GNU/Linux 架構，再去選您心目中的 distro。不過目前有許多
+已把中文整合好的系統，您可以先從這裡下手，例如： CLE、Mandrake、Debian、及國內廠商做的 distro。 
+
+安裝方式及安裝時所使用的指令各 distro 很可能會不一樣。在 i18n(internationalization，取前後字母和中間字母數目合成 i18n)架構
+下，目前大部份的 distro 都已具備中文能力，只不過是有沒有微調好及有沒有安裝中文字型的問題。 
+
+各獨立的 distro 討論區您可在下列地方找到： 
+
+ telnet bbs.sayya.org 
+ telnet linux.twbbs.org 
+ http://www.linuxfab.cx/indexForumTree.php 
+
+包括 CLE、Slackware、Red Hat、GNU Debian、Mandrake、SuSE ... 等等，如果您想先瞭解各 distro 可以去逛逛再來決定，甚至有許多
+distro 都已有熱心同好把安裝及使用手冊翻譯成中文供免費下載。 
+
+這裡鄭重的提醒各位，有空時把您的安裝光碟 mount 5 上來，看看裡面有些什麼東東，最近由於安裝程式的自動化，讓許多使用者跟本搞
+不清楚有什麼套件可以用，以致版上經常出現缺什麼程式，要安裝什麼套件的問題，千萬拜託熟悉一下自己的倉庫裡頭有些什麼存貨。 
+
+  
+0.5 Mouse vs. Keyboard 
+
+怪怪，怎麼談到這個問題呢？由於 Un*x 系統基本上是一群工具的結合，這些工具組合起來威力驚人，但同時也會嚇壞不少初學者（因為永
+遠搞不清楚有多少指令可用，也永遠搞不清楚要用到的指令有多少參數）。舉個例子：下面會提到的 ls 指令，主要是來觀察目錄內的檔案
+的，但同時也有相對的圖形化（GUI）的檔案管理程式(file manager)，就像您在 Windows 中用的「檔案總管」(explorer)一樣。那到底要
+用哪一種工具呢？ 
+
+GUI 的 file manager 表面上看是比較方便，但效率卻不怎麼樣，甚至會佔不少記憶體，另外有一個很重大的缺點是，沒辨法很方便的放進
+您所寫的 script 6 中。其次，沒人敢擔保自己的系統不出毛病，出了毛病恐怕就只能用軟碟來開機，這時，可沒有 GUI 工具給您用囉！
+另外，這些指令的參數相當多，可以做很精細的微調工作，達到您所想要的效果，這是 GUI 的東東不容易完整做到的，縱使做到了，大概
+選單會比指令的參數更複雜。 
+
+其實 GUI 的檔案管理程式只是整合了一些常用的系統上工具方便使用者使用而已。這裡可不是在貶低 GUI 的工具，而是說明看場合來選擇
+適合的工具將會增加您的工作效率。當然，有時候您是別無選擇啦！:) 
+
+Un*x 是多人多工的作業系統，縱使是家裡個人使用，還是一個多人多工的環境，因此基本上，您本人就是一位系統管理者，這和您以前使
+用的 windows, OS/2 系統是不一樣的，因此一些系統管理者需要做的事情，您多少都得懂一點才能善用 GNU/Linux 系統。尤其目前的
+Linux + XFree86 尚無法做到全面 GUI 的情形下，您蹲些馬步是必要的，縱使以後全面 GUI 了，還是建議您多蹲些馬步，一定會用得著
+的。 
+
+這裡所指的馬步，就是下面會談到的命令列(command line)指令。因此，老手一般喜歡使用 command line 的東東，如果您顧及效率，想對
+系統結構多些瞭解，而且以後也想寫個簡單的 script 程式玩玩的話，請多多留意 /sbin, /usr/sbin, /bin, /usr/bin 裡頭有些什麼工具
+可用（可能會讓您玩好久喔！）。命令列的指令，在 X 下也很常用到，可以開個模擬終端機。例如 rxvt/xterm 來使用。 
+
+  
+0.6 建議先學的幾個指令及架構(開始蹲一點點馬步吧！:) 
+
+這裡不做詳細說明，是非常簡單的介紹，要詳細請看 man pages、info pages、HOWTO 文件或書籍裡頭的說明。最重要的是，您要親自去操
+作看看。剛開始學習時由於規則不熟悉，會很不習慣，但可以把一些常用到的 tips 收集起來，就像以前學英文時先由句型著手一般。如果
+您是在 GUI 的環境下，請開個終端機(rxvt/xterm ...)，來試試看。 
+
+1 locate 
+ 這是快速尋找指令，請試試 locate locate 看看。有錯誤訊息出現的話，請用 updatedb 更新一下系統資料庫。比較複雜的條件式搜
+ 尋，請研究一下 find 指令。 
+2 man 
+ 這是看 manual pages 線上說明的指令。請試試 man locate 看看。按 h 來看操作說明，有空的話就 man man。請善用 man -k(或
+ apropos) 來找系統上的指令。例如要找 ftp 的相關指令 man -k ftp 就會列出一堆出來。另外，whatis ftp 則會有 ftp 的簡短說明，
+ whereis ftp 則會指出 ftp 這支程式及其 man page(ftp.1)的位置。 
+
+3 info 
+ 這是另一個線上說明的指令，請試試 info ls 看看。按 Ctrl + h 來看操作說明，有空的話就 info info。有個 pinfo 指令，但可能系
+ 統上沒有，找看看您的光碟上有沒有，可取代 info 指令，操作較簡便，而且有彩色。 
+
+4 ls(list) 
+ 這就是 DOS 裡的 dir 指令，意思就是 list 啦！功能比 dir 強多了！ls 的參數相當多，別忘了 man ls，找些您喜歡的參數試試看。
+
+5 cat(concatenate) 
+ 可以顯示檔案內容或結合數個檔案成為一個檔案。 
+
+6 more(less) 
+ 這在 DOS 裡也有，不過功能不可同日而語。壓縮檔請改用 zmore 及 izless(*.gz, *.Z) 或 bzmore 及 bzless(*.bz2)。more
+ /etc/profile 或 cat /etc/profile | more 兩種方式皆可。 
+
+7 gzip, bzip2, tar 
+ 這是 Un*x 系統常用到的壓縮、打包的工具，請務必要先熟悉，在網路上下載的檔案有許多都是 *.tar.gz, *.tar.bz2, *.tgz 的格式，
+ 您要解開就要利用到這些工具。 
+
+8 wget 
+ 這是抓檔的工具，如果沒有安裝，把您的安裝光碟 mount 上來，裝上去，http, ftp 上的檔案都可以抓，整個網站抓下來也沒問題。一
+ 般使用很簡單： 
+
+ wget ftp://xxx.xxx.xxx/target.tar.gz 
+ wget -c ftp://xxx.xxx.xxx/target.tar.gz (續傳) 
+ wget http://xxx.xxx.xxx/target.tar.gz 
+ wget -m -np http://xxx.xxx.xxx/target.html (將以 target.html 為中心的整個相關案抓下來，m=mirror，np=no parent 不抓上
+ 層目錄的檔案)。 
+
+ man wget 裡頭有相當多的實例供參考，也有 gwget 的 GUI 界面供使用。 
+
+9 telnet 
+ 打 BB 嗎？telnet bbs.xxx.xxx.xxx 就可以了！當然您要先有中文終端機，例如：chdrv, jmcce, crxvt ... 等等。而且要有中文輸入
+ 法，chdrv,jmcce 就有附，crxvt 的話可配合 xcin 來輸入中文。如果碰到亂碼，可使用 telnet -8 參數試看看。 
+
+10 請先熟悉任一種編輯器 
+ 在 Un*x 裡頭，有許多檔案的設定，都得自行手動去編輯設定檔，而 Un*x 裡頭的編輯器，實在是多的不像話 :-)。請選個自己認為順
+ 手而其他 Un*x 系統也有的編輯器來使用。vi, emacs 這兩個幾乎是 Un*x 系統的基本配備，當然使用上非常有個性就是了！另外還有
+ joe, pico ... 等較簡單的。 
+
+ * vi(m) 中文使用說明: 
+ http://www.study-area.net/tips/vim/index.html 
+ 或 
+ http://www.linuxfab.cx/indexColumnData.php?CID=53&FIRSTHIT=1 
+ http://www.linuxfab.cx/indexColumnData.php?CID=55&FIRSTHIT=1 
+ http://www.linuxfab.cx/indexColumnData.php?CID=58&FIRSTHIT=1 
+
+ * emacs 中文使用說明： 
+ ftp://beta.wsl.sinica.edu.tw/aspac/doc/94/94016.ps.gz 
+ 這個站還有一些中文文件，是中研院的 ASPAC 計劃，請先抓一下： 
+ ftp://beta.wsl.sinica.edu.tw/aspac/doc/announce.doc 
+ 看一看再決定要不要抓其它檔案。 
+
+ * joe 中文使用說明： 
+ http://www.linuxfab.cx/indexColumnData.php?CID=61&FIRSTHIT=1 
+
+ * pico 這個不必中文說明了吧！:-) 這是郵件新聞軟體 pine 所附的編輯器，您系統上不一定會有。 
+
+11 bash 
+ 這是 GNU/Linux 常用到的 shell，簡單的說，您一進入 GNU/Linux，這個 shell 就負責您和作業系統的溝通的工作，就像 DOS 裡頭的
+ command.com 一樣。光這一個 shell 要詳細的話，就可以出一本書，您一有空的話，不妨 man bash 或 info bash，熟悉一下，一些有
+ 關 shell 的變數設定，裡頭都會有詳細的交待。 
+
+ bash 的相關問題可以先參考 FAQ： 
+ ftp://ftp.cwru.edu/pub/bash/FAQ 
+ 深入一點的文件： 
+ http://www.tldp.org/LDP/abs/html/ 
+ 學 bash，這個 abs(Advanced Bash-Scripting) guide 文件很值得研究，有相當多的實例供參考，在作者的網頁有 tarball 可以下
+ 載。 
+
+12 GNU/Linux 系統的控制室 
+ 要瞭解整個 GNU/Linux 系統運作的機制，最好的方法就是熟悉 /etc 7 這個目錄下的各種檔案在做些什麼事情。在這個目錄下的檔案是
+ 一些進入系統就要執行的 script 及整個系統的初始設定檔。這些檔案相當多，而且需要 shell script(man bash) 的基礎知識，剛開
+ 始看可能會搞得滿面豆花，沒關係，不要急，慢慢來會比較快！:-) 
+
+13 如果使用的是 GUI 介面，那可以叫出 gnome-help-browser 或 khelpcenter (舊版為 kdehelp)，可直接叫出然後由選單來選，或加參
+ 數，來看一些系統上就有的說明文件，例如叫出 bash 的 man/info： 
+
+ gnome-help-browser man:bash 
+ gnome-help-browser info:bash 
+ khelpcenter man:bash 
+ khelpcenter info:bash 
+
+ 由於 GNOME/KDE 環境並沒有 man/info pages 的說明文件，因此要使用這兩個工具來叫用他們的說明文件，而這兩個工具也是可以解讀
+ man/info pages 格式，使用上相當方便。 
+
+14 man, info, more, less 都會有搜尋功能，按個 / 然後輸入要找的字串，再按 Enter 即可，按 n(next) 會繼續找，大寫的 N 則是往
+ 回(上)找，按 q(quit) 離開。 
+
+  
+0.7 GNU/Linux 上有沒有 ``窗'' 呢？ 
+
+當然有啦！而且還是 ``多窗'' 的環境，那就是 X Window System(可簡稱為 X 或 X11)，雖然移植到 PC 的是稱為 XFree86 但通常稱為
+X 應該也是可以。這是 Unix-like 系統的『標準』GUI，任何一種的 Un*x 系統應該都會有 X Window System。 
+
+為什麼說是 ``多窗'' 呢？因為 X 只是規定了一些基本規格，彈性相當大，細節部份就由程式設計師去自由發揮，因此就有許許多多的
+WM(Window Manager) 出現，您有相當多的選擇，不僅如此，目前大部份的 WM 皆支援 theme，所呈現出來的不同風貌會讓您嘆為觀止。 
+
+在這個地方就比 Windows 系統多了許多變化，不僅僅是 look & feel 的不同，連操作的方式也不同喔！較常用的有 KDE 環境，GNOME 環
+境，afterstep、WindowMaker、icewm、fvwm ... 等等。KDE, GNOME 不純是 WM，他是 GUI 的整合環境。 
+
+X 是透過 X protocol 採主從(client-server)方式的設計，相當適合網路上的使用。尤其是一些很貴的商業軟體或是一些體積相當龐大的
+軟體，只要一檯高檔的機器安裝即可，其它人可以透過網路去使用，並把結果傳回您眼前的電腦螢幕。而且，這是 portable 的設計，和您
+使用的作業平檯無關，也就是說您可以由其它作業系統連上這檯機器來執行機器上的 X 應用程式。當然，本地端的作業系統要安裝自己的
+X server。遠端的機器就是 client (指上頭的應用軟體)。而且，基本前提是網路要暢通。Linux/FreeBSD、Windows、OS/2、MS-DOS 系統
+都有 X server 可以安裝。 
+
+另外，提醒您，GNU/Linux 是一套獨立的作業系統，而 XFree86 只是其上的一套應用軟體，希望別誤會了！有許多朋友，因為這樣的誤
+解，以致於和 Windows 系統做不適當的比較，這是不公平的。 
+
+各種 WM 網站，可先去觀光一下： 
+
+ http://www.kde.org/ (KDE 整合環境) 
+ http://gnome.org/ (GNOME 整合環境) 
+ http://www.fvwm.org/ (老字號的 WM，特點是：快、省記憶體) 
+ http://blackbox.wiw.org/ (後起之秀，短小精悍，不失漂亮) 
+ http://www.windowmaker.org/ (wmaker 有 NeXT 的影子) 
+ http://www.enlightenment.org/pages/main.html (最華麗的 WM) 
+ http://www.icewm.org/ (實用的 WM，麻雀雖小，五臟俱全) 
+ http://www.afterstep.org/ (另一個 NeXT 代表) 
+ http://linux.nctu.edu.tw/web/moto/screenshots/screenshots_index.html 8 
+
+  
+0.8 我能在 GNU/Linux 上做什麼事情呢？ 
+
+這就說不完了，anything you want! 除了日常的文書處理作業，上上網，收發 email、打 BB 外，GNU/Linux 還是程式設計者的天堂，除
+了一些特殊的 C# 語言外，大概您找得到的程式語言的編譯、組譯、解譯器，在 GNU/Linux 上都找得到，而且 99.9% 都是 free 9 的。 
+
+當然 GNU/Linux 的母語是 C，如果您懂 C 的話，使用 GNU/Linux 會愉快得多，因為 GNU/Linux 裡頭的程式，99.9% 其程式碼都是公開
+的！不懂 C 但懂一點 shell script 的話，也是可以玩得不亦樂乎！總之，視您的用途而定。 
+
+GNU/Linux 安裝好，大概一般常用的伺服器(server)都已安裝上去，剩下的是一些微調設定的工作，如 ftp, email, WWW... 等等。基本
+上，GNU/Linux 目前還是傾向定位於網路作業系統，雖然桌上環境正漸漸成熟，但 GNU/Linux 的重點，還是在網路，可以預見的是，漸漸
+走向 server + desktop 的趨勢，雖然還有一段路要走... 
+
+像目前非常流行的 WWW server，在 GNU/Linux 裡頭有 Apache10 + PHP11 + *SQL12 的結合，成本低，相當有威力，這裡有現成的例子：
+
+ http://www.linuxfab.cx/ (商用) 
+ http://www.softwareliberty.org/ (非商用) 
+
+更高級的運用，如 google 搜尋引擎，以數千檯的 GNU/Linux 機器組成，這已超出我能力範圍了，有待各位去發掘。總之，東西是死的，
+人是活的... 
+
+那，很常被問題到的一個問題：能不能完全取代 XXX？這個我無法回答，得看您『陷入』 XXX 有多深而定，如果您願意改變一下習慣，或
+許有可能，但請別太『宗教』化了，只是個工具而已，哪裡方便就哪裡用吧！我個人是把 GNU/Linux 當做 desktop system 來用，幾乎都
+可以處理，但是不是能處理很好，及處理起來方不方便，那是另外一個問題了，反而有時回到 windows 上有點惘然說，打開 notepad，卻
+猛按 Esc 鍵(vi)！但其他 OS 目前既然能存在，那一定是有其存在的價值，我們似沒有必要去抹殺。open source, open mind。 
+
+  
+0.9 精華區 
+
+http://asklinux.net/ 
+http://bbs.ee.ntu.edu.tw/boards/Linux/index.html 
+各 BBS 站應會有精華區及查詢的功能，請多多利用，避免同樣的問題一再重複。 
+
+免費線上書籍： 
+ftp://wks.uts.ohio-state.edu/unix_course/unix_book.ps (英文） 
+ftp://ftp.tku.edu.tw/Document/Chinese_Doc/UNIX-Guide/main.ps 13 
+以上都是針對一般 Unix 系統，但可以參考，基本原理是一樣的。 
+
+http://dsl.org/cookbook/cookbook-1.2.tar.gz (英文 info 版本) 14 
+
+  
+0.10 不錯的中文網站 
+
+http://www.cyut.edu.tw/~ckhung/ 
+這是朝陽大學洪朝貴老師的網站，是學習 FS/OSS 的樂園，也有打包好的最近期內容的 tarball 供下載，請多多利用！網頁常有更新，有
+空得去查探一下！:-) 
+
+http://www.study-area.net/menu1.htm 
+這是網中人兄（netman）創立的網站，重點雖是網路，但也有電腦硬體及使用 GNU/Linux 的基礎知識。目前由 study-area 團隊共同維
+護。 
+
+http://linux.nctu.edu.tw/web/moto 
+這是 moto 兄的摩托學園，趕快去挖寶。這裡有 moto 兄寫的『Debian 無痛起步法』，是使用 GNU/Debian 者的福音，別忘了去下載。 
+
+http://cle.linux.org.tw/ 
+這是 CLE(Chinese Linux Extension) 總部。 
+
+http://www.debian.org/intl/zh/ 
+這是 Debian-Chinese 總部。Debian 的中文使用手冊在這兒可以找到。 
+
+http://mdk.linux.org.tw/ 
+Mandrake 中文使用手冊在這兒可以找到。 
+
+http://xcin.linux.org.tw/ 
+這是中文輸入法 XCIN Project 總部。xcin 及國際化（i18n）的問題，請先來此逛逛。許多中文出不來...，怎麼輸入中文的問題，請先到
+這個網站 i18n 項目內惡補一下。網頁首頁雖是英文(因為有國外來士會來交流)，但子目錄下的各項說明，大部份是中文的。 
+
+http://jmcce.slat.org/ 這是 console 下的中文終端機模擬程式，目前由全新的 JMCCE Team 成員接手維護。有這方面需求的朋友，請到
+此站一遊，並幫忙測試。這裡要特別感謝 crazykid(kids) 主動的接手維護，並有多位大將從旁幫忙。 
+
+http://www.linux.org.tw/ 
+這是 TLUG(Taiwan Linux User Group) 的網頁，有台灣 Linux 的一些重要消息。其中 CLDP(Chinese Linux Documents Project) 是
+Linux 中文文件計劃的大本營，有為數相當多的中文文件。 
+
+http://kde.linux.org.tw/ 
+這是 KDE 中文化 Project 總部。 
+
+http://i18n.linux.org.tw/ 
+這是 Linux 國際化 Project 總部。 
+
+http://www.linuxfab.cx/ 
+這是國人設立的 LinuxFab 電子新聞雜誌總部。 
+
+http://x11.alphalab.net/ 
+這是 George O 兄維護的網站，有許多關於 X 的介紹。 
+
+http://www.europa.idv.tw/ 
+這是網路農夫維護的網站，實在相當精緻的網站，內容包括 UNIX/GNU/Linux 及 *BSD，可以說是 UNIX 大集合，裡面的文件(連結)都是相
+當經典的，想瞭解 Unix-like OS 的家族的發展，可到此一遊，絕對值回票價，還有作者自製的精緻桌面圖片，每個月的主題皆不同。 
+
+  
+0.11 不錯的英文網站 
+
+http://www.cafecomputer.com/faqindex.htm 
+這是 John Pisini 先生維護的 Linux-FAQ，是由他自行撰寫的另一份 FAQ 文件，每個星期都會更新，資料相當新，很值得參考。 
+
+http://www.linuxdoc.org/ 
+這是 LDP(Linux Documents Project) 的大本營，就是一些 HOWTOs 文件。在這裡的都是最新的版本。 
+
+http://heather.cs.ucdavis.edu/~matloff/Linux/LinuxInstall.pdf 
+這是 Norman Matloff 教授的 Linux 安裝指引，是以 RedHat 為講述對象，但其它 distro 也可參考。 
+
+http://www.powerup.com.au/~squadron/ 
+這是一頁就說完的 Linux 手冊。裡面含重要的系統設定檔及一些相當實用的指令，可以下載後印出來放在手邊隨時參考。雖說是一頁，但
+我下載的 pdf 檔卻是兩頁，作者大概是指正反兩面都印吧！:-) 
+
+http://www.xfree.org/FAQ/ 
+這是 XFree86 的 FAQs 大本營。 
+
+  
+0.12 各位的系統裡就有不少文件可以參考 
+
+man pages（使用 man 這個指令） 
+info pages（使用 info 這個指令） 
+/usr/doc(或 /usr/share/doc) 目錄下的資料（尤其是一些 HOWTO 文件） 
+/usr/X11R6/doc 
+/usr/src/linux/Documentation 下的資料 
+
+請記得安裝時要把一些文件安裝上去，別讓文件躺在 HD 或 CD 裡，卻跑到版上來問問題。 
+
+許多線上說明或書本上找不到的內容，如一些驅動程式使用說明，其實就在 /usr/src/linux 及以下的子目錄裡頭，甚至有些是在程式碼的
+注解裡頭。 
+
+如果您的 distro 無中文版的 HOWTO 文件，請到： http://www.linux.org.tw/CLDP/ 一遊，裡頭有數量很多的中文翻譯文件。 
+
+  
+0.13 硬體支援資料庫 
+
+GNU/Linux 是 Free（自由）的作業系統，有些新硬體不見得可以馬上支援，原因是硬體廠商不願釋出硬體規格所致，因此安裝前最好檢查
+一下 GNU/Linux 能支援的硬體，如果不幸您的硬體 GNU/Linux 不支援，那請不要客氣，寫信給硬體廠商，如果認為一個人力量薄弱，請
+po 到版上來，大家一起響應。 
+
+Linux-FreeBSD 硬體支援資料庫(以晶片 chipset 為主，不是 card 名)： 
+http://www.linux.org.tw/hardware/index.php3 (中文) 
+http://www.linhardware.com/ (英文) 
+http://www.linuxhardware.org/ 
+
+以下為英文： 
+Mandrake Linux: 
+http://www.linux-mandrake.com/en/hardware.php3 
+
+Red Hat Linux: 
+http://hardware.redhat.com/hcl/?pagename=hcl 
+
+SuSE Linux: 
+http://hardwaredb.suse.de/index.php?LANG=en_UK 
+
+Printer(印表機資源): 
+http://www.linuxprinting.org/ 
+
+Notebook(筆記型電腦資源)： 
+http://www.linux-laptop.net/ 
+http://www.redhat.com/mirrors/laptop/welcome.html 
+
+Winmodem(windows 軟體 modem 資源)： 
+http://www.linmodems.org/ 
+
+X Window System: 
+http://www.xfree86.org/cardlist 
+http://www.xfree86.org/4.2.0/Status.html (4.2.0 可變更為您的版本) 
+
+其他： 
+http://www.mostang.com/sane/sane-backends.html 
+http://linuxdoc.org/HOWTO/Hardware-HOWTO.html 
+http://support.intel.com 
+
+  
+0.14 找軟體 
+
+http://freshmeat.net (鮮肉店) 
+http://linux.tucows.com (牛頭店) 
+http://www.linuxfab.cx （軟體報報） 
+http://www.linuxapps.com 
+
+以上皆有 email 可以訂閱，這樣就可以坐在家裡就知道軟體最新動態了！ 
+
+news:comp.os.linux.announce 
+這個 news group 會不定期公告新的軟體。 
+
+  
+0.15 網路學習 
+
+http://www.study-area.net/network/networkfr.htm 
+網路的學習可以從這兒開始，先把一些基礎打好再說。 
+
+http://turtle.ee.ncku.edu.tw/~tung/ 
+這是優客筆記簿網站，有相當多網路相關文章。 
+
+http://aerosol.ev.ncku.edu.tw/~vbird/ 
+這是 VBird 兄維護的網站，有很多網路架站實作的經驗(私房菜)。 
+
+  
+0.16 呼天不應，叫地不響的時候 
+
+http://www.google.com/ 
+http://groups.google.com/ 
+http://www.google.com/linux 
+http://www.1stlinuxsearch.com/ 
+http://bbs.openfind.com.tw/ http://www.ask.com/ 
+
+請注意研究一下其使用方法，例如，ask 站可以使用："what is linux?" 之類的敘述來問問題。而 google 站有中文繁體界面可使用，而
+且可以打入 site 以縮小搜尋範圍。請參考： 
+http://www.google.com/help/basics.html 
+http://groups.google.com/googlegroups/basics.html 
+
+線上電腦名詞辭典（英文） 
+http://www.InstantWeb.com/foldoc/ 
+
+dot files(一般指系統、程式之設定檔)的疑難雜症： 
+http://www.dotfiles.com/ 
+
+英文版的 Linux FAQs 會在每個月初在 comp.os.linux.misc 這個 newsgroup post 出來。 
+
+  
+0.17 進階內容的獲得 
+
+有不少使用上的特殊方法或很深入的問題，在一般的討論區或網路上不見得能找得到、問的到。因此善用 mailing list 來發問是很經濟實
+惠的方法，一般獨立的 project 都會設立 mailing list(郵件論壇)，也都會有網頁上訂閱的方法，非常方便。大概稍有規模的軟體都會設
+立 mailing list，例如 XCIN, JMCCE, TTFM, VIM ... 等等。 
+
+這裡以 XCIN 為例來說明： 
+
+在 XCIN 的網站就會有說明在哪裡訂閱，也有 archive 的站可以去看看別人討論的情形。一般 google 都應該會查得到這些 archive 上的
+資料，只是不集中而已。 
+
+只要填好資料，然後等待 list server 寄確認信給您，收到後回信(通常直接 reply 即可)，確認後會收到 Welcome 的信，告訴您 list
+的 email address，及您的密碼，利用這個密碼，可進入 list server 去更改一些個人的設定。 
+
+其他的程式，例如 Vim 甚至分成好幾個 list，例如 vim-user 是給一般使用者討論用的，重點在『使用』，而 vim-dev 則是給發展者討
+論的，重點是軟體的開發。這些 list 是很好進階的地方，請多多利用。 
+
+  
+0.18 本文的內容變遷 
+
+
+????-??-?? 抱歉，我忘了第一次 post 是什麼時候了。
+2002-05-19 加入網路農夫的網址。多謝 cnoize 的提醒。
+2002-05-20 多謝 moto 通知網址變更。
+2002-05-22 多謝 kids 來信建議加入核心編譯的迷思。
+2002-07-02 多謝 VBird 來信提醒，我忘了要更新這篇文章了。:-)
+           加入 mailing list 的說明。
+2002-07-05 改採 HTML 及 PDF 兩種格式發表。
+
+本文的 PDF 格式為了網路傳輸的方便，字型是不內嵌的，可以使用 acroread 或 xpdf 來閱覽，但 acroread 的顯示品質可能會較好。要
+送印表機的話，可使用 acroread 將他轉成 PostScript 的格式，acroread 會使用他內建的實體字型。 
+
+本文 PDF 可在此下載： 
+http://www.study-area.org/tips/linux_entry.pdf 
+
+  
+0.19 授權聲明 
+
+Copyright © 2001,2002 李果正 Edward G.J. Lee 
+最後修訂日期： 
+本文件為自由文件(FDL)，可自由複製、修改、散佈，但請保留版權聲明。文件內所提及的商標皆屬其合法註冊公司所有。 
+
+About this document ... 
+
+GNU/Linux 初學之旅
+
+This document was generated using the LaTeX2HTML translator Version 2002 (1.62) 
+
+Copyright © 1993, 1994, 1995, 1996, Nikos Drakos, Computer Based Learning Unit, University of Leeds. 
+Copyright © 1997, 1998, 1999, Ross Moore, Mathematics Department, Macquarie University, Sydney. 
+
+The command line arguments were: 
+latex2html -split 0 -show_section_number -ascii_mode -noimages linux_entry.tex 
+
+The translation was initiated by on 2002-07-05 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Footnotes
+
+... \let\oldfootnote
+...1
+ #1 
+...版本 2
+ 當然請不要去用一些老古董的版本，例如 kernel 1.0.x 時代的版本，那實在就和『社會』脫節了！:) 實際運作的機器，為了安全上
+ 的漏洞，當然是要盡可能更新為安全的版本。 
+...GNU/Linux 3
+ GNU/Linux 是 Unix-like 的作業系統，操作環境和其它 Unix 系統大同小異。什麼是 Unix 系統？請參考：
+ http://www.unix-systems.org/what_is_unix/history_timeline.html (英文)。什麼是 Linux 系統？請參考：
+ http://www.linux.org.tw/intro/01-what_is_linux.shtml (中文) 
+... GNU4
+ GNU = GNU's Not Unix。是一個 project，主要是在發展一種 freedom 的 Unix-like 系統。裡頭結合全世界一大堆想不開的天才，整
+ 天想破頭寫出很好的程式給全世界的人自由使用，沒有他們就沒有今天方便好用的 GNU/Linux。請參考：http://www.gnu.org/。 
+... mount5
+ 查一下書，或 man mount，研究一下 mount 要怎麼使用，有些系統有安裝自動掛載的機能，那就不必手動 mount 啦！ 
+... script6
+ script 可暫時先想像成 DOS 中的批次檔，當然功能強多了！基本的是 shell script 及一些功能強大的 perl script, python
+ script ... 等等，這是 Un*x 系統相當具有威力的工具，有機會可以多去瞭解一下。 
+... /etc7
+ distro 不同，目錄下檔案的位置可能會不太一樣。可藉由 mc, gmc, kfm, filerunner 這些 file manager 來方便瞭解這些檔案。 
+...http://linux.nctu.edu.tw/web/moto/screenshots/screenshots_index.html 8
+ 這是 moto 兄的現成的圖片，大家可以去看看人家是怎麼佈置桌面的，還有許多軟使用的簡單說明，有些看對眼的圖片，恨不得馬上弄
+ 來試試。:-) 
+... free9
+ free 指的是軟體本身的自由、公開，與要不要錢無關，但通常在成本相當低的情形下就可以穫得。 
+... Apache10
+ Apache 是一種目前使用率相當高的 WWW server。 
+... PHP11
+ PHP(PHP: Hypertext Preprocessor) 伺服器端的 HTML 嵌入式 script 語言。 
+... *SQL12
+ SQL(Structured Query Language) 是一種資料庫系統語言，常用的有 mySQL PostgreSQL等，也有大型的商業產品。 
+...ftp://ftp.tku.edu.tw/Document/Chinese_Doc/UNIX-Guide/main.ps 13
+ 這是楊景翔先生所寫的 ``UNIX 初學者使用手冊'' 也有出版成書(第三波)。 
+...http://dsl.org/cookbook/cookbook-1.2.tar.gz 14
+ 這是 Michael Stutz 寫的 The Linux Cookbook。在 Debian 網站有 HTML 的版本：
+ http://packages.debian.org/unstable/doc/linuxcookbook.html 
+
+-------------------------------------------------------------------------------------------------------------------------
+Compiled by Edward G.J. Lee (2002-07-05) 
