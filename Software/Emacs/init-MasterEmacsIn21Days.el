@@ -1,8 +1,3 @@
-;; Enable line-numbers
-(global-display-line-numbers-mode 1)
-(setq display-line-numbers-type 'relative)
-
-;;;;;;;;;;;;;;;;;;;;;;;;start;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
 
@@ -10,7 +5,9 @@
 (scroll-bar-mode -1)
 
 ;; 显示行号
-(global-linum-mode 1)
+;(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
 
 ;; 更改光标的样式（不能生效，解决方案见第二集
 (setq cursor-type 'bar)
@@ -191,11 +188,36 @@ M-x custmoize-group <PACKAGE-NAME>
 					try-complete-lisp-symbol-partially
 					try-complete-lisp-symbol))
 
-(global-set-key (kbd "s-/") 'hippie-expand)
+;(global-set-key (kbd "s-/") 'hippie-expand)
 
-;; 970
+;; dired-mode
+;; ===========
+;;  + 创建目录
+;;  g 刷新目录
+;;  C 拷贝
+;;  D 删除
+;;  R 重命名
+;;  d 标记删除
+;;  u 取消标记
+;;  x 执行所有的标记
 
+;;设定为默认递归删除目录
+;(setq dired-recursive-deletes 'always)
+;;设定为默认递归拷贝目录
+;(setq dired-recursive-copies 'always)
 
+;;重用唯一的一个缓冲区作为 Dired Mode 显示专用缓冲区。
+(put 'dired-find-alternate-file 'disabled nil)
 
+;; 主动加载 Dired Mode
+(require 'dired)
+(defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
+;; 延迟加载
+(with-eval-after-load 'dired
+    (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+;(require 'dired-x)
+(setq dired-dwin-target 1) 
+
+;;----------1015-----------------------
