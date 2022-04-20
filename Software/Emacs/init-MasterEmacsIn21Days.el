@@ -41,8 +41,11 @@
 (when (>= emacs-major-version 24)
      (require 'package)
      (package-initialize)
-     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+     (setq package-archives '(
+			      ;("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			      ;("melpa" . "http://elpa.emacs-china.org/melpa/")
+			      ("melpa" . "https://melpa.org/packages/")
+			      )))
 
 ;; 开启全局 Company 补全
 (global-company-mode 1)
@@ -53,6 +56,9 @@
 
  ;; Add Packages
  (defvar my-packages '(
+		neotree
+		;; --- web-mode ---
+		web-mode
 		;evil
 		;popwin
 		;; --- Auto-completion ---
@@ -66,7 +72,7 @@
 		js2-mode
 		;; --- Minor Mode ---
 		nodejs-repl
-		exec-path-from-shell
+		;exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
 		;; solarized-theme
@@ -109,6 +115,7 @@
 
 ;; 加载主题
 (load-theme 'monokai 1)
+;; (load-theme 'tango-dark 1)
 
 ;; 选择对应的插件名称，可以进入可视化选项区对指定的插件做自定义设置
 ;; M-x custmoize-group <PACKAGE-NAME>
@@ -126,6 +133,7 @@
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))
+       '(("\\.html\\'" . web-mode))
        auto-mode-alist))
 
 ;; MEMO: 正则表达式匹配的例子
@@ -225,6 +233,47 @@
 ;(require 'dired-x)
 ;(setq dired-dwin-target 1) 
 
-;;----------1015-----------------------
+;; 在 Emacs Lisp 中有时候只需要一个',但是 Emacs 很好心的帮我们做了补全，但这并不是我们需要的。
+;(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+;(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+
+;; 也可以把上面两句合起来
+;(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+
+;; 光标 在括号内时就高亮包含内容的两个括号
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
+;; 隐藏换行符\r(^M)
+(defun hidden-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (unless buffer-display-table
+    (setq buffer-display-table (make-display-table)))
+  (aset buffer-display-table ?\^M []))
+
+;; 定义函数将换行符\r(^M)删除，
+;(defun remove-dos-eol ()
+;  "Replace DOS eolns CR LF with Unix eolns CR"
+;  (interactive)
+;  (goto-char (point-min))
+;  (while (search-forward "\r" nil t) (replace-match "")))
+
+;; web-mode
+;; web-mode 支持在 HTML 文件中存在多语言，所以我们可以对不同的语言的缩减做出设置。
+
+;(defun my-web-mode-indent-setup ()
+;  (setq web-mode-markup-indent-offset 2) ; web-mode, html tag in html file
+;  (setq web-mode-css-indent-offset 2)    ; web-mode, css in html file
+;  (setq web-mode-code-indent-offset 2)   ; web-mode, js code in html file
+;  )
+;(add-hook 'web-mode-hook 'my-web-mode-indent-setup)
+
+
+;;----------1115-----------------------
 (require 'evil)
 (evil-mode 1)
