@@ -13,7 +13,7 @@
 			 ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
 ;; Add Packages
-(defvar my/packages '(
+(defvar my-packages '(
 		      evil
 		      ;; --- Auto-completion ---
 		      company
@@ -33,6 +33,21 @@
 		      nodejs-repl
 		      ;; Find OS X Executable Helper Package
 ))
+
+(setq package-selected-packages my-packages)
+
+(defun my-packages-installed-p ()
+     (cl-loop for pkg in my-packages
+	   when (not (package-installed-p pkg)) do (cl-return nil)
+	   finally (cl-return t)))
+
+(unless (my-packages-installed-p)
+     (message "%s" "Refreshing package database...")
+     (package-refresh-contents)
+     (dolist (pkg my-packages)
+       (when (not (package-installed-p pkg))
+	 (package-install pkg))))
+
 
 ;; 文件末尾
 (provide 'init-packages)
