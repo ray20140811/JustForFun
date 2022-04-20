@@ -12,8 +12,8 @@
 ;; 更改光标的样式（不能生效，解决方案见第二集
 (setq cursor-type 'bar)
 
-;; 更改显示字体大小 16pt
-(set-face-attribute 'default nil :height 160)
+;; 更改显示字体大小 14pt
+(set-face-attribute 'default nil :height 140)
 
 ;; 快速打开配置文件
 (defun open-init-file()
@@ -23,8 +23,6 @@
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
 (global-set-key (kbd "<f2>") 'open-init-file)
 
-;; 开启全局 Company 补全
-;; (global-company-mode 1)
 
 ;; 禁止 Emacs 自动生成备份文件，例如 init.el~
 (setq make-backup-files nil)
@@ -46,11 +44,17 @@
      (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
 			      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
 
+;; 开启全局 Company 补全
+(global-company-mode 1)
+
  ;; cl - Common Lisp Extension
-(require 'cl)
+;(require 'cl)
+(require 'cl-lib)
 
  ;; Add Packages
- (defvar my/packages '(
+ (defvar my-packages '(
+		;evil
+		;popwin
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
@@ -68,28 +72,28 @@
 		;; solarized-theme
 		) "Default packages")
 
- (setq package-selected-packages my/packages)
+ (setq package-selected-packages my-packages)
 
- (defun my/packages-installed-p ()
-     (loop for pkg in my/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
+ (defun my-packages-installed-p ()
+     (cl-loop for pkg in my-packages
+	   when (not (package-installed-p pkg)) do (cl-return nil)
+	   finally (cl-return t)))
 
- (unless (my/packages-installed-p)
+ (unless (my-packages-installed-p)
      (message "%s" "Refreshing package database...")
      (package-refresh-contents)
-     (dolist (pkg my/packages)
+     (dolist (pkg my-packages)
        (when (not (package-installed-p pkg))
 	 (package-install pkg))))
 
  ;; Find Executable Path on OS X
- (when (memq window-system '(mac ns))
-   (exec-path-from-shell-initialize))
+; (when (memq window-system '(mac ns))
+;   (exec-path-from-shell-initialize))
 
-(cl-loop for x from 1 to 100
-	 for y = (* x x)
-	 until (>= y 729)
-	 finally return (list x (= y 729)))
+;(cl-loop for x from 1 to 100
+;	 for y = (* x x)
+;	 until (>= y 729)
+;	 finally return (list x (= y 729)))
 
 ;; Emacs 设置为开启默认全屏
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
@@ -101,13 +105,13 @@
 (global-hl-line-mode 1)
 
 ;; 安装主题 
-(add-to-list 'my/packages 'monokai-theme)
+(add-to-list 'my-packages 'monokai-theme)
 
 ;; 加载主题
 (load-theme 'monokai 1)
 
 ;; 选择对应的插件名称，可以进入可视化选项区对指定的插件做自定义设置
-M-x custmoize-group <PACKAGE-NAME>
+;; M-x custmoize-group <PACKAGE-NAME>
 
 ;; MEMO: 推荐插件 
 ;; * company
@@ -137,7 +141,7 @@ M-x custmoize-group <PACKAGE-NAME>
 (global-auto-revert-mode 1)
 
 ;; 关闭自动保存文件
-;;(setq auto-save-default nil)
+(setq auto-save-default nil)
 
 ;; popwin 自动将光标移动到，新创建的窗口中。
 (require 'popwin)
@@ -174,6 +178,7 @@ M-x custmoize-group <PACKAGE-NAME>
     ("8zl" "zilongshanren")
     ;; Tudi
     ("8lxy" "lixinyang")
+    ("kuo" "Ray Kuo")
    ))
 
 ;; Hippie 补全
@@ -211,13 +216,15 @@ M-x custmoize-group <PACKAGE-NAME>
 
 ;; 主动加载 Dired Mode
 (require 'dired)
-(defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+;(defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
 ;; 延迟加载
-(with-eval-after-load 'dired
-    (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+;(with-eval-after-load 'dired
+;    (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 ;(require 'dired-x)
-(setq dired-dwin-target 1) 
+;(setq dired-dwin-target 1) 
 
 ;;----------1015-----------------------
+(require 'evil)
+(evil-mode 1)
