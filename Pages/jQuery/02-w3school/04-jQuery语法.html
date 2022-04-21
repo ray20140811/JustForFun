@@ -1,0 +1,52 @@
+<html>
+    <head>
+	<!-- <script type="text/javascript" src="../jquery-1.12.4.min.js"></script> -->
+
+	<!--使用 Google 的 CDN -->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.12.4/jquery.min.js"></script> -->
+
+	<!--使用 Microsoft 的 CDN -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.12.4.min.js"></script> 
+
+	<script type="text/javascript">
+	 //jQuery 语法实例
+
+	 //$(this).hide() : 隐藏当前的 HTML 元素
+	 //$(document).ready(function(){
+	 //	$("button").click(function(){
+	 //	    $(this).hide();
+	 //	});
+	 //});
+
+	 //$("#test").hide() : 隐藏 id="test" 的元素
+	 //$(document).ready(function(){
+	 //	$("button").click(function(){
+	 //	    $("#test").hide();
+	 //	});
+	 //});
+
+	 //$("p").hide() : 隐藏所有 <p> 元素
+	 //$(document).ready(function(){
+	 //	$("button").click(function(){
+	 //	    $("p").hide();
+	 //	});
+	 //});
+
+	 //$(".test").hide() : 隐藏所有 class="test" 的元素
+	 $(document).ready(function(){
+		$("button").click(function(){
+		    $(".test").hide();
+		});
+	 });
+	 
+	</script>
+    </head>
+    <body>
+	<h2 class="test">This is a heading</h2>
+	<p class="test">This is a paragraph.</p>
+	<p id="test">This is another paragraph.</p>
+	<button type="button">Click Me</button>
+    </body>
+</html>
