@@ -1,0 +1,127 @@
+<html>
+    <head>
+	<!-- <script type="text/javascript" src="../jquery-1.12.4.min.js"></script> -->
+
+	<!--使用 Google 的 CDN -->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.12.4/jquery.min.js"></script> -->
+
+	<!--使用 Microsoft 的 CDN -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.12.4.min.js"></script> 
+	<script type="text/javascript">
+
+	 /*
+	    jquery 效果 - 隐藏和显示
+	    jQuery hide()
+	  */
+	 $(document).ready(function(){
+	     $("p").click(function(){
+		 $(this).hide(); 
+	     });
+	 });
+
+	 /*
+
+	 */
+	 $(document).ready(function(){
+	     $(".ex .hide").click(function(){
+		 $(this).parents(".ex").hide("slow"); 
+	     });
+	 });
+
+
+	 $(document).ready(function(){
+	     $("#hide").click(function(){
+		 $("#p1").hide();
+	     });
+
+	     $("#show").click(function(){
+		 $("#p1").show();
+	     });
+	 });
+
+	 /*
+	    语法：
+	    $(selector).hide(speed, callback);
+
+	    $(selector).show(speed, callback);
+	    
+	    可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。 
+	    可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+
+	    下面的例子演示了带有 speed 参数的 hide() 方法：
+
+	  */
+
+	 $(document).ready(function(){
+	     $("#hideslow").click(function(){
+		 $("#p2").hide(500);
+		 $("#p3").hide(2000);
+	     });
+	 });
+
+
+	 $(document).ready(function(){
+	     $("#toggle").click(function(){
+		 $(".toggle").toggle();
+	     });
+	 });
+	 /* 
+	    # jQuery效果参考手册
+	    https://www.w3school.com.cn/jquery/jquery_ref_effects.asp
+	 */
+	</script>
+	<style type="text/css">
+	 div.ex
+	 {
+	     background-color:#e5eecc;
+	     padding:7px;
+	     border:solid 1px #c3c3c3;
+	 }
+	</style>
+    </head>
+    <body>
+	<p>如果您点击我，我会消失。</p>
+	<p>点击我，我会消失。</p>
+	<p>也要点击我哦。</p>
+
+	<h3>中国办事处</h3>
+	<div class="ex">
+	    <button class="hide" type="button">隐藏</button>
+	    <p>联系人：张先生<br /> 
+		北三环中路 100 号<br />
+		北京</p>
+	</div>
+
+	<h3>美国办事处</h3>
+	<div class="ex">
+	    <button class="hide" type="button">隐藏</button>
+	    <p>联系人：David<br /> 
+		第五大街 200 号<br />
+		纽约</p>
+	</div>
+
+
+	<h3>jQuery hide() 和 show()</h3>
+	<div class="ex">
+	    <p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+	    <button id="hide" type="button">隐藏</button>
+	    <button id="show" type="button">显示</button>
+	</div>
+
+	<h3>带有 speed 参数的 hide() 方法</h3>
+	<div class="ex">
+	    <button id="hideslow" type="button">隐藏</button>
+	    <p id="p2">这是一个段落。</p>
+	    <p id="p3">这是另一个段落。</p>
+	</div>
+
+	<h3>jQuery toggle()</h3>
+	<div class="ex">
+	    <button id="toggle" type="button">隐藏</button>
+	    <p class="toggle">这是一个段落。</p>
+	    <p class="toggle">这是另一个段落。</p>
+	</div>
+    </body>
+</html>
