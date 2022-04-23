@@ -126,6 +126,16 @@
 ;; * Swiper & Counsel
 ;; * smartparens
 
+;; 开启全局 Company 补全
+(global-company-mode 1)
+
+(hungry-delete-mode 1)
+
+(counsel-mode 1)
+
+;(require 'smartparens)
+(smartparens-mode 1)
+
 ;; js2-mode
 ;; auto-mode-alist 的作用，这个变量是一个 AssociationList，
 ;; 它使用正则表达式（REGEXP）的规则来匹配不同类型文件应使用的Major Mode。
@@ -143,6 +153,18 @@
 ;;  ("\\.c\\'" . c-mode)
 ;;  ("\\.h\\'" . c-mode)
 ;;  …)
+
+;下面是如何添加新的模式与对应文件类型的例子
+;(setq auto-mode-alist
+;  (append
+;   ;; File name (within directory) starts with a dot.
+;   '(("/\\.[^/]*\\'" . fundamental-mode)
+;     ;; File name has no dot.
+;     ("/[^\\./]*\\'" . fundamental-mode)
+;     ;; File name ends in ‘.C’.
+;     ("\\.C\\'" . c++-mode))
+;   auto-mode-alist))
+
 
 ;; 自动加载外部修改过的文件
 (global-auto-revert-mode 1)
@@ -277,5 +299,3 @@
 (require 'evil)
 (evil-mode 1)
 
-;; 开启全局 Company 补全
-(global-company-mode 1)
