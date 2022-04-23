@@ -112,3 +112,57 @@
 
 ;; 我们来对`list-of-names'列表中的每一个元素都使用hello函数:
 (mapcar 'hello list-of-names)
+
+(defun greeting ()
+  (switch-to-buffer-other-window "*test*")
+  (erase-buffer)
+  (mapcar 'hello list-of-names)
+  (other-window 1))
+
+(greeting)
+
+(defun replace-hello-by-bonjour ()
+  (switch-to-buffer-other-window "*test*")
+  (goto-char (point-min))
+  (while (search-forward "Hello")
+    (replace-match "Bonjour"))
+  (other-window 1))
+
+(replace-hello-by-bonjour)
+
+(defun hello-to-bonjour ()
+  (switch-to-buffer-other-window "*test*")
+  (erase-buffer)
+  (mapcar 'hello list-of-names)
+  (goto-char (point-min))
+  (while (search-forward "Hello" nil t)
+    (replace-match "Bonjour"))
+  (other-window 1))
+
+(hello-to-bonjour)
+
+(defun boldify-names ()
+  (switch-to-buffer-other-window "*test*")
+  (goto-char (point-min))
+  (while (re-search-forward "Bonjour \\(.+\\)!" nil t)
+    (add-text-properties (match-beginning 1)
+			 (match-end 1)
+			 (list 'face 'bold)))
+  (other-window 1))
+
+(boldify-names)
+
+
+;; If you want to know more about a variable or a function:
+;;
+;; C-h v a-variable RET
+;; C-h f a-function RET
+;;
+;; To read the Emacs Lisp manual with Emacs:
+;;
+;; C-h i m elisp RET
+;;
+;; To read an online introduction to Emacs Lisp:
+;; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html	     
+
+				 
