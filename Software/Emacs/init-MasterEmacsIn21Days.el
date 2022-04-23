@@ -45,10 +45,9 @@
 			      ;("gnu"   . "http://elpa.emacs-china.org/gnu/")
 			      ;("melpa" . "http://elpa.emacs-china.org/melpa/")
 			      ("melpa" . "https://melpa.org/packages/")
+			      ("marmalade" . "http://marmalade-repo.org/packages/")
 			      )))
 
-;; 开启全局 Company 补全
-(global-company-mode 1)
 
  ;; cl - Common Lisp Extension
 ;(require 'cl)
@@ -59,8 +58,8 @@
 		neotree
 		;; --- web-mode ---
 		web-mode
-		;evil
-		;popwin
+		evil
+		popwin
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
@@ -277,3 +276,6 @@
 ;;----------1115-----------------------
 (require 'evil)
 (evil-mode 1)
+
+;; 开启全局 Company 补全
+(global-company-mode 1)
