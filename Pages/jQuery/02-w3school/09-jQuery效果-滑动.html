@@ -1,0 +1,118 @@
+<html>
+    <head>
+	<!-- <script type="text/javascript" src="../jquery-1.12.4.min.js"></script> -->
+
+	<!--使用 Google 的 CDN -->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.12.4/jquery.min.js"></script> -->
+
+	<!--使用 Microsoft 的 CDN -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.12.4.min.js"></script> 
+	<script type="text/javascript">
+
+	 /*
+	    jquery 效果 - 滑动
+
+	    jQuery 滑动方法可使元素上下滑动。
+
+	    jQuery 拥有下面3种 滑动方法：
+	    slideDown()
+	    slideUp()
+	    slidToggle()
+
+	  */
+
+	 /*
+	    jQuery slideDown() 用于向下滑动元素。
+
+	    语法：
+	    $(selector).slideDown(speed,callback);
+	    
+	    可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	    可选的 callback 参数是 滑动完成后所执行的函数名称。
+
+	  */
+
+	 $(document).ready(function(){
+	     $(".flip").click(function(){
+		 $(".panel").slideDown(); 
+	     });
+	 });
+
+	 /*
+	    jQuery slideUp() 方法用于向上滑动元素。
+
+	    语法：
+	    $(selector).slideUp(speed,callback);
+	    
+	    可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	    可选的 callback 参数是 fading 完成后所执行的函数名称。
+
+	  */
+
+	 $(document).ready(function(){
+	     $(".flip").click(function(){
+		 $(".panel").slideUp(); 
+	     });
+	 });
+
+	 /*
+	    jQuery slideToggle() 方法可以在 slideUp() 与 slideDown() 方法之间进行切换。
+
+	    如果元素向下滑动，则 slideToggle() 可向上滑动它们。
+	    如果元素向上滑动，则 slideToggle() 可向下滑动它们。
+
+	    语法：
+	    $(selector).slideToggle(speed,callback);
+	    
+	    可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	    可选的 callback 参数是 fading 完成后所执行的函数名称。
+
+	  */
+
+	 $(document).ready(function(){
+	     $(".flip").click(function(){
+		 $(".panel").slideToggle(); 
+	     });
+	 });
+
+
+	 /* 
+	    # jQuery效果参考手册
+	    https://www.w3school.com.cn/jquery/jquery_ref_effects.asp
+	 */
+	</script>
+	<style type="text/css">
+	 div.ex
+	 {
+	     background-color:#e5eecc;
+	     padding:7px;
+	     border:solid 1px #c3c3c3;
+	 }
+
+	 div.panel, p.flip
+	 {
+	     margin:0px;
+	     padding:5px;
+	     text-align:center;
+	     background:#e5eecc;
+	     border: solid 1px #c3c3c3;
+	 }
+
+	 div.panel
+	 {
+	     height:120px;
+	     display:none;
+	 }
+	</style>
+    </head>
+    <body>
+	<div class="panel">
+	    <p>W3School - 领先的 Web 技术教程站点</p3>
+	    <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p3>
+	</div>
+
+	<p class="flip">请点击这里</p>
+    </body>
+</html>
