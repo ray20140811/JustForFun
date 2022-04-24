@@ -1,0 +1,169 @@
+<html>
+    <head>
+	<!-- <script type="text/javascript" src="../jquery-1.12.4.min.js"></script> -->
+
+	<!--使用 Google 的 CDN -->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.12.4/jquery.min.js"></script> -->
+
+	<!--使用 Microsoft 的 CDN -->
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
+/jquery-1.12.4.min.js"></script> 
+	<script type="text/javascript">
+
+	 /*
+	    jQuery 效果 - 动画
+
+	    jQuery animate() 方法允许您创建自定义的动画。
+
+	  */
+
+	 /*
+	    jQuery animate() 方法用于创建自定义动画。
+
+	    语法：
+	    $(selector).animate({params}, speed,callback);
+	    
+	    必需的 params 参数定义形成动画的 CSS 属性。
+	    可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+	    可选的 callback 参数是 滑动完成后所执行的函数名称。
+
+	  */
+
+	 $(document).ready(function(){
+	     $("#btn1").click(function(){
+		 $("#div1").animate({left:'250px'}); 
+	     });
+	 });
+
+	 
+	 /*
+	    jQuery animate() - 操作多个属性
+
+	  */
+
+	 $(document).ready(function(){
+	     $("#btn2").click(function(){
+		 $("#div2").animate({
+		     left:'250px',
+		     opacity: '0.5',
+		     height: '150px',
+		     width: '150px'
+		 }); 
+	     });
+	 });
+
+	 /*
+	    提示：可以用 animate() 方法来操作所有 CSS 属性吗？
+	    是的，几乎可以！不过，需要记住一件重要的事情：当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，
+	    比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。
+	    同时，色彩动画并不包含在核心 jQuery 库中。
+	    如果需要生成颜色动画，您需要从 jQuery.com 下载 Color Animations 插件。
+	  */
+
+	 /*
+	    jQuery animate() - 使用相对值
+	  */
+
+	 $(document).ready(function(){
+	     $("#btn3").click(function(){
+		 $("#div3").animate({
+		     left:'250px',
+		     height: '+=150px',
+		     width: '+=150px'
+		 }); 
+	     });
+	 });
+
+	 /*
+	    jQuery animate() - 使用预定义的值
+	    
+	    可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：
+	  */
+	 $(document).ready(function(){
+	     $("#btn4").click(function(){
+		 $("#div4").animate({
+		     left: 'toggle',
+		 }); 
+	     });
+	 });
+
+	 /*
+	    jQuery animate() - 使用队列功能
+	    
+	    默认地，jQuery 提供针对动画的队列功能。
+	    这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的“内部”队列。
+	    然后逐一运行这些 animate 调用。
+	  */
+	 $(document).ready(function(){
+	     $("#btn5").click(function(){
+		 var div = $("#div5");
+		 div.animate({height:'300px',opacity:'0.4'},"slow");
+		 div.animate({width:'300px',opacity:'0.8'},"slow");
+		 div.animate({height:'100px',opacity:'0.4'},"slow");
+		 div.animate({width:'100px',opacity:'0.8'},"slow");
+	     });
+	 });
+
+	 $(document).ready(function(){
+	     $("#btn6").click(function(){
+		 var div6 = $("#div6");
+		 div6.animate({left:'100px'},"slow");
+		 div6.animate({fontSize:'3em'},"slow");
+	     });
+	 });
+
+
+
+
+	 /* 
+	    # jQuery效果参考手册
+	    https://www.w3school.com.cn/jquery/jquery_ref_effects.asp
+	  */
+	</script>
+	<style type="text/css">
+	 div.ex
+	 {
+	     background-color:#e5eecc;
+	     padding:7px;
+	     border:solid 1px #c3c3c3;
+	 }
+
+	 div.panel, p.flip
+	 {
+	     margin:0px;
+	     padding:5px;
+	     text-align:center;
+	     background:#e5eecc;
+	     border: solid 1px #c3c3c3;
+	 }
+
+	 div.panel
+	 {
+	     height:120px;
+	     display:none;
+	 }
+	</style>
+    </head>
+    <body>
+	<button id="btn1">开始动画 </button>
+	<button id="btn2">开始动画:操作多个属性</button>
+	<button id="btn3">开始动画:使用相对值</button>
+	<button id="btn4">开始动画:使用预定义的值</button>
+	<button id="btn5">开始动画:使用队列功能</button>
+	<button id="btn6">开始动画:使用队列功能2</button>
+	<p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+	<div id="div1" style="background:#F0F8FF;height:10px;width:10px;padding: 0px; position:absolute;"></div>
+	<hr>
+	<div id="div2" style="background:#00FFFF;height:10px;width:10px;padding: 10px;position:absolute;"></div>
+	<hr>
+	<div id="div3" style="background:#8A2BE3;height:10px;width:10px;padding: 20px;position:absolute;"></div>
+	<hr>
+	<div id="div4" style="background:#DEB887;height:10px;width:10px;padding: 30px;position:absolute;"></div>
+	<hr>
+	<div id="div5" style="background:#00008B;height:10px;width:10px;padding: 40px;position:absolute;"></div>
+	<hr>
+	<div id="div6" style="background:#98bf21;height:100px;width:200px;padding: 50px;position:absolute;">HELLO</div>
+	<hr>
+    </body>
+</html>
