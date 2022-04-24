@@ -1,3 +1,9 @@
+* emacs
+  <C-SPC> : mark
+  <C-w> : cut the text
+  <M-w> : copy the text
+  <C-y> : paste the text
+
 * [[https://www.gnu.org/software/emacs/manual/html_node/ediff/Quick-Help-Commands.html][ediff]]
 ** key binding
 | key | function | description                                                 |
@@ -38,7 +44,7 @@
 - <C-c C-c> : change the root directory 
 - <C-c C-p> : copy a file or a directory 
 
-
+  
 * org-mode
 ** question
    - [[https://stackoverflow.com/questions/11876048/how-to-insert-in-org-mode-table][How to insert "|" in org-mode table]]
