@@ -56,6 +56,7 @@
  ;; Add Packages
  (defvar my-packages '(
 		neotree
+		;magit
 		;; --- web-mode ---
 		web-mode
 		evil
@@ -294,8 +295,83 @@
 ;  )
 ;(add-hook 'web-mode-hook 'my-web-mode-indent-setup)
 
+;; web-mode 使用 M-; 就可以注释当前行代码或选中行的代码
+
+
+;; 下面的函数可以用于在两个空格和四个空格之间进行切换 
+(defun my-toggle-web-indent ()
+  (interactive)
+  ;; web development
+  (if (or (eq major-mode 'js-mode) (eq major-mode 'js2-mode))
+      (progn
+	(setq js-indent-level (if (= js-indent-level 2) 4 2))
+	(setq js2-basic-offset (if (= js2-basic-offset 2) 4 2))))
+
+  (if (eq major-mode 'web-mode)
+      (progn (setq web-mode-markup-indent-offset (if (= web-mode-markup-indent-offset 2) 4 2))
+	     (setq web-mode-css-indent-offset (if (= web-mode-css-indent-offset 2) 4 2))
+	     (setq web-mode-code-indent-offset (if (= web-mode-code-indent-offset 2) 4 2))))
+  (if (eq major-mode 'css-mode)
+      (setq css-indent-offset (if (= css-indent-offset 2) 4 2)))
+
+  (setq indent-tabs-mode nil))
+
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+
 
 ;;----------1115-----------------------
+
+;; Ray
 (require 'evil)
 (evil-mode 1)
 
+;; 自动补齐引号和大括号
+(electric-pair-mode 1)
+
+;; 不能自动补齐单引号以及大括号
+;(setq electric-pair-pairs		
+;      '(
+;		(?\" . ?\")  ;; 添加双引号补齐
+;		(?\{ . ?\})  ;; 添加大括号补齐
+;		(?\' . ?\'))) ;; 添加单引号补齐
+
+(defun it-help-neotree ()
+  (setq it-help-neotree-shortkey "neotree:\nn - next line\np - previous line\nSPC/Enter/TAB - open current item\nU - go up a directory")
+  ;(format "%s" it-help-neotree-shortkey)
+  (message "%s" it-help-neotree-shortkey)
+)
+
+(defun it-help-emacs ()
+  (setq it-help-emacs-shortkey "Emacs:\n<C-SPC> - mark\n<M-w> - copy the text\n<C-y> - paste the text\n<C-w> - cut the text\n")
+  ;(format "%s" it-help-emacs-shortkey)
+  (message "%s" it-help-emacs-shortkey)
+)
+
+;; eww
+(defun it-help-eww ()
+  (setq ithelp-eww-shortkey "eww:\n<q> - eww-quit\n<g> - eww-reload\n<l> - eww-back-url\n<r> - eww-forward-url\n<b> - eww-add-bookmark\n<B> - eww-list-bookmarks\n<&> - eww-browse-with-external-browser")
+  ;(format "%s" it-help-eww-shortkey)
+  (message "%s" it-help-eww-shortkey)
+)
+
+(defun it-help-nil ()
+  (message "%s" "not found in it-help"))
+
+
+;; main
+(defun it-help ()
+  (interactive)
+  (let ((package-name (read-from-minibuffer "Enter package name: ")))
+  (if (string-equal package-name "neotree")
+      ;"yes" "no")
+      (it-help-neotree) nil)
+  (if (string-equal package-name "emacs")
+      ;"yes" "no")
+      (it-help-emacs) nil)
+  (if (string-equal package-name "eww")
+      ;"yes" "no")
+      (it-help-eww) nil)
+  (if nil "What!" (it-help-nil))
+ ))
+
+(global-set-key (kbd "<f3>") 'it-help)
