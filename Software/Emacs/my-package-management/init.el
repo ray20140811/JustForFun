@@ -1,10 +1,8 @@
-;; ~/.emacs.d/init.el
-
-;;(package-initialize)
-
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
 ;; Package Management
 ;; -----------------------------------------------------------------
+;(package-initialize)
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
 (require 'init-packages)
-(require 'custom)
+(require 'init-ui)
+(require 'init-custom)
