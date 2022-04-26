@@ -77,17 +77,4 @@
 ;;重用唯一的一个缓冲区作为 Dired Mode 显示专用缓冲区。
 ;(put 'dired-find-alternate-file 'disabled nil)
 
-
-;; cheatsheet
-(cheatsheet-add :group 'Common
-		:key "C-SPC"
-		:description "mark the text.")
-
-(cheatsheet-add-group 'Common
-		      '(:key "C-w" :description "cut the text")
-		      '(:key "M-w" :description "copy the text")
-		      '(:key "C-y" :description "paste the text"))
-
-(global-set-key (kbd "<f3>") 'cheatsheet-show)
-
 (provide 'init-custom)

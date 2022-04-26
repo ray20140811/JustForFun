@@ -6,3 +6,4 @@
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-custom)
+(require 'init-cheatsheet)
