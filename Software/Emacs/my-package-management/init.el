@@ -3,7 +3,9 @@
 ;(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
-(require 'init-packages)
+;(require 'init-packages)
+(require 'init-usepackages)
 (require 'init-ui)
 (require 'init-custom)
 (require 'init-cheatsheet)
+

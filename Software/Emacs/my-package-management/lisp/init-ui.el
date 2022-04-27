@@ -1,4 +1,5 @@
-(require 'init-packages)
+;(require 'init-packages)
+(require 'init-usepackages)
 
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
@@ -30,7 +31,8 @@
 ;(add-to-list 'my-packages 'monokai-theme)
 
 ;; 加载主题
-(load-theme 'monokai 1)
+;; (load-theme 'monokai 1)
 ;; (load-theme 'tango-dark 1)
+(load-theme 'manoj-dark 1)
 
 (provide 'init-ui)
