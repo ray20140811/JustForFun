@@ -1,8 +1,100 @@
 * emacs
+
+** shortcut 
+
   <C-SPC> : mark
   <C-w> : cut the text
   <M-w> : copy the text
   <C-y> : paste the text
+
+*** Macro
+
+  <C-x (> : Start Macro Recording 
+  <C-x )> : End Macro Recording 
+  <C-x e> : Run Macro
+  <e> : repeat to run Macro
+  <C-x C-k r> : apply-macro-to-region-line
+
+**** Macro 練習
+
+EX:
+
+a
+b
+c
+d
+e
+
+Macro練習: 要在a b c d e前面都加上 - 
+輸入:
+    Step 1: 將游標移動到第一行的a
+    Step 2: 輸入<C-x (>
+    Step 3: 輸入<i> <-> <SPC> <Esc> <j>
+    Step 4: 輸入<C-x )>
+    Step 5: 輸入<C-x e>
+    Step 6: 輸入4次 <e>
+
+
+
+**** Macro Reference
+
+     - [https://stackoverflow.com/questions/4870704/appending-characters-to-the-end-of-each-line-in-emacs]
+
+* evil-mode
+
+ v   : VISUAL state
+ C-v : VISUAL-BLOCK state (but not working in cua-mode)
+
+** VISUAL-BLOCK
+
+*** 垂直修改
+I : 插入
+c : 替換
+r : 取代
+x : 刪除
+
+以上I和c輸入完按<ESC>才會生效. 按<Enter>會變成插入換行
+
+EX:
+
+aaaa
+aaaa
+aaaa
+aaaa
+aaaa
+
+[插入]練習: 在aaaa前面都插入;變成;aaaa
+輸入:
+    Step 1: 將游標移動到第一行的第1個a
+    Step 2: <C-v> j j j j j
+    Step 3: I
+    Step 4: ;
+    Step 5: <Esc>
+
+
+[替換]練習: 把;aaaa都改成;abaa
+輸入:
+    Step 1: 將游標移動到第一行的第2個a
+    Step 2: <C-v> j j j j j
+    Step 3: c
+    Step 4: b
+    Step 5: <Esc>
+
+[取代]練習: 把;abaa都改成;abca
+輸入:
+    Step 1: 將游標移動到第一行的第3個a
+    Step 2: <C-v> j j j j j
+    Step 3: r
+    Step 4: c
+
+[刪除]練習: 把;abca都改成;abc
+輸入:
+    Step 1: 將游標移動到第一行的最後一個a
+    Step 2: <C-v> j j j j j
+    Step 3: x
+
+
+
 
 * [[https://www.gnu.org/software/emacs/manual/html_node/ediff/Quick-Help-Commands.html][ediff]]
 ** key binding
@@ -28,8 +120,11 @@
 | v    | eww-view-source                  | 查看页面源代码                                                                   |
 | C    | eww-cookie-list                  | 列示Cookie                                                                       |
 
+
 * NeoTree
+
 ** Shortcut
+
 - <n> : next line 
 - <p> : previous line
 - <SPC> or <Enter> or <TAB> : open current item
