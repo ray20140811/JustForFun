@@ -7,5 +7,7 @@
 (require 'init-usepackages)
 (require 'init-ui)
 (require 'init-custom)
+(require 'init-keybindings)
 (require 'init-cheatsheet)
+(require 'init-experiment)
 

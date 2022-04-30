@@ -6,7 +6,7 @@
   (find-file "~/.emacs.d/init.el"))
 
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
-(global-set-key (kbd "<f2>") 'open-init-file)
+;(global-set-key (kbd "<f2>") 'open-init-file)
 
 ;; 禁止 Emacs 自动生成备份文件，例如 init.el~
 (setq make-backup-files nil)
