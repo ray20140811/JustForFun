@@ -31,6 +31,11 @@
   :ensure t
   :bind (("M-o" . ace-window)))
   
+(use-package better-defaults
+  :ensure t
+  :config 
+  (save-place-mode 1))
+
 (use-package cheatsheet
   :ensure t)
 
@@ -46,7 +51,6 @@
            company-capf
            company-yasnippet)
           (company-abbrev company-dabbrev))))  
-
   
 (use-package counsel
   :ensure t
@@ -77,6 +81,14 @@
   :ensure t
   :bind (("\C-x g" . magit-status)))
   
+(use-package nano-theme
+  :ensure t)		  
+
+(use-package nano-modeline
+  :ensure t		  
+  :config
+  (nano-modeline-mode t))
+
 (use-package neotree
   :ensure t)		  
   
@@ -100,8 +112,11 @@
       (append
        '(("\\.html\\'" . web-mode))
        auto-mode-alist)))		 
-  
-  
+
+;(use-package which-key
+;  :ensure t
+;  :config
+;  (which-key-mode t))
 
 ;; 文件末尾
 (provide 'init-usepackages)

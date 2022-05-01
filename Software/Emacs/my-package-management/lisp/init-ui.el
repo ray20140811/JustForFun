@@ -33,6 +33,7 @@
 ;; 加载主题
 ;; (load-theme 'monokai 1)
 ;; (load-theme 'tango-dark 1)
-(load-theme 'manoj-dark 1)
+;; (load-theme 'manoj-dark 1)
+(load-theme 'nano-dark 1)
 
 (provide 'init-ui)
