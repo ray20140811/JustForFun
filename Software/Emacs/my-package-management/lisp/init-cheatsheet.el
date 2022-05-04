@@ -13,6 +13,19 @@
 		      '(:key "M-w" :description "copy text")
 		      '(:key "C-SPC" :description "mark the text"))
 
+(cheatsheet-add-group 'magit
+                      '(:key "s" :description "stage the changes")
+                      '(:key "C-TAB" :description "cycle the visibility of the current section")
+                      '(:key "TAB" :description "expand or collapse the sections")
+                      '(:key "p" :description "move between sections")
+                      '(:key "n or p" :description "move between sections")
+                      '(:key "g" :description "fresh")
+		      '(:key "C-x g" :description "git status"))
+
+(cheatsheet-add-group 'eww
+                      '(:key "H" :description "eww-forward-url")
+                      '(:key "r" :description "eww-forward-url")
+		      '(:key "l" :description "eww-back-url"))
 ;; Macro
 ;(cheatsheet-add :group 'Macro
 ;                :key "Key"
@@ -60,12 +73,12 @@
 ;                :key "Japanese"
 ;                :description "Chinese")
 
-(cheatsheet-add-group 'L23
-                      '(:key "ききます" :description "問")
-                      '(:key "まわします" :description "轉動")
-		      '(:key "ひきます" :description "拉")
-      		      '(:key "かえます" :description "改變")
-		      '(:key "さわります" :description "摸,觸碰"))
+;(cheatsheet-add-group 'L23
+;                      '(:key "ききます" :description "問")
+;                      '(:key "まわします" :description "轉動")
+;		      '(:key "ひきます" :description "拉")
+;      		      '(:key "かえます" :description "改變")
+;		      '(:key "さわります" :description "摸,觸碰"))
 ;		      '(:key "でます" :description "出來")
 ;		      '(:key "あるきます" :description "走")
 ;		      '(:key "わたります" :description "過")
