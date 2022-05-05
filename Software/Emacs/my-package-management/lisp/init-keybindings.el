@@ -4,7 +4,10 @@
 ;; 这一行代码，将函数 cheatsheet-show 绑定到 <f3> 键上
 (global-set-key (kbd "<f3>") 'cheatsheet-show)
 
-;; 这一行代码，将函数 neotree-toggle 绑定到 <f3> 键上
+;; 这一行代码，将函数 cua-mode 绑定到 <f4> 键上
+(global-set-key (kbd "<f4>") 'cua-mode)
+
+;; 这一行代码，将函数 neotree-toggle 绑定到 <f8> 键上
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 
 ;; Rebind keys
