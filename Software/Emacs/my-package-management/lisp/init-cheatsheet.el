@@ -14,10 +14,16 @@
 		      '(:key "C-SPC" :description "mark the text"))
 
 (cheatsheet-add-group 'magit
+                      '(:key "u" :description "push origin/master")
+                      '(:key "P" :description "push")
+                      '(:key "C-c C-c" :description "with-editor-finish")
+                      '(:key "c" :description "commit")
                       '(:key "U" :description "unstage all changes")
                       '(:key "S" :description "stage all changes")
                       '(:key "u" :description "unstage the changes")
                       '(:key "s" :description "stage the changes")
+                      '(:key "u" :description "pull origin/master")
+                      '(:key "F" :description "Pull")
                       '(:key "C-TAB" :description "cycle the visibility of the current section")
                       '(:key "TAB" :description "expand or collapse the sections")
                       '(:key "p" :description "move between sections")
