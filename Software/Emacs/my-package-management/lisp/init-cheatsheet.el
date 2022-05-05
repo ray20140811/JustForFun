@@ -14,6 +14,9 @@
 		      '(:key "C-SPC" :description "mark the text"))
 
 (cheatsheet-add-group 'magit
+                      '(:key "U" :description "unstage all changes")
+                      '(:key "S" :description "stage all changes")
+                      '(:key "u" :description "unstage the changes")
                       '(:key "s" :description "stage the changes")
                       '(:key "C-TAB" :description "cycle the visibility of the current section")
                       '(:key "TAB" :description "expand or collapse the sections")
