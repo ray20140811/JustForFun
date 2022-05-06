@@ -1,0 +1,34 @@
+* Chapter01
+
+| Command | Function                     | Description                                                |
+| ------- | ---------------------------- | ---------------------------------------------------------- |
+| C-x C-f | find-file                    | 讀取文件                                                   |
+| C-x C-v | find-alternate-file          | 讀取另外一個文件來代替剛才讀入的那一個                     |
+| C-x i   | insert-file                  | 插入文件                                                   |
+| C-h f   | describe-function            | display the full documentation of FUNCTION                 |
+| C-h k   | describe-key                 | display documentation of the function invoked by KEY-LIST  |
+| C-h i   | info-goto-emacs-command-node | Enter Info, the documentation browser                      |
+| C-s C-q |                              | 當C-x C-s發生死機,可用C-s 停止接收輸入,C-q重新啟動這次會話 |
+
+* Chapter02
+
+| Command    | Function                     | Description                                                |
+| -------    | ---------------------------- | ---------------------------------------------------------- |
+| M-<number> | digit-argument               | 等同C-u <number> 重複number次                              |
+| M-<        | beginning-of-buffer          | 游標移動到文件頭                                           |
+| M->        | end-of-buffer                | 游標移動到文件尾                                           |
+|            | goto-line                    | 游標移動到第n行                                            |
+| C-l        | recenter                     | 重新繪製畫面,並將當前行放在畫面中心                        |
+| C-d        | delete-character             | 刪除游標所在的字符                                         |
+| M-d        | kill-word                    | 刪除下一個單詞                                             |
+| M-delete   | backward-kill-word           | 刪除前一個單詞                                             |
+| C-k        | kill-line                    | 刪除一整行                                                 |
+|            |                              |                                                            |
+
+** M-n和C-u n的差異
+
+ 1. C-u若不帶參數,則隨後的命令會執行4次
+ 2. C-u C-u 則重複執行16次
+ 3. C-u C-u C-u 則重複執行64次
+    按4的冪次來重複執行: 16次, 64次, 256次 依此類推
+   
