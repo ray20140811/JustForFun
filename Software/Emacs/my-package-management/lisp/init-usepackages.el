@@ -81,6 +81,9 @@
   :ensure t
   :bind (("\C-x g" . magit-status)))
   
+(use-package markdown-mode
+  :ensure t)
+            
 (use-package nano-theme
   :ensure t)		  
 
