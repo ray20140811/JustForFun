@@ -319,6 +319,26 @@
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 
 
+;; js2-refactor 是一个用于重构 JavaScript 的插件
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+
+;; 优化 occur 与 imenu
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
 ;;----------1115-----------------------
 
 ;; Ray
