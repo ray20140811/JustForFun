@@ -1,5 +1,4 @@
 * emacs
-
 ** shortcut 
 
   <C-SPC> : mark
@@ -39,6 +38,53 @@ Macro練習: 要在a b c d e前面都加上 -
 **** Macro Reference
 
      - [https://stackoverflow.com/questions/4870704/appending-characters-to-the-end-of-each-line-in-emacs]
+
+** Q&A
+
+1. [[https://www.twblogs.net/a/5bfac625bd9eee7aec4dc0fe][emacs 在shell下中文亂碼解決方案]]
+   - 直接在緩衝區修改編碼：
+     1. 打開文件出現亂碼時，可以嘗試修改字符的編碼：
+        M-x revert-buffer-with-coding-system RET（回車）
+        C-x return r
+        然後輸入對應編碼，如：utf-8 或者 chinese-gbk。
+     2. 在保存的時候還可以指定文件的保存編碼：
+        M-x set-buffer-file-coding-system
+        C-x return f
+     3. 查看Emacs編碼格式
+        M-x describe-coding-system
+   - [[https://paxinla.github.io/posts/2015/07/windowsxia-emacsde-shell-modeluan-ma-jie-jue.html][設置編輯環境]]：
+     ;; 設置爲中文簡體語言環境
+     (set-language-environment 'Chinese-GB)
+     ;; 設置emacs 使用 utf-8
+     (setq locale-coding-system 'utf-8)
+     ;; 設置鍵盤輸入時的字符編碼
+     (set-keyboard-coding-system 'utf-8)
+     (set-selection-coding-system 'utf-8)
+     ;; 文件默認保存爲 utf-8
+     (set-buffer-file-coding-system 'utf-8)
+     (set-default buffer-file-coding-system 'utf8)
+     (set-default-coding-systems 'utf-8)
+     ;; 解決粘貼中文出現亂碼的問題
+     (set-clipboard-coding-system 'utf-8)
+     ;; 終端中文亂碼
+     (set-terminal-coding-system 'utf-8)
+     (modify-coding-system-alist 'process "*" 'utf-8)
+     (setq default-process-coding-system '(utf-8 . utf-8))
+     ;; 解決文件目錄的中文名亂碼
+     (setq-default pathname-coding-system 'utf-8)
+     (set-file-name-coding-system 'utf-8)
+     ;; 解決 Shell Mode(cmd) 下中文亂碼問題
+     (defun change-shell-mode-coding ()
+       (progn
+       (set-terminal-coding-system 'gbk)
+       (set-keyboard-coding-system 'gbk)
+       (set-selection-coding-system 'gbk)
+       (set-buffer-file-coding-system 'gbk)
+       (set-file-name-coding-system 'gbk)
+       (modify-coding-system-alist 'process "*" 'gbk)
+       (set-buffer-process-coding-system 'gbk 'gbk)
+       (set-file-name-coding-system 'gbk)))
+
 
 * evil-mode
 

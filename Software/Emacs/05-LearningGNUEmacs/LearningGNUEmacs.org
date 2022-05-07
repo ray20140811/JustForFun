@@ -1,34 +1,153 @@
-* Chapter01
+* CHAPTER 1 Emacs Basics
 
-| Command | Function                     | Description                                                |
-| ------- | ---------------------------- | ---------------------------------------------------------- |
-| C-x C-f | find-file                    | Åª¨ú¤å¥ó                                                   |
-| C-x C-v | find-alternate-file          | Åª¨ú¥t¥~¤@­Ó¤å¥ó¨Ó¥N´À­è¤~Åª¤Jªº¨º¤@­Ó                     |
-| C-x i   | insert-file                  | ´¡¤J¤å¥ó                                                   |
-| C-h f   | describe-function            | display the full documentation of FUNCTION                 |
-| C-h k   | describe-key                 | display documentation of the function invoked by KEY-LIST  |
-| C-h i   | info-goto-emacs-command-node | Enter Info, the documentation browser                      |
-| C-s C-q |                              | ·íC-x C-sµo¥Í¦º¾÷,¥i¥ÎC-s °±¤î±µ¦¬¿é¤J,C-q­«·s±Ò°Ê³o¦¸·|¸Ü |
+| Keystrokes  | Command name                 | Action                                                      |
+|-------------+------------------------------+-------------------------------------------------------------|
+| C-x C-f     | find-file                    | Find file and read it in a new buffer.                      |
+| C-x C-v     | find-alternate-file          | Read and alternate file, replacing the one read with C-xC-f |
+| C-x i       | insert-file                  | Insert file at cursor position                              |
+| C-x C-s     | save-buffer                  | Save file                                                   |
+| C-x C-w     | write-file                   | Write buffer contents to file                               |
+| C-x C-c     | save-buffers-kill-emacs      | Exit Emacs                                                  |
+| C-h         | help-command                 | Enter the online help system                                |
+| C-h f       | describe-function            | display the full documentation of FUNCTION                  |
+| C-h k       | describe-key                 | display documentation of the function invoked by KEY-LIST   |
+| c-h t       | help-with-tutorial           | Start Emacs tutorial                                        |
+| C-h i       | info-goto-emacs-command-node | Start Info documentation reader                             |
+| C-s C-q     |                              | ·íC-x C-sµo¥Í¦º¾÷,¥i¥ÎC-s °±¤î±µ¦¬¿é¤J,C-q­«·s±Ò°Ê³o¦¸·     |
 
-* Chapter02
+** Problems You May Encounter
 
-| Command    | Function                     | Description                                                |
-| -------    | ---------------------------- | ---------------------------------------------------------- |
-| M-<number> | digit-argument               | µ¥¦PC-u <number> ­«½Ænumber¦¸                              |
-| M-<        | beginning-of-buffer          | ´å¼Ð²¾°Ê¨ì¤å¥óÀY                                           |
-| M->        | end-of-buffer                | ´å¼Ð²¾°Ê¨ì¤å¥ó§À                                           |
-|            | goto-line                    | ´å¼Ð²¾°Ê¨ì²Än¦æ                                            |
-| C-l        | recenter                     | ­«·sÃ¸»sµe­±,¨Ã±N·í«e¦æ©ñ¦bµe­±¤¤¤ß                        |
-| C-d        | delete-character             | §R°£´å¼Ð©Ò¦bªº¦r²Å                                         |
-| M-d        | kill-word                    | §R°£¤U¤@­Ó³æµü                                             |
-| M-delete   | backward-kill-word           | §R°£«e¤@­Ó³æµü                                             |
-| C-k        | kill-line                    | §R°£¤@¾ã¦æ                                                 |
-|            |                              |                                                            |
+  - M-x version <Enter> : Emacs Version
+  - F10 or M-` : The Help Menu
+  
 
-** M-n©MC-u nªº®t²§
+* CHAPTER 2 Editing (P.20)
+
+*** Editing Exercise
+
+Emacs is the advanced, extensible, customizable, self-documenting
+editor. This manual describes how to edit with Emacs and some of the
+ways to customize it; it corresponds to GNU Emacs Version 28.1.
+
+If you are reading this in Emacs, type 'h' to read a basic
+introduction to the Info documentation system.
+
+** Tabel 2-1 Text filling and reformatting commands
+
+| Keystrokes | Command name   | Action                                                                    |
+|            | refill-mode    | Toggle refill mode, in which Emacs automatically reformats text           |
+|            | auto-fill-mode | Toggle auto-fill mode, in which Emacs formats paragraphs as you type them |
+| M-q        | fill-paragraph | Reformat paragraph                                                        |
+|            | fill-region    | Reformat individual paragraphs within a region                            |
+
+** Tabel 2-2 Cursor movement commands 
+
+| Keystrokes   | Command name                 | Action                                                     |
+| ----------   | ---------------------------- | ---------------------------------------------------------- |
+| C-f          | forward-char                 | Move forward one character (right)                         |
+| C-b          | backward-char                | Move backward one character (left)                         |
+| C-p          | previous-line                | Move to previous line (up)                                 |
+| C-n          | next-line                    | Move to next line (down)                                   |
+| M-f          | forward-word                 | Move one word forward                                      |
+| M-b          | backward-word                | Move one word backward                                     |
+| C-a          | beginning-of-line            | Move to beginning of line                                  |
+| C-e          | end-of-line                  | Move to end of line                                        |
+| M-e          | forward-sentence             | Move forward one sentence                                  |
+| M-a          | backward-sentence            | Move backward one sentence                                 |
+| M-}          | forward-paragraph            | Move forward one paragraph                                 |
+| M-{          | backward-paragraph           | Move backward one paragraph                                |
+| C-v          | scroll-up                    | Move forward one screen                                    |
+| M-v          | scroll-down                  | Move backward one screen                                   |
+| C-x ]        | forward-page                 | Move forward one page                                      |
+| C-x [        | backward-page                | Move backward one page                                     |
+| M-<          | beginning-of-buffer          | Move to beginning of file                                  |
+| M->          | end-of-buffer                | Move to end of file                                        |
+|              | goto-line                    | Go to line n of file                                       |
+|              | goto-char                    | Go to character n of file                                  |
+| C-l          | recenter                     | Redraw screen with current line in the center              |
+| M-/number/   | digit-argument               | Repeat the next command n times                            |
+| C-u /number/ | universal-argument           | Repeat the next command n times (four times if you omit n) |
+
+*** M-n©MC-u nªº®t²§
 
  1. C-u­Y¤£±a°Ñ¼Æ,«hÀH«áªº©R¥O·|°õ¦æ4¦¸
  2. C-u C-u «h­«½Æ°õ¦æ16¦¸
  3. C-u C-u C-u «h­«½Æ°õ¦æ64¦¸
     «ö4ªº¾­¦¸¨Ó­«½Æ°õ¦æ: 16¦¸, 64¦¸, 256¦¸ ¨Ì¦¹Ãþ±À
-   
+
+
+** Table 2-3 Deletion commands
+
+| Keystrokes      | Command name            | Action                            |
+| ----------      | ---------------------   | -------------------------         |
+| C-d             | delete-char             | Delete character under cursor     |
+| <BACKSPACE>     | delete-backward-char    | Delete previous character         |
+| M-d             | kill-word               | Delete next word                  |
+| M-<BACKSPACE>   | backward-kill-word      | Delete previous word              |
+| C-k             | kill-line               | Delete from cursor to end of line |
+| M-k             | kill-sentence           | Delete next sentence              |
+| C-x <BACKSPACE> | backward-kill-sentence  | Delete previous sentence          |
+| C-y             | yank                    | Restore what you've deleted       |
+| C-w             | kill-region             | Delete a marked region            |
+|                 | kill-paragraph          | Delete next paragraph             |
+|                 | backward-kill-paragraph | Delete previous paragraph         |
+
+*** Deletion Commands Exercise
+
+Is was the worst of times
+It was the worst of times
+It was the worst of times
+
+try to delete some words here.
+
+try to delete another words here.
+try to delete another words here.
+
+try to delete another words here.
+try to delete another words here.
+try to delete another words here.
+
+** Table 2-4 The kill ring in action
+
+| Keystrokes | Action                            |
+| C-y        | This was the most recent deletion |
+| M-y        | This was the second-last deletion |
+| M-y        | This was the third-last deletion  |
+| M-y        | This was the fourth-last deletion |
+
+
+* CHAPTER 3 
+
+| Command                          | Function                     | Description                                                |
+| ----------                       | ---------------------------- | ---------------------------------------------------------- |
+| C-s                              | isearch-forward              | do incremental search forward¦¸                            |
+| C-r                              | isearch-backward-regexp      | do incremental search backward for regular expression      |
+| <enter>                          |                              | exit isearch                                               |
+| C-g                              | keyboard-quit                | cancel isearch operation                                   |
+| <DEL>                            | delete-forward-char          | delete the following N characters                          |
+| C-s C-w                          |                              |                                                            |
+| C-s C-y                          |                              |                                                            |
+| C-s M-y                          |                              |                                                            |
+| C-s C-s                          |                              | repeat isearch                                             |
+| C-s <Enter> searchstring <Enter> |                              |                                                            |
+| C-r <enter>                      |                              |                                                            |
+
+
+
+
+
+* Copy/Paste
+
+ C-@ M-w C-y
+
+
+* Lorem Ipsum
+
+** "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis tincidunt ligula, vel pellentesque elit auctor in. Nullam euismod pulvinar laoreet. Praesent fringilla turpis et nibh dapibus, in hendrerit ipsum sagittis. Praesent pharetra tortor et diam efficitur aliquam. Etiam nec lectus auctor, blandit est faucibus, varius purus. Nullam malesuada interdum ante vel feugiat. Mauris nunc lorem, porttitor in orci eu, cursus porta tortor. Donec luctus massa magna, sit amet mollis odio dictum vitae. Nulla ac neque sit amet dolor volutpat ultrices. Aliquam blandit dui id risus hendrerit condimentum.
+
+Etiam vestibulum placerat enim id vulputate. Cras ut elit ornare, commodo quam a, pharetra nibh. Donec at lacus ut tellus sollicitudin finibus vel sed lorem. Nam mauris arcu, rutrum a enim vitae, accumsan tincidunt nisl. Sed eget cursus lorem, eu posuere ipsum. Fusce pulvinar maximus ligula, et auctor orci rhoncus nec. Donec pretium ex et massa accumsan pharetra. Nulla pulvinar, lorem in mollis elementum, justo purus scelerisque felis, ut sodales eros mauris sed neque. In eleifend et eros in faucibus.
+
+Vivamus eleifend aliquet risus. Curabitur nisi leo, hendrerit non purus in, tincidunt mattis mi. Aliquam facilisis ligula massa, at viverra mauris faucibus fringilla. Praesent viverra dolor pellentesque arcu pretium maximus. Suspendisse vitae orci sit amet massa imperdiet aliquam. Suspendisse fermentum turpis a congue scelerisque. Vestibulum auctor gravida purus, vel finibus tortor tempor id. Suspendisse ac enim tellus. 
