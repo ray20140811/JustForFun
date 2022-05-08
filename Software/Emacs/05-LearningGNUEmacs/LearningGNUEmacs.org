@@ -75,6 +75,24 @@ introduction to the Info documentation system.
  3. C-u C-u C-u 則重複執行64次
     按4的冪次來重複執行: 16次, 64次, 256次 依此類推
 
+*** Deleting Text Exercise
+
+| If the cursor is here:      | M-d makes this edit:     |
+|-----------------------------+--------------------------|
+| It was the w*o*rst of times | It was the w of times    |
+| It was the *w*orst of times | It was the  of times     |
+| It was the wors*t* of times | It was the wors of times |
+
+
+try to delete some words here.
+
+try to delete another words here.
+try to delete another words here.
+
+try to delete another words here.
+try to delete another words here.
+try to delete another words here.
+
 
 ** Table 2-3 Deletion commands
 
@@ -92,20 +110,6 @@ introduction to the Info documentation system.
 |                 | kill-paragraph          | Delete next paragraph             |
 |                 | backward-kill-paragraph | Delete previous paragraph         |
 
-*** Deletion Commands Exercise
-
-Is was the worst of times
-It was the worst of times
-It was the worst of times
-
-try to delete some words here.
-
-try to delete another words here.
-try to delete another words here.
-
-try to delete another words here.
-try to delete another words here.
-try to delete another words here.
 
 ** Table 2-4 The kill ring in action
 
@@ -114,7 +118,6 @@ try to delete another words here.
 | M-y        | This was the second-last deletion |
 | M-y        | This was the third-last deletion  |
 | M-y        | This was the fourth-last deletion |
-
 
 * CHAPTER 3 
 
