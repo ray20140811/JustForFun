@@ -121,23 +121,114 @@ try to delete another words here.
 
 * CHAPTER 3 
 
-| Command                          | Function                     | Description                                                |
-| ----------                       | ---------------------------- | ---------------------------------------------------------- |
-| C-s                              | isearch-forward              | do incremental search forward¦¸                            |
-| C-r                              | isearch-backward-regexp      | do incremental search backward for regular expression      |
-| <enter>                          |                              | exit isearch                                               |
-| C-g                              | keyboard-quit                | cancel isearch operation                                   |
-| <DEL>                            | delete-forward-char          | delete the following N characters                          |
-| C-s C-w                          |                              |                                                            |
-| C-s C-y                          |                              |                                                            |
-| C-s M-y                          |                              |                                                            |
-| C-s C-s                          |                              | repeat isearch                                             |
-| C-s <Enter> searchstring <Enter> |                              |                                                            |
-| C-r <enter>                      |                              |                                                            |
+** Table 3-1 Incremental search commands
 
+| Command                      | Function                     | Description                                                                                                    |
+| ----------                   | ---------------------------- | ----------------------------------------------------------                                                     |
+| C-s                          | isearch-forward              | do incremental search forward¦¸                                                                                |
+| C-r                          | isearch-backward-regexp      | do incremental search backward for regular expression                                                          |
+| <Enter>                      | isearch-exit                 | exit isearch                                                                                                   |
+| C-g                          | keyboard-quit                | cancel isearch operation                                                                                       |
+| <DEL>                        | isearch-delete-char          | delete the following N characters                                                                              |
+| C-s C-w                      | isearch-yank-word            | Start an incremental search with the word the cursor is on as the search string                                |
+| C-s C-y                      | isearch-yank-line            | Start an incremental search with the text from the cursor position to the end of the line as the search string |
+| C-s M-y                      | isearch-yank-kill            | Start an incremental search with the text from the kill ring as the search string                              |
+| C-s C-s                      | isearch-repeat-forward       | Repeat previous search                                                                                         |
+| C-r C-r                      | isearch-repeat-backward      | Repeat previous search backward                                                                                |
 
+** Incremental Search Exercise
+made
+ 1n
+means
+  2
+method
+   3
+meteor
+    4
+meter
+     5
+meters
+      6
+      
+** Simple Searches
 
+*** Table 3-2 Simple search commands
 
+| Keystrokes                   | Action                               |
+|------------------------------+--------------------------------------|
+| C-s Enter searchstring Enter | Start nonincremental search forward  |
+| C-s                          | Repeat search forward                |
+| C-r Enter searchstring enter | Start nonincremental search backward |
+| C-r                          | Repeat search backward               |
+
+** Word Search
+
+*** Exercise
+
+He said, "All good elephants are wise, aren't they?"
+She answered, "Some are smarter than others, but we
+think this is socially conditioned."
+
+** Search and Replace
+
+M-x replace-string 
+M-< to go to the beginning of the file
+M-% query-replace
+
+*** Exercise
+
+Python is awesome. I love python. Do you like python?
+
+*try to replace emacs instead of python*
+
+*** Table 3-3 Response during query-replace 
+
+| Keystrokes | Action                                                                                 |
+|------------+----------------------------------------------------------------------------------------|
+| Space or y | Replace searchstring with new string and go to the next instance of the string         |
+| Del or n   | Don't replace; move to next instance                                                   |
+| .          | Replace the current instance and quit                                                  |
+| ,          | Replace and let me see the result before moving on (Press Space or y to move on)       |
+| !          | Replace all the rest and don't ask                                                     |
+| ^          | Back up to the previous instance                                                       |
+| Enter or q | Exit query-replace                                                                     |
+| E          | Modify the replacement string                                                          |
+| C-r        | Enter a recursive edit                                                                 |
+| C-w        | Delete this instance and enter a recursive edit (so you can make a custom replacement) |
+| C-M-c      | Exit recursive edit and resume query-repace                                            |
+| C-]        | Exit recursive edit and exit query-replace                                             |
+
+* CHAPTER 5 
+   
+| Keystrokes       | Command name            | Action                    |
+| ----------       | ---------------------   | ------------------------- |
+| M-!              | shell-command           |                           |
+| diff file1 file2 | diff                    |                           |
+| M-h              | mark-paragraph          |                           |
+| M-\vert              | shell-command-on-region |                           |
+
+*** Shell Command Exercise
+**** Data
+Liam   (703)555-2112
+Alfred (212)555-7812
+Denise (904)555-0332
+Yatzin (814)555-7878
+
+**** ex01
+1. M-h
+2. M-|
+3. sort
+
+**** ex02
+1. M-h
+2. C-u
+3. M-|
+4. sort
+
+**** ex03
+1. C-u
+2. M-!
+3. ls -al
 
 * Copy/Paste
 

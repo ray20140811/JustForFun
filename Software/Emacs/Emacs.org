@@ -189,5 +189,6 @@ aaaa
 * org-mode
 ** question
    - [[https://stackoverflow.com/questions/11876048/how-to-insert-in-org-mode-table][How to insert "|" in org-mode table]]
-
+     To insert a vertical bar into a table field, use \vert or, inside a word abc\vert{}def.
+     If \vert is not automatically converted to |, call *org-toggle-pretty-entities*, per: C-c C-x \
 
