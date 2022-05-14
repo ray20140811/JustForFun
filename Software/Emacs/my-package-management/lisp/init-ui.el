@@ -18,6 +18,13 @@
 ;; 更改显示字体大小 14pt
 (set-face-attribute 'default nil :height 140)
 
+;; 更改显示字体大小 12pt,且設定字型為Roboto Mono
+;(set-face-attribute 'default nil :height 120 :family "Roboto Mono")
+
+;; customize the default font
+;;(setq nano-font-family-monospaced "Roboto Mono") ;;只在nano-emacs裡生效
+;;(set-default-font "Roboto Mono") ;;不曉得為什麼會出錯
+
 ;; Emacs 设置为开启默认全屏
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
