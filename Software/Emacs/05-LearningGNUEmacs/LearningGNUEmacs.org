@@ -20,10 +20,8 @@
   - M-x version <Enter> : Emacs Version
   - F10 or M-` : The Help Menu
   
-
 * CHAPTER 2 Editing (P.20)
-
-*** Editing Exercise
+** Editing Exercise
 
 Emacs is the advanced, extensible, customizable, self-documenting
 editor. This manual describes how to edit with Emacs and some of the
@@ -93,7 +91,6 @@ try to delete another words here.
 try to delete another words here.
 try to delete another words here.
 
-
 ** Table 2-3 Deletion commands
 
 | Keystrokes      | Command name            | Action                            |
@@ -110,6 +107,55 @@ try to delete another words here.
 |                 | kill-paragraph          | Delete next paragraph             |
 |                 | backward-kill-paragraph | Delete previous paragraph         |
 
+** Marking Text to Delete, Move, or Copy
+*** Marking Text Exercise
+The point is at the end of the region to be marked.
+Now the region is marked.Press C-x C-x;this command
+swaps the locations of the mark and the point.
+If the cursor moves to where you thought the mark was,
+the region is marked correctly.
+
+Press C-x C-x;this command
+swaps the locations of the mark and the point.
+
+Press C-x C-x;this command
+swaps the locations of the mark and the point.
+
+*** memo
+C-@ : start marking
+C-x C-x : swaps the locations of the mark and the point.
+C-_ and C-x u : undo
+C-w : kill-region
+C-y : yank (insert the text)
+M-h : mark-paragraph
+C-x h : mark-whole-buffer
+C-x C-p : mark-page
+
+** Copying Text
+
+Line01
+Line02
+Line03
+Line04
+Line05
+Line06
+Line07
+Line08
+Line09
+Line10
+Line11
+Line12
+Line13
+Line14
+Line15
+Line16
+Line17
+Line18
+Line19
+Line20
+
+To copy text, mark a region by press M-x.
+To insert the copied text and press C-y.
 
 ** Table 2-4 The kill ring in action
 
@@ -119,8 +165,13 @@ try to delete another words here.
 | M-y        | This was the third-last deletion  |
 | M-y        | This was the fourth-last deletion |
 
-* CHAPTER 3 
+** Tabel 2-6 Selecting text with the mouse
 
+| Keystrokes   | Command name                 | Action                                                     |
+| ----------   | ---------------------------- | ---------------------------------------------------------- |
+| C-f          | forward-char                 | Move forward one character (right)                         |
+
+* CHAPTER 3 
 ** Table 3-1 Incremental search commands
 
 | Command                      | Function                     | Description                                                                                                    |
@@ -230,11 +281,6 @@ Yatzin (814)555-7878
 2. M-!
 3. ls -al
 
-* Copy/Paste
-
- C-@ M-w C-y
-
-
 * Lorem Ipsum
 
 ** "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
@@ -245,3 +291,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis tincidunt 
 Etiam vestibulum placerat enim id vulputate. Cras ut elit ornare, commodo quam a, pharetra nibh. Donec at lacus ut tellus sollicitudin finibus vel sed lorem. Nam mauris arcu, rutrum a enim vitae, accumsan tincidunt nisl. Sed eget cursus lorem, eu posuere ipsum. Fusce pulvinar maximus ligula, et auctor orci rhoncus nec. Donec pretium ex et massa accumsan pharetra. Nulla pulvinar, lorem in mollis elementum, justo purus scelerisque felis, ut sodales eros mauris sed neque. In eleifend et eros in faucibus.
 
 Vivamus eleifend aliquet risus. Curabitur nisi leo, hendrerit non purus in, tincidunt mattis mi. Aliquam facilisis ligula massa, at viverra mauris faucibus fringilla. Praesent viverra dolor pellentesque arcu pretium maximus. Suspendisse vitae orci sit amet massa imperdiet aliquam. Suspendisse fermentum turpis a congue scelerisque. Vestibulum auctor gravida purus, vel finibus tortor tempor id. Suspendisse ac enim tellus. 
+
+
+* MyNotes
+
+| Keystrokes | Command name          | Action                    |
+| ---------- | --------------------- | ------------------------- |
+| C-@        |                       | marking text              |
+| M-w        |                       | copy text                 |
+| C-y        |                       | paste text                |
+| M-g g      | goto-line             |                           |
+
+
+
+
