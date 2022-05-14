@@ -1,0 +1,36 @@
+#+title: [[https://ostechnix.com/tilda-highly-configurable-gtk-based-drop-terminal-unix-like-systems/][Tilda – A Highly Configurable GTK-based Drop Down Terminal For Unix-like Systems]]
+#+date: 2022-05-14
+
+* Install Tilda
+
+#+begin_src bash
+  $ sudo pacman -S tilda
+#+end_src
+
+* Default Hotkeys
+
+| hotkeys  | description                                 |
+|----------+---------------------------------------------|
+| F1       | Pull down and pull up tilda terminal window |
+| S-C-T    | Open a new tab                              |
+| S-C-W    | Close the active tab                        |
+| C-PgUp   | Go to previous tab                          |
+| C-PgDn   | Go to next tab                              |
+| S-C-PgUp | Move tab left                               |
+| S-C-PgDn | Move tab right                              |
+| M-1      | Go to tab 1                                 |
+| M-2      | Go to tab 2                                 |
+| M-3      | Go to tab 3                                 |
+| M-4      | Go to tab 4                                 |
+| M-5      | Go to tab 5                                 |
+| M-6      | Go to tab 6                                 |
+| M-7      | Go to tab 7                                 |
+| M-8      | Go to tab 8                                 |
+| M-9      | Go to tab 9                                 |
+| M-0      | Go to tab 10                                |
+| S-C-c    | Copy text from Tilda window                 |
+| S-C-v    | Paste text in terminal                      |
+| F11      | Toggle full screen                          |
+| F12      | Toggle Transparency                         |
+| S-C-f    | Search                                      |
+| S-C-q    | Quit Tilda Terminal                         |
