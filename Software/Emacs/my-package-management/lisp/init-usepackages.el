@@ -88,9 +88,9 @@
   :ensure t)		  
 
 (use-package nano-modeline
-  :ensure t		  
-  :config
-  (nano-modeline-mode t))
+  :ensure t)		  
+;  :config
+;  (nano-modeline-mode t))
 
 (use-package neotree
   :ensure t)		  
