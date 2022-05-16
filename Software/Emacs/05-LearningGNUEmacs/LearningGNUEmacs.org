@@ -249,14 +249,17 @@ Python is awesome. I love python. Do you like python?
 | C-M-c      | Exit recursive edit and resume query-repace                                            |
 | C-]        | Exit recursive edit and exit query-replace                                             |
 
-* CHAPTER 5 
-   
-| Keystrokes       | Command name            | Action                    |
-| ----------       | ---------------------   | ------------------------- |
-| M-!              | shell-command           |                           |
-| diff file1 file2 | diff                    |                           |
-| M-h              | mark-paragraph          |                           |
-| M-\vert              | shell-command-on-region |                           |
+* CHAPTER 5 Emacs as a Work Environment
+
+** Running One Command at a Time
+
+| Keystrokes       | Command name            | Action                                                         |
+| ----------       | ---------------------   | -------------------------                                      |
+| M-!              | shell-command           |                                                                |
+| diff file1 file2 | diff                    |                                                                |
+| M-h              | mark-paragraph          |                                                                |
+| M-\vert          | shell-command-on-region |                                                                |
+| C-u M-!          |                         | runs a shell command and puts the output in the current buffer |
 
 *** Shell Command Exercise
 **** Data
@@ -280,6 +283,22 @@ Yatzin (814)555-7878
 1. C-u
 2. M-!
 3. ls -al
+
+** Using Shell Mode
+
+| Keystrokes       | Command name            | Action                                                         |
+| ----------       | ---------------------   | -------------------------                                      |
+| M-!              | shell-command           |                                                                |
+|
+
+*** Shell Mode Exercise
+**** ex-01
+1. M-x shell
+   
+
+
+
+
 
 * Lorem Ipsum
 

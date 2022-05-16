@@ -8,10 +8,14 @@
 
 (buffer-file-name)
 
-(buffer-name) "*scratch"
+(buffer-name) ;"*scratch"
 
+;; 2.2 Getting Buffers
 (current-buffer)
 
 (other-buffer)
+
+;; 2.3 Switching Buffers
+(switch-to-buffer (other-buffer))
 
 
