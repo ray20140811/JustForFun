@@ -15,12 +15,16 @@ int main()
 {
   long t1;
   int i, n, t, t3;
-  char a[100];
+  char a[100] = "";
   printf("please input a number string:\n");
   //gets(a);
   fgets(a, 100, stdin);
   strupr(a);
   t3 = strlen(a);
+  if(t3 > 1 && a[t3-1] == '\n') {
+    a[t3-1] = '\0';
+    t3= strlen(a);
+  }
   t1 = 0;
   printf("please input n(2or8or16):\n");
   scanf("%d", &n);
