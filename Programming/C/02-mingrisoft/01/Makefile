@@ -1,4 +1,4 @@
 build:
-	gcc -o 003 003.c
+	gcc main.c -o main
 run:
-	./003
+	./main
