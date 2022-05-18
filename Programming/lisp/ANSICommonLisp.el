@@ -202,6 +202,76 @@ ELISP> lst
 ELISP> (setf x (remove 'a x))
 (n b c)
 
-ELISP> 
+;; ACL (ANSI Common Lisp)
+(defun show-squares (start end)
+  (do ((i start (+ i 1)))
+      ((> i end) 'done)
+      (format t "~A ~A~%" i (* i i))))
 
-ELISP> 
+(show-squares 2 5)
+
+;; ACL
+(defun show-squares (i end)
+  (if (> i end)
+      'done
+    (progn
+      (format t "%d %d" i (* i i))
+      (show-squares (+ i 1) end))))
+
+(show-squares 2 5)
+
+;; elisp
+;; only display nil 
+(defun show-squares (start end)
+  (setq i start)
+  (dotimes (i end))
+    (unless (< i end)
+      (message "%d" i)))
+ 
+;; elisp
+;; only display done
+(defun show-squares (i end)
+  (if (> i end)
+      'done
+    (progn
+      ;(format "%d %d" i (* i i))
+      ;(message "%d %d" i (* i i))
+      ;(prin1 "%d %d" i (* i i))
+      (show-squares (+ i 1) end))))
+
+(show-squares 2 5)
+
+;; elisp dotimes example-01
+(let (value)
+  (dotimes (number 3)
+    (setq value (cons number value)))
+  value)
+
+;; elisp dotimes example-02
+(defun triangle-using-dotimes (number-of-rows)
+  "Using `dotimes', and up the number of pebbles in a triangle."
+         (let ((total 0))
+           (dotimes (number number-of-rows)
+             (setq total (+ total (1+ number))))
+           total))
+
+(triangle-using-dotimes 4)
+
+(defun power-i (x y)
+  (let ((result 1))
+    (dotimes (count y result)
+      (setf result (* x result)))))
+
+(power-i (3 4))
+
+(setq animals '(gazelle giraffe lion tiger))
+(reverse animals)
+
+;; elisp sample
+(format "%d" 1)
+(message "%d %d" 2 (* 2 2))
+
+(progn
+  (format "%d" 1)
+  (message "%d" 2)
+  (message "%d %d" 2 (* 2 2)))
