@@ -1,19 +1,19 @@
 * CHAPTER 1 Emacs Basics
 
-| Keystrokes  | Command name                 | Action                                                      |
-|-------------+------------------------------+-------------------------------------------------------------|
-| C-x C-f     | find-file                    | Find file and read it in a new buffer.                      |
-| C-x C-v     | find-alternate-file          | Read and alternate file, replacing the one read with C-xC-f |
-| C-x i       | insert-file                  | Insert file at cursor position                              |
-| C-x C-s     | save-buffer                  | Save file                                                   |
-| C-x C-w     | write-file                   | Write buffer contents to file                               |
-| C-x C-c     | save-buffers-kill-emacs      | Exit Emacs                                                  |
-| C-h         | help-command                 | Enter the online help system                                |
-| C-h f       | describe-function            | display the full documentation of FUNCTION                  |
-| C-h k       | describe-key                 | display documentation of the function invoked by KEY-LIST   |
-| c-h t       | help-with-tutorial           | Start Emacs tutorial                                        |
-| C-h i       | info-goto-emacs-command-node | Start Info documentation reader                             |
-| C-s C-q     |                              | ·íC-x C-sµo¥Í¦º¾÷,¥i¥ÎC-s °±¤î±µ¦¬¿é¤J,C-q­«·s±Ò°Ê³o¦¸·     |
+| Keystrokes | Command name                 | Action                                                      |
+|------------+------------------------------+-------------------------------------------------------------|
+| C-x C-f    | find-file                    | Find file and read it in a new buffer.                      |
+| C-x C-v    | find-alternate-file          | Read and alternate file, replacing the one read with C-xC-f |
+| C-x i      | insert-file                  | Insert file at cursor position                              |
+| C-x C-s    | save-buffer                  | Save file                                                   |
+| C-x C-w    | write-file                   | Write buffer contents to file                               |
+| C-x C-c    | save-buffers-kill-emacs      | Exit Emacs                                                  |
+| C-h        | help-command                 | Enter the online help system                                |
+| C-h f      | describe-function            | display the full documentation of FUNCTION                  |
+| C-h k      | describe-key                 | display documentation of the function invoked by KEY-LIST   |
+| c-h t      | help-with-tutorial           | Start Emacs tutorial                                        |
+| C-h i      | info-goto-emacs-command-node | Start Info documentation reader                             |
+| C-s C-q    |                              | ç•¶C-x C-sç™¼ç”Ÿæ­»æ©Ÿ,å¯ç”¨C-s åœæ­¢æ¥æ”¶è¼¸å…¥,C-qé‡æ–°å•Ÿå‹•é€™æ¬¡      |
 
 ** Problems You May Encounter
 
@@ -66,13 +66,13 @@ introduction to the Info documentation system.
 | M-/number/   | digit-argument               | Repeat the next command n times                            |
 | C-u /number/ | universal-argument           | Repeat the next command n times (four times if you omit n) |
 
-*** M-n©MC-u nªº®t²§
+*** M-nå’ŒC-u nçš„å·®ç•°
 
- 1. C-u­Y¤£±a°Ñ¼Æ,«hÀH«áªº©R¥O·|°õ¦æ4¦¸
- 2. C-u C-u «h­«½Æ°õ¦æ16¦¸
- 3. C-u C-u C-u «h­«½Æ°õ¦æ64¦¸
-    «ö4ªº¾­¦¸¨Ó­«½Æ°õ¦æ: 16¦¸, 64¦¸, 256¦¸ ¨Ì¦¹Ãş±À
-
+ 1. C-uè‹¥ä¸å¸¶åƒæ•¸,å‰‡éš¨å¾Œçš„å‘½ä»¤æœƒåŸ·è¡Œ4æ¬¡
+ 2. C-u C-u å‰‡é‡è¤‡åŸ·è¡Œ16æ¬¡
+ 3. C-u C-u C-u å‰‡é‡è¤‡åŸ·è¡Œ64æ¬¡
+    æŒ‰4çš„å†ªæ¬¡ä¾†é‡è¤‡åŸ·è¡Œ: 16æ¬¡, 64æ¬¡, 256æ¬¡ ä¾æ­¤é¡æ¨
+    
 *** Deleting Text Exercise
 
 | If the cursor is here:      | M-d makes this edit:     |
@@ -176,7 +176,7 @@ To insert the copied text and press C-y.
 
 | Command                      | Function                     | Description                                                                                                    |
 | ----------                   | ---------------------------- | ----------------------------------------------------------                                                     |
-| C-s                          | isearch-forward              | do incremental search forward¦¸                                                                                |
+| C-s                          | isearch-forward              | do incremental search forwardÂ¦Â¸                                                                                |
 | C-r                          | isearch-backward-regexp      | do incremental search backward for regular expression                                                          |
 | <Enter>                      | isearch-exit                 | exit isearch                                                                                                   |
 | C-g                          | keyboard-quit                | cancel isearch operation                                                                                       |
@@ -296,10 +296,31 @@ Yatzin (814)555-7878
 1. M-x shell
    
 
+** Table 5-4. Calendar movement commands
 
-
-
-
+| Keystrokes | Command name                                                 | Action                             |
+| ---------- | ---------------------                                        | -------------------------          |
+| (none)     | calendar                                                     | Display the calendar.              |
+| .          | calendar-goto-today                                          | Move to todayâ€™s date.              |
+| C-f        | calendar-forward-day                                         | Move forward a day.                |
+| C-b        | calendar-backward-day                                        | Move backward a day.               |
+| C-n        | calendar-forward-week                                        | Move forward a week.               |
+| C-p        | calendar-backward-week                                       | Move backward a week.              |
+| M-}        | calendar-forward-month                                       | Move forward one month.            |
+| M-{        | calendar-backward-month                                      | Move backward a month.             |
+| C-x ]      | calendar-forward-year                                        | Move forward a year.               |
+| C-x [      | calendar-backward-year                                       | Move backward a year.              |
+| C-a        | calendar-beginning-of-week                                   | Move to the beginning of the week. |
+| C-e        | calendar-end-of-week                                         | Move to the end of the week.       |
+| M-a        |                                                              |                                    |
+| Got        | oâBeginning of Month                                         |                                    |
+| cal        | endar-beginning-of-month Move to the beginning of the month. |                                    |
+| M-e        |                                                              |                                    |
+| Got        | oâEnd of Month                                               |                                    |
+| cal        | endar-end-of-month Move to the end of the month.             |                                    |
+| M-<        |                                                              |                                    |
+| Got        | oâBeginning of Year                                          |                                    |
+| cal        | endar-beginning-of-year Move to the beginning of the year.   |                                    |
 * Lorem Ipsum
 
 ** "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
