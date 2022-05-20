@@ -87,8 +87,8 @@
 (use-package nano-theme
   :ensure t)		  
 
-(use-package nano-modeline
-  :ensure t)		  
+;(use-package nano-modeline
+;  :ensure t)		  
 ;  :config
 ;  (nano-modeline-mode t))
 

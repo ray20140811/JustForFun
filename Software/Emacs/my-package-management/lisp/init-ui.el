@@ -43,4 +43,10 @@
 (load-theme 'manoj-dark 1)
 ;; (load-theme 'nano-dark 1)
 
+;; display time
+(display-time)
+
+;; calendar
+;(calendar)
+
 (provide 'init-ui)
