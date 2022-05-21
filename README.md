@@ -162,6 +162,11 @@ shell for Linux, macOS, and the rest of the family.
      - [Google Common Lisp Style Guide](https://google.github.io/styleguide/lispguide.xml)
    - GNU clisp - an ANSI Common Lisp
      - [GNU CLISP](https://savannah.gnu.org/projects/clisp)
+   - [Practical Common Lisp](https://gigamonkeys.com/book/)
+   - [The Common Lisp Cookbook](https://lispcookbook.github.io/cl-cookbook/)
+   - [LISP Primer](https://www.csie.ntu.edu.tw/~course/10420/Resources/lp/)
+ - Scheme
+   - [The Scheme Programming Language](https://www.scheme.com/tspl4/)
 
-
-
+# Blogger
+    - [Peter Seibel](https://gigamonkeys.com/)
