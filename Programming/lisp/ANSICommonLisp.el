@@ -312,6 +312,34 @@ DONE
 > #'+
 +
 
+> (apply #'+ '(1 2 3))
+6
+
+> (apply #'+ 1 2 '(3 4 5))
+15
+
+> (funcall #' + 1 2 3)
+6
+
+(lambda (x y)
+  (+ x y))
+
+> ((lambda (x) (+ x 100)) 1)
+101
+
+> (funcall #'(lambda (x) (+ x 100)) 1)
+101
+
+
+;; 2.15 Types
+;; ACL (ANSI Common Lisp)
+> (typep 27 'integer)
+T
+
+;; elisp
+> (eq (type-of 27) 'integer)
+> (eq (type-of 27.0) 'integer)
+   
 ;; elisp dotimes example-01
 (let (value)
   (dotimes (number 3)
