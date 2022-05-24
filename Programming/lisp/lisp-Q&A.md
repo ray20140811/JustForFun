@@ -1,0 +1,73 @@
+* Q: [What's difference between defvar, defparameter, setf and setq](https://stackoverflow.com/questions/8927741/whats-difference-between-defvar-defparameter-setf-and-setq)
+
+  #+begin_src lisp
+  [1]> (defvar a 5)
+  A
+  [2]> (+ a 1)
+  6
+  [3]> (defparameter b 5)
+  B
+  [4]> (+ b 1)
+  6
+  [5]> (setf c 5)
+  5
+  [6]> (+ c 1)
+  6
+  [7]> (setq d 5)
+  5
+  [8]> (+ d 1)
+  6
+  [9]> (let ((a 500)) (+ a 1))
+  501
+  [10]> (let ((b 500)) (+ b 1))
+  501
+  [11]> (let ((c 500)) (+ c 1))
+  501
+  [12]> (let ((d 500)) (+ d 1))
+  501
+  #+end_src 
+  
+  A: DEFPARAMETER always assigns a value. So:
+  
+  #+begin_src lisp
+
+  [1]> (defparameter a 1)
+  A
+  [2]> (defparameter a 2)
+  A
+  [3]> a
+  2
+ 
+  #+end_src
+  
+  while DEFVAR does it only once, so:
+
+  #+begin_src lisp
+  [4]> (defvar b 1)
+  B
+  [5]> (defvar b 2)
+  B
+  [6]> b
+  1
+  #+end_src
+
+  SETF is a macro which uses SETQ internally, but has more possibilities. In a way it's a more general assignment operator. E.g. with SETF you can do:
+
+  #+begin_src lisp
+  [19]> (defparameter c (list 1 2 3))
+  [21]> (setf (car c) 42)                                              
+  42
+  [22]> c
+  (42 2 3)
+  #+end_src
+
+  but you can't do that with SETQ:
+
+  #+begin_src lisp
+  [23]> (setq (car c) 42)                                              
+  *** - SETQ: (CAR C) is not a symbol
+  The following restarts are available:
+  USE-VALUE      :R1      Input a value to be used instead.
+  ABORT          :R2      Abort main loop
+  Break 1 [24]> abort
+  #+end_src
