@@ -297,28 +297,60 @@ Yatzin (814)555-7878
    
 ** Table 5-2. Dired Commands
 
-| Keystrokes | Command name               | Action                                                                                                  |
-| ---------- | ---------------------      | -------------------------                                                                               |
-| C-x d      | dired                      | Start Dired.                                                                                            |
-| A          | dired-do-search            | Do a regular expression search on marked files;                                                         |
-| B          | dired-do-byte-compile      | Byte-compile file.                                                                                      |
-| C          | dired-do-copy              | Copy file.                                                                                              |
-| d          | dired-flag-file-deletion   | Flag for deletion                                                                                       |
-| D          | dired-do-delete            | Query fo immediate deletion.                                                                            |
-| e          | dired-find-file            | Edit file.                                                                                              |
-| f          | dired-advertised-find-file | Find (so you can edit).                                                                                 |
-| g          | revert-buffer              | Reread the directory from disk.                                                                         |
-| G          | dired-do-chgrp             | Change group permissions.                                                                               |
-| h          | describe-mode              | Display descriptive help text for Dired.                                                                |
-| H          | dired-do-hardlink          | Create a hard link to this file                                                                         |
-| i          | dired-maybe-insert-subdir  | Add a listing of this subdirectory to the current dired buffer; if it's already there, just move to it. |
-| k          | dired-do-kill-lines        | Remove line from display (don't delete file).                                                           |
-| L          | dired-do-load              | Load file.                                                                                              |
-| v          | dired-view-file            | C-c or q to return to the directory list                                                                |
-| m          | dired-mark                 |                                                                                                         |
-| %l         |                            | lowercase                                                                                               |
-| %u         |                            | upercase                                                                                                |
-| Z          | dired-do-compress          |                                                                                                       |
+| Keystrokes | Command name                 | Action                                                                                                  |
+| ---------- | ---------------------        | -------------------------                                                                               |
+| C-x d      | dired                        | Start Dired.                                                                                            |
+| A          | dired-do-search              | Do a regular expression search on marked files;                                                         |
+| B          | dired-do-byte-compile        | Byte-compile file.                                                                                      |
+| C          | dired-do-copy                | Copy file.                                                                                              |
+| d          | dired-flag-file-deletion     | Flag for deletion                                                                                       |
+| D          | dired-do-delete              | Query fo immediate deletion.                                                                            |
+| e          | dired-find-file              | Edit file.                                                                                              |
+| f          | dired-advertised-find-file   | Find (so you can edit).                                                                                 |
+| g          | revert-buffer                | Reread the directory from disk.                                                                         |
+| G          | dired-do-chgrp               | Change group permissions.                                                                               |
+| h          | describe-mode                | Display descriptive help text for Dired.                                                                |
+| H          | dired-do-hardlink            | Create a hard link to this file                                                                         |
+| i          | dired-maybe-insert-subdir    | Add a listing of this subdirectory to the current dired buffer; if it's already there, just move to it. |
+| k          | dired-do-kill-lines          | Remove line from display (don't delete file).                                                           |
+| L          | dired-do-load                | Load file.                                                                                              |
+| v          | dired-view-file              | C-c or q to return to the directory list                                                                |
+| m          | dired-mark                   |                                                                                                         |
+| M          | dired-do-chmode              | Use chmod command on this file.                                                                         |
+| n          | dired-next-line              | Move to next line.                                                                                      |
+| o          | dired-find-file-other-window | Find file in another window; move there.                                                                |
+| C-o        | dired-display-file           | Find file in another window; don't move there.                                                          |
+| O          | dired-do-chown               | Change ownership of file.                                                                               |
+| p          | dired-previous-line          | Move up a line.                                                                                         |
+| P          | dired-do-print               | Print file.                                                                                             |
+| q          | quit-window                  | Quit Dired.                                                                                             |
+| Q          | dired-do-query-replace       | Query replace string in marked files.                                                                   |
+| R          | dired-do-rename              | Rename file.                                                                                            |
+| S          | dired-do-symlink             | Create a symbolic link to this file.                                                                    |
+| s          | dired-sort-toggle-or-edit    | Sort the Dired display by date or by filename.                                                          |
+| t          | dired-toggle-marks           | Toggle marks on files and directories.                                                                  |
+| u          | dired-unmark                 | Remove mark.                                                                                            |
+| v          | dired-view-file              | View file (read-only).                                                                                  |
+| w          | dired-copy-filename-as-kill  | Copy filename into the kill ring.                                                                       |
+| x          | dired-do-flagged-delete      | Delete files flagged with D.                                                                            |
+| y          | dired-show-file-type         | Display information on the type of the file using the file command.                                     |
+| Z          | dired-do-compress            | Compress or uncompress file.                                                                            |
+| ~          | dired-flag-backup-files      | Flag backup files for deletion; C-u ~ removes flags.                                                    |
+| #          | dired-flag-auto-save-files   | Flag auto-save files for deletion; C-u # removes flags.                                                 |
+| &          | dired-flag-garbage-files     | Flag "garbage" files for deletion.                                                                      |
+| .          | dired-clean-directory        | Flag numbered backups for deletion.                                                                     |
+| =          | dired-diff                   | Compare this file to another file (the one at the mark).                                                |
+| M-=        | dired-backup-diff            | Compare this file with its backup file.                                                                 |
+| ! or X     | dired-do-shell-command       | Ask for shell command to execute on the current file or marked files.                                   |
+| +          | dired-create-directory       | Create a directory.                                                                                     |
+| >          | dired-next-dirline           | Move to next directory.                                                                                 |
+| <          | dired-prev-dirline           | Move to previous directory.                                                                             |
+| ^          | dired-up-directory           | Find the parent directory in a new Dired buffer.                                                        |
+| $          | dired-hide-subdir            | Hide or show the current directory or subdirectory.                                                     |
+| M-$        | dired-hide-all               | Hide all subdirectories.                                                                                |
+| %l         | dired-downcase               | Lowercase marked files.                                                                                 |
+| %u         | dired-upcase                 | Uppercase marked files.                                                                                 |
+| %R         | dired-do-rename-regexp       | Rename files with filenames that match regular expression.                                              |
 
 ** Table 5-4. Calendar movement commands
 
