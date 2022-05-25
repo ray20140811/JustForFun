@@ -1,0 +1,66 @@
+ray@IEC1-090836-1:~/Projects/JustForFun/Programming/lisp/gcl$ gcl
+GCL (GNU Common Lisp)  2.6.12 CLtL1    Fri Apr 22 15:51:11 UTC 2016
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files:
+/tmp/
+
+>(integerp 10)
+
+T
+
+>(integerp 10.5)
+
+NIL
+
+>(floatp 10)
+
+NIL
+
+>(floatp 10.5)
+
+T
+
+>(numberp 10)
+
+T
+
+>(numberp 10.5)
+
+T
+
+>(numberp 10/4)
+
+T
+
+>(rationalp 10/5)
+
+T
+
+>(stringp "blah blah blah")
+
+T
+
+>(type-of 105.3)
+
+LONG-FLOAT
+
+>(type-of 10/3)
+
+RATIO
+
+>(type-of 10)
+
+FIXNUM
+
+>(typep 10 'integer)
+
+T
+>(typep 10 'fixnum)
+
+T
+>
