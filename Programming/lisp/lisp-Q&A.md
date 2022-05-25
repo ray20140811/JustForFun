@@ -71,3 +71,36 @@
   ABORT          :R2      Abort main loop
   Break 1 [24]> abort
   ```
+
+* Q: [What is the lisp/scheme equivalent of pass or "do nothing"](https://stackoverflow.com/questions/67289737/what-is-the-lisp-scheme-equivalent-of-pass-or-do-nothing)
+
+  I would like to do the following pattern in scheme:
+
+  ```
+  if N > 0:
+      pass
+  else:
+      do-function()
+  ```
+
+* A: You could just add a dummy expression of your liking,
+
+  ```
+  (if (> n 0) '() (do-something))
+  ```
+
+  or with sugar-coating,
+
+  ```
+  (define pass '())
+  (if (> n 0) pass (do-something))
+  ```
+
+  but there are constructs in both Common Lisp and Scheme that make the intention clear without the clutter – unless and when:
+
+  ```
+  (unless (> n 0) (do-something))
+  (when (<= n 0) (do-something))
+  ```
+  
+  If the branch isn't taken, the value is nil in Common Lisp, and unspecified (i.e. some implementation-dependent value) in Scheme.
