@@ -295,6 +295,30 @@ Yatzin (814)555-7878
 **** ex-01
 1. M-x shell
    
+** Table 5-2. Dired Commands
+
+| Keystrokes | Command name               | Action                                                                                                  |
+| ---------- | ---------------------      | -------------------------                                                                               |
+| C-x d      | dired                      | Start Dired.                                                                                            |
+| A          | dired-do-search            | Do a regular expression search on marked files;                                                         |
+| B          | dired-do-byte-compile      | Byte-compile file.                                                                                      |
+| C          | dired-do-copy              | Copy file.                                                                                              |
+| d          | dired-flag-file-deletion   | Flag for deletion                                                                                       |
+| D          | dired-do-delete            | Query fo immediate deletion.                                                                            |
+| e          | dired-find-file            | Edit file.                                                                                              |
+| f          | dired-advertised-find-file | Find (so you can edit).                                                                                 |
+| g          | revert-buffer              | Reread the directory from disk.                                                                         |
+| G          | dired-do-chgrp             | Change group permissions.                                                                               |
+| h          | describe-mode              | Display descriptive help text for Dired.                                                                |
+| H          | dired-do-hardlink          | Create a hard link to this file                                                                         |
+| i          | dired-maybe-insert-subdir  | Add a listing of this subdirectory to the current dired buffer; if it's already there, just move to it. |
+| k          | dired-do-kill-lines        | Remove line from display (don't delete file).                                                           |
+| L          | dired-do-load              | Load file.                                                                                              |
+| v          | dired-view-file            | C-c or q to return to the directory list                                                                |
+| m          | dired-mark                 |                                                                                                         |
+| %l         |                            | lowercase                                                                                               |
+| %u         |                            | upercase                                                                                                |
+| Z          | dired-do-compress          |                                                                                                       |
 
 ** Table 5-4. Calendar movement commands
 

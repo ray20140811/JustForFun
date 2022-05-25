@@ -13,6 +13,13 @@
 		      '(:key "M-w" :description "copy text")
 		      '(:key "C-SPC" :description "mark the text"))
 
+(cheatsheet-add-group 'dired
+                      '(:key "U" :description "cancel mark")
+                      '(:key "R" :description "rename file")
+		      '(:key "C" :description "copy file")
+		      '(:key "d" :description "mark file to delete")
+		      '(:key "C-x d" :description "dired"))
+
 (cheatsheet-add-group 'magit
                       '(:key "u" :description "push origin/master")
                       '(:key "P" :description "push")
