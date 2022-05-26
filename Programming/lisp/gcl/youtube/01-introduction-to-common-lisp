@@ -1,0 +1,40 @@
+ray@IEC1-090836-1:~/Projects/JustForFun/Programming/lisp/gcl/youtube$ gcl
+GCL (GNU Common Lisp)  2.6.12 CLtL1    Fri Apr 22 15:51:11 UTC 2016
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files:
+/tmp/
+
+>25
+
+25
+
+>(sqrt 25)
+
+5.0
+
+>(+ 5 10)
+
+15
+
+>(+ (- 10 5) (* 16 30))
+
+485
+
+>foo
+
+Error: UNBOUND-VARIABLE :NAME FOO
+Fast links are on: do (si::use-fast-links nil) for debugging
+Signalled by EVAL.
+UNBOUND-VARIABLE :NAME FOO
+
+Broken at EVAL.  Type :H for Help.
+    1  Return to top level. 
+>>1
+
+Top level.
+>

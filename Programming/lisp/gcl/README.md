@@ -3,9 +3,41 @@ http://csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
 
 # getting started, intro to common lisp
 
+## intro to common lisp
+
+#### GNU Common Lisp (gcl)
+
+    - We’ll spend the first half of the course examining common
+      lisp in detail, I’ve posted a ton of code and discussion at
+    	 csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
+	 
+    - Will use the gcl interpretter, /usr/bin/gcl
+    
+    - Can be used interactively (type gcl on the command line) or
+      can create lisp scripts (begin with #! /usr/bin/gcl -f)
+
+    - Is very mush a hubrid language, will try to lean towards
+      functionlly pure solutions, but in places procedural
+      approaches just make far more sense
+
+
+      
+#### A few basics for common lisp
+
+    - Everything is a funciton, even "procedural" actions like declaring a variable:
+    (defvar x 10) ; defines x, initializes to 10; single-line comments, to the right of semi-colon
+    - The name of the function is the first thing inside the brackets, e.g. (sqrt 67.6) would be like C-style sqrt(67.5)
+
+    - Functions always return a value (default is nil)
+
+#### Using the interpretter
+
+    - Start the interpretter
+    
+
 ## lisp types/checking
 
-### Lisp types/checking
+#### Lisp types/checking
     
     - Variables (and parameters) don't have a fixed type - the data type is based on whatever actual data value they're currently holding
 
@@ -17,7 +49,7 @@ http://csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
 
     - As with all things lispy, this is done through function calls
 
-### Type checking 
+#### Type checking 
 
     - For each built in data type, there is a function that can check if something is of that type
 
@@ -27,7 +59,7 @@ http://csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
 
     - Available functions include integerp, rationalp, floatp, complexp, listp, stringp, functionp, symbolp, vectorp, arrayp, and many others
 
-*** Type checking habits
+#### Type checking habits
     
     - Type checking becomes part of life for a lisp programmer
 
@@ -35,7 +67,7 @@ http://csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
 
     - When you write a script that takes command line arguments, or a function that takes parameters, the first thing you'll typically do is check that the type meets your expectations
 
-### Other typechecking functions
+#### Other typechecking functions
 
   - We can look up the type of something using (type-of x), which returns the name of the type as a symbol (e.g. 'float)
 
@@ -44,7 +76,7 @@ http://csci.viu.ca/~wesselsd/courses/csci330/code/lisp/
   - We can also see if something's type matches a specific type using (typep x sometype)
 
     
-### User-defined types
+#### User-defined types
 
   - Some lisp functions also allow us to generate user defined types (e.g. structures), and will at the same time create functions for us that allow us to check if an item is of our defined type 
 
