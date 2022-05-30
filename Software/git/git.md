@@ -81,3 +81,26 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+
+# git init
+## create a new repository on the command line
+
+```
+echo "# mygcl" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ray20140811/mygcl.git
+git push -u origin main
+```
+
+## push an existing repository from the command line
+
+```
+git remote add origin https://github.com/ray20140811/mygcl.git
+git branch -M main
+git push -u origin main
+```
+
+
