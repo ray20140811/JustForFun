@@ -370,7 +370,56 @@ T
 (format "%d" 1)
 (message "%d %d" 2 (* 2 2))
 
-(progn
-  (format "%d" 1)
-  (message "%d" 2)
-  (message "%d %d" 2 (* 2 2)))
+;; 3 Lists P.31
+
+;; 3.1 Conses P.31
+(setf x (cons 'a nil)) ;; (A)
+
+(car x) ;; A
+
+(cdr x) ;; NIL
+
+(setf y (list 'a 'b 'c)) ;; (A B C)
+
+(cdr y) ;; (B C)
+
+(setf z (list 'a (list 'b 'c) 'd)) ;; (A (B C) D)
+
+(car (cdr z)) ;; (B C)
+
+(defun our-listp (x)
+  (or (null x) (consp x)))
+
+(our-listp '(a b c)) ;; T
+
+(defun our-atom (x) (not (consp x)))
+
+(our-atom 'a) ;; T
+(our-atom '(a b c)) ;; NIL
+
+;; 3.2 Equality P.34
+(eql (cons 'a nil) (cons 'a nil)) ;; NIL
+
+(equal (cons 'a nil) (cons 'a nil)) ;; T
+
+(setf x (cons 'a nil)) ;; (A)
+
+(eql x x) ;; T
+
+(equal x (cons 'a nil)) ;; T
+
+(defun our-equal (x y)
+  (or (eql x y)
+      (and (consp x)
+           (consp y)
+           (our-equal (car x) (car y))
+           (our-equal (cdr x) (cdr y)))))
+
+;; test
+(our-equal (list 'a 'b 'c) '(a b c))
+
+;; test
+(setf x (cons 'a nil))
+(our-equal x (cons 'a nil))
+
+;; 3.3 Why Lisp Has No Pointers P.34
