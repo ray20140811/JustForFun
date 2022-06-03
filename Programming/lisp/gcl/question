@@ -1,0 +1,5 @@
+http://csci.viu.ca/~wesselsd/courses/csci330/slides/lists.pdf
+
+page 7: 
+(member e L) true iff e is in L --> (member e L) true if e is in L
+(null L) true iff L is empty list --> (null L) true if L is empty list
