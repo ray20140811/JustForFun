@@ -187,3 +187,54 @@ LISP也提供大量的算術述句。例如,numbp可測試引數,看看是不是
     NIL
 
 這兒的cond用來判斷對引數執行car函數安不安全。若不安全,cond只傳回nil,這個值也是函數的傳回值。否則,cond傳回(atom (car x))的值,而不考慮這是個什麼樣的值。
+
+#### 4.3.1 更複雜的cond
+
+  在上例中,cond的功效相當於"if ... then ..."敘述:只有通過前面的測試,才對後面的部份進行求值。但是,cond有著更廣泛的用途,尤其是cond允許我們宣告任意數目的cond子句。LISP會對每個子句前面部份的測試進行求值,直到找到一個測試,其傳回值是真值為止。然後LISP對這個cond子句其餘的部份進行求值。如果在這個cond子句之後還有多餘的cond子句,則全部略去不計。
+  現以實例來說明,假設我們所要設計的函數必須具有下列的功能:若給它一個串列,就用cons把基元a加入串列的最前端;若給它一個數值,就令此數加7;否則,只傳回nil。我們可用雙子句的cond建構出這個函數:
+  
+    > (defun cond-example1 (x)
+		(cond
+			((listp x) (cons 'a x))
+			((numbp x) (plus 7 x))))
+	cond-example1	
+	> (cond-example1 '(b c))
+    (a b c)
+	> (cond-example1 9)
+	16
+	> (cond-example1 'z)
+	NIL
+	
+我們可以用縮排的形式寫出cond子句。以便讓函數的結構更加清晰。這是種優良的程式設計方式。
+  當我們使用cond-example2時,首先對第一個cond子句的條件進行求值。引數若是個串列,傳回值為真,此時a會cons至串列的最前端。TODO: P56
+
+	> (defun cond-example2 (x)
+		(cond
+			[(listp x) (setq flag 'list) (cons 'a x)]
+			[(numbp x) (setq flag 'number) (plus 7 x)]))
+	cond-example2
+	> (cond-example2 '(b c) 
+	(a b c)
+	> flag
+	list
+	> (cond-example2 9)
+	16 
+	> flag
+	number
+	
+	
+
+	> (defun cond-example3 (x)
+		(cond
+			[(listp x) (setq flag 'list) (cons 'a x)]
+			[(numbp x) (setq flag 'number) (plus 7 x)]
+			[t (setq flag 'neither) nil]))
+	cond-example3
+	> (cond-example3 '(b c) 
+	(a b c)
+	> flag
+	list
+	> (cond-example3 'z)
+	nil 
+	> flag
+	neither
