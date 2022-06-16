@@ -239,3 +239,39 @@ LISP也提供大量的算術述句。例如,numbp可測試引數,看看是不是
 	nil 
 	> flag
 	neither
+	
+	> (defun cond-example4 (x)
+	    (cond
+		[(listp x) (setq flag 'list) (cons 'a x)]
+		[(numbp x) (setq flag 'number) (plus 7 x)]
+		[(setq flag 'neither)]))
+	cond-example4
+	> (cond-example4 '(b c))
+	(a b c)
+	> flag
+	list
+	> (cond-example4 'z)
+	neither
+	> flag
+	neither 
+
+### 4.4 邏輯運算子
+
+  假設我們要檢查某個s-運算式的值是不是介於50和100之間的偶數,我們可以分別用evenp,greaterp和lessp檢查此數,再用cond合併它們。下面這個函數可以完成這件工作:
+    
+	> (defun even-50-100 (x)
+	    (cond ((numbp x)
+		(cond ((evenp x)
+		    (cond ((greaterp x 49)
+			    (lessp x 101))))))))
+	even-50-100    
+	> (even-50-100 17)
+	nil
+	> (even-50-100 88)
+	t
+	> (even-50-100 89)
+	nil
+	> (even-50-100 102)
+	nil
+	> (even-50-100 '(a b c))
+	nil
