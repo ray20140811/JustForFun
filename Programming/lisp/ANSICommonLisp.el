@@ -423,3 +423,97 @@ T
 (our-equal x (cons 'a nil))
 
 ;; 3.3 Why Lisp Has No Pointers P.34
+
+> (setf x '(a b c))
+(A B C)
+
+> (setf y x)
+(A B C)
+
+> (eql x y)
+T
+
+;; 3.4 Building Lists
+
+> (setf x '(a b c)
+	y (copy-list x))
+(A B C)
+
+(defun our-copy-list (lst)
+  (if (atom lst)
+      lst
+      (cons (car lst) (our-copy-list (cdr lst)))))
+
+> (setf x '(a b c)
+	y (copy-our-list x))
+(A B C)
+
+> (append '(a b) '(c d) 'e)
+(A B C D . E)
+
+;; 3.5 Example: Compression
+(defun compress (x)
+  (if (consp x)
+      (compr (car x) 1 (cdr x))
+    x))
+
+(defun compr (elt n lst)
+  (if (null lst)
+      (list (n-elts elt n))
+    (let ((next (car lst)))
+      (if (eql next elt)
+	  (compr elt (+ n 1) (cdr lst))
+	(cons (n-elts elt n)
+	      (compr next 1 (cdr lst)))))))
+
+(defun n-elts (elt n)
+  (if (> n 1)
+      (list n elt)
+    elt))
+
+> (compress '(1 1 1 0 1 0 0 0 0 1))
+((3 1) 0 1 (4 0) 1)
+
+(defun uncompress (lst)
+  (if (null lst)
+      nil
+    (let ((elt (car lst))
+	  (rest (uncompress (cdr lst))))
+      (if (consp elt)
+	  (append (apply #'list-of elt)
+		  rest)
+	(cons elt rest)))))
+
+(defun list-of (n elt)
+  (if (zerop n)
+      nil
+    (cons elt (list-of (- n 1) elt))))
+
+> (uncompress '((3 1) 0 1 (4 0) 1))
+(1 1 1 0 1 0 0 0 0 1)
+
+> (list-of 3 'ho)
+(ho ho ho)
+
+; compress.lisp
+; (load "compress.lisp)
+
+;; 3.6 Access
+> (nth 0 '(a b c))
+A
+
+> (nthcdr 2 '(a b c))
+C
+
+(defun our-nthcdr (n lst)
+  (if (zerop n)
+      lst
+    (our-nthcdr (- n 1) (cdr lst))))
+
+> (our-nthcdr 2 '(a b c))
+(C)
+
+> (last '(a b c))
+(C)
+
+;; 3.7 Mapping Functions
