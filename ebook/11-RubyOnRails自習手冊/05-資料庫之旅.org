@@ -1,0 +1,49 @@
+* 5-1 物件關聯對映(ORM)
+
+  好在Rails其中一樣最令人稱道的設計是在關聯式資料庫的使用中採用了
+物件關聯對應物件關聯對映(Object-relational Mapping),在這個概念被提出
+來以前,網站開發者往往須熟習SQL,並在伺服端用拼湊字串的方式組成詢問
+(query),如果是新手工程師,可能還會寫出SQL隱碼攻擊漏洞.
+
+* 5-2 Active Record
+
+  Active Record 模式是由Martin Fowler於『Patterns of Enterprise Application
+Architecture』書中提及,後來則被廣泛地應用在ORM上,而Rails中使用的gem也與此同名.
+
+  關聯式資料庫是由多個表組成,一個表由多個列與欄組成,在Active Record設計下,關聯式資料庫
+與物件導向程式設計間的對應關係如下表所示:
+
+  | 物件導向        | 關聯式資料庫 |
+  | --------        | ------------ |
+  | 類別(class)     | 表(table)    |
+  | 物件(object)    | 列(row)      |
+  | 屬性(attribute) | 欄(column)   |
+
+** 5-2-1 命名慣例
+
+ | 物件導向    | 關聯式資料庫  |
+ | -----------+--------------------------------- |                                     |
+ | 資料表      | 複數單字,蛇形命名法,例如 book_clubs |
+ | Model類別   | 單數單字,駱駝命名法,例如 BookClub   |
+
+
+ | 類別     | 資料表     |
+ | ----     | ------     |
+ | Post     | posts      |
+ | LineItem | line_items |
+ | Deer     | deers      |
+ | Mouse    | mice       |
+ | Person   | people     |
+
+** 5-2-2 rails dbconsole
+
+ #start_src SQL
+ CREATE TABLE posts (
+   id INTEGER PRIMARY KEY,
+   title TEXT,
+   content TEXT
+ );
+#end_src
+** 5-2-3 rails console
+** 5-2-4 CRUD操作
+** 5-2-5 設定資料庫
